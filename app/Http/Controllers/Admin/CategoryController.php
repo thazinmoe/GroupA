@@ -22,7 +22,7 @@ class CategoryController extends Controller
         return view('admin.categories.create');
     }
 
-    public function store(StoreCategoryRequest $request) : RedirectResponse
+    public function store(Request $request) : RedirectResponse
     {
         Category::create($request->validated());
 
@@ -34,7 +34,7 @@ class CategoryController extends Controller
         return view('admin.categories.edit', compact('category'));
     }
 
-    public function update(StoreCategoryRequest $request,Category $category) : RedirectResponse
+    public function update(Request $request,Category $category) : RedirectResponse
     {
         $category->update($request->validated());
 

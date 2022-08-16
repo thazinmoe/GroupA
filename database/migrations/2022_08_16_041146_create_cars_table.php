@@ -19,7 +19,7 @@ class CreateCarsTable extends Migration
             $table->integer('price');
             $table->string('duration');
             $table->text('image');
-            $table->timestamps();
+            $table->timestamps(); 
         });
     }
 

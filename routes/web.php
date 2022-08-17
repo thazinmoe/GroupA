@@ -16,13 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('home');
-Route::group(['middleware' => 'auth'], function() {
-
-        Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
-        Route::group(['middleware' => 'isAdmin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
-        Route::resource('cars', \App\Http\Controllers\Admin\CarController::class);
-    });
-    
-});

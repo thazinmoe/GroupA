@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSlugToTravelPackagesTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddSlugToTravelPackagesTable extends Migration
      */
     public function up()
     {
-        Schema::table('travel_packages', function (Blueprint $table) {
-            $table->string('slug')->nullable();
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->timestamps();    
         });
     }
 
@@ -25,8 +27,6 @@ class AddSlugToTravelPackagesTable extends Migration
      */
     public function down()
     {
-        Schema::table('travel_packages', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('categories');
     }
 }

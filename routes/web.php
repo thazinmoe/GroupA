@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::controller(App\Http\Controllers\Admin\PostController::class)->group(function () {
+    #view
+    Route::get('/posts', 'index');
+    
+    
+    
+    
+});

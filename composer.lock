@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "8abf2081d0e3ec4c7705e43edb1ef748",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -567,6 +567,63 @@
                 }
             ],
             "time": "2022-02-23T14:25:13+00:00"
+        },
+        {
+            "name": "furious-developer/lara-bit",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ragib-mrb/larabit.git",
+                "reference": "0f3794ae87168e10c83e31e9f8d9aefa57da79b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ragib-mrb/larabit/zipball/0f3794ae87168e10c83e31e9f8d9aefa57da79b0",
+                "reference": "0f3794ae87168e10c83e31e9f8d9aefa57da79b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "FuriousDeveloper\\LaraBit\\LaraBitServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FuriousDeveloper\\LaraBit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ragib Mrb",
+                    "email": "ragib.mrb@gmail.com"
+                }
+            ],
+            "description": "Create Laravel views (blade template) using 'php artisan' command-line interface",
+            "keywords": [
+                "artisan",
+                "blade",
+                "command",
+                "generator",
+                "laravel",
+                "php",
+                "template",
+                "views"
+            ],
+            "support": {
+                "issues": "https://github.com/ragib-mrb/larabit/issues",
+                "source": "https://github.com/ragib-mrb/larabit/tree/v1.0.5"
+            },
+            "time": "2021-10-10T11:15:31+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -7906,5 +7963,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

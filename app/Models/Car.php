@@ -2,12 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\TravelPackage;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Car extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
+    
+    public function travel_packages(){
+        return $this->hasMany(TravelPackage::class);
+    }
 }

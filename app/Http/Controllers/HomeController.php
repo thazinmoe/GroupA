@@ -23,9 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('dashboardWelcome');
     }
-
     public function detail(){
         return view('detail');
     }

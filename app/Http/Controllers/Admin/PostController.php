@@ -17,6 +17,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index(): View
     {
         $posts = Post::get();
@@ -29,9 +30,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create(): View
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
@@ -40,20 +42,17 @@ class PostController extends Controller
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Post $post)
+    public function store(StorePostRequest $request): RedirectResponse
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->title);
+        $data['image'] = $request->file('image')->store(
+            'assets/post', 'public'
+        );
+        Post::create($data);
+
+        return redirect()->route('admin.posts.index')->with('message', 'Added Successfully !');
     }
 
     /**
@@ -62,9 +61,9 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Post $post): View
     {
-        //
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**
@@ -74,9 +73,21 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(StorePostRequest $request, Post $post)
+    public function update(StorePostRequest $request, Post $post): RedirectResponse
     {
-        //
+        if($request->image){
+            File::delete('storage/' . $post->image);
+        }
+
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->title);
+        $data['image'] = $request->image ? $request->file('image')->store(
+            'assets/post', 'public'
+        ) : $post->image;
+
+        $post->update($data);
+
+        return redirect()->route('admin.posts.index')->with('message', 'Updated Successfully !');
     }
 
     /**
@@ -85,8 +96,15 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post):  RedirectResponse
     {
-        //
+        if($post->image){
+            File::delete('storage/' . $post->image);
+        }
+
+        $post->delete();
+
+        return redirect()->route('admin.posts.index')->with('message', 'Deleted  Successfully !');
+        //return redirect()->with('message', 'Deleted  Successfully !');
     }
 }

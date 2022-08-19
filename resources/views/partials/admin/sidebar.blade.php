@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard.index') }}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
     </a>
 
@@ -12,9 +12,10 @@
     @auth
     @role('Admin')
         <li class="nav-item active">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">          
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Dashboard</span>
+            </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.users.index') }}">
@@ -38,21 +39,20 @@
         </li>
 
         <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('admin.travel-packages.index') }}">
                 <i class="fas fa-fw fa-hotel"></i>
                 <span>Travel Package</span></a>
         </li>
 
         <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('admin.cars.index') }}">
                 <i class="fas fa-fw fa-car"></i>
                 <span>Car</span></a>
         </li>   
     @endrole
     @role('Admin|SubAdmin')
         <li class="nav-item ">
-        <!--<a class="nav-link" href="{{ route('admin.customers') }}">-->
-            <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('admin.posts.index') }}">
                 <i class="fas fa-fw fa-book"></i>
                 <span>Posts</span></a>
         </li>

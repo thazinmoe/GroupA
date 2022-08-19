@@ -2,18 +2,23 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Car;
-use App\Models\Category;
-use Illuminate\View\View;
 use Illuminate\Support\Str;
 use App\Models\TravelPackage;
+use Illuminate\Contracts\View\View;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreTravelPackageRequest;
+use App\Models\Category;
 
 class TravelPackageController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:travelPackage-list|travelPackage-create|travelPackage-edit|travelPackage-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:travelPackage-create', ['only' => ['create','store']]);
+         $this->middleware('permission:travelPackage-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:travelPackage-delete', ['only' => ['destroy']]);
+    }
 
     public function index(): View
     {

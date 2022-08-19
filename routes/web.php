@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerApiController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TravelPackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,15 +24,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => 'auth'], function() {
-    Route::group(['middleware' => 'isAdmin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
-        Route::resource('travel-packages',TravelPackageController::class);
-        Route::post('travel-packages/search', [App\Http\Controllers\Admin\TravelPackageController::class, 'search'])->name('package-search');
-    });
-});
 Auth::routes();
-
-Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('viewHome');
 
 Route::group(['middleware' => 'auth'], function () {
 
@@ -39,7 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/login',function () {
             return view('auth.login');
         });
-        Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         //role and permission
         Route::resource('roles', RoleController::class);
         Route::resource('users', UserController::class);
@@ -49,8 +44,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('cars', \App\Http\Controllers\Admin\CarController::class);
         Route::resource('posts', \App\Http\Controllers\Admin\PostController::class);
         Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
-        //Route::get('customers', [CustomerApiController::class, 'index'])->name('customers');
-        //Route::get('delete-customer/{id}', [CustomerApiController::class, 'destroy'])->name('destroy');
+        Route::get('customers', [CustomerApiController::class, 'index'])->name('customers');
+        Route::get('delete-customer/{id}', [CustomerApiController::class, 'destroy'])->name('destroy');
+        //travelpackage
+        Route::resource('travel-packages',TravelPackageController::class);
+        Route::post('travel-packages/search', [App\Http\Controllers\Admin\TravelPackageController::class, 'search'])->name('package-search');
     });
 });
 Route::get('customers', [CustomerApiController::class, 'index']);

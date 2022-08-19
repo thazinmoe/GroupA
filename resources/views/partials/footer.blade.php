@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="container-fluid text-center py-4 border-top mt-4">
-          <small>@Copyright • Abdul Aziz 2021 • All reserved</small>
+          <small>@Copyright 2023 • All reserved</small>
         </div>
       </div>
     </footer>

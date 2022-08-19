@@ -11,6 +11,13 @@ use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:category-list|category-create|category-edit|category-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:category-create', ['only' => ['create','store']]);
+         $this->middleware('permission:category-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:category-delete', ['only' => ['destroy']]);
+    }
     public function index() : View
     {
         $categories = Category::get();
@@ -22,7 +29,7 @@ class CategoryController extends Controller
         return view('admin.categories.create');
     }
 
-    public function store(Request $request) : RedirectResponse
+    public function store(StoreCategoryRequest $request) : RedirectResponse
     {
         Category::create($request->validated());
 
@@ -34,7 +41,7 @@ class CategoryController extends Controller
         return view('admin.categories.edit', compact('category'));
     }
 
-    public function update(Request $request,Category $category) : RedirectResponse
+    public function update(StoreCategoryRequest $request,Category $category) : RedirectResponse
     {
         $category->update($request->validated());
 

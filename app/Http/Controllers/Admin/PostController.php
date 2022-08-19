@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Post;
-use App\Http\Requests\StorePostRequest;
 use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
-
 class PostController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:post-list|post-create|post-edit|post-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:post-create', ['only' => ['create','store']]);
+         $this->middleware('permission:post-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:post-delete', ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

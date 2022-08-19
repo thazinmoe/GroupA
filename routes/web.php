@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -22,6 +23,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => 'auth'], function() {
+    Route::group(['middleware' => 'isAdmin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
+        Route::resource('travel-packages',TravelPackageController::class);
+        Route::post('travel-packages/search', [App\Http\Controllers\Admin\TravelPackageController::class, 'search'])->name('package-search');
+    });
+});
 Auth::routes();
 
 //Route::get('/', [PageController::class, 'home'])->name('home');

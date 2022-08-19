@@ -1,4 +1,4 @@
-    <header class="header" id="header">
+<header class="header" id="header">
       <nav class="nav container">
         <a href="{{ route('home') }}" class="nav__logo"
           ><img

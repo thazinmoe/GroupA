@@ -31,8 +31,7 @@ Route::group(['middleware' => 'auth'], function() {
 });
 Auth::routes();
 
-//Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('viewHome');
+Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 
@@ -48,9 +47,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('exportexcel', [CustomerApiController::class, 'exportexcel']);
         //cars
         Route::resource('cars', \App\Http\Controllers\Admin\CarController::class);
+        Route::resource('posts', \App\Http\Controllers\Admin\PostController::class);
         Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
-        Route::get('customers', [CustomerApiController::class, 'index'])->name('customers');
-        Route::get('delete-customer/{id}', [CustomerApiController::class, 'destroy'])->name('destroy');
+        //Route::get('customers', [CustomerApiController::class, 'index'])->name('customers');
+        //Route::get('delete-customer/{id}', [CustomerApiController::class, 'destroy'])->name('destroy');
     });
 });
 Route::get('customers', [CustomerApiController::class, 'index']);
@@ -59,11 +59,3 @@ Route::post('add-customer/{travelPackage:slug}', [CustomerApiController::class, 
 Route::get('/{id}/completed', [CustomerApiController::class, 'completed']);
 Route::get('edit-customer/{id}', [CustomerApiController::class, 'edit']);
 Route::put('update-customer/{id}', [CustomerApiController::class, 'update']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

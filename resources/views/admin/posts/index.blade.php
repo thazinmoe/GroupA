@@ -54,7 +54,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="7" class="text-center">Nothing</td>
+                            <td colspan="7" class="text-center">Data Empty</td>
                         </tr>
                         @endforelse
                     </tbody>

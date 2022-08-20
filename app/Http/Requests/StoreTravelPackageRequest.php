@@ -13,7 +13,7 @@ class StoreTravelPackageRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -28,8 +28,8 @@ class StoreTravelPackageRequest extends FormRequest
             'location' => 'required',
             'duration' => 'required',
             'description' => 'required',
-            'image' => 'required',
-            'price' => 'required',
+            'image' => 'required|image',
+            'price' => 'required|integer',
             'category_id' => 'required',
         ];
     }

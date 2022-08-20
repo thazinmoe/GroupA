@@ -34,14 +34,14 @@
             <li class="nav__item">
               <a href="">
                 <i class="bx bx-briefcase-alt nav__icon"></i>
-                <span class="nav__name">Paket Travel</span>
+                <span class="nav__name">Packages Travel</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="">
                 <i class="bx bx-message-square-detail nav__icon"></i>
-                <span class="nav__name">Kontak Kami</span>
+                <span class="nav__name">Contact Us</span>
               </a>
             </li>
           </ul>

@@ -7,7 +7,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Post</h1>
             
-            <a href="#" class="btn btn-primary btn-sm shadow-sm">Add Post  <i class="fa fa-plus"> </i></a>
+            <a href="{{ route('admin.posts.create') }}" class="btn btn-primary btn-sm shadow-sm">Add Post  <i class="fa fa-plus"> </i></a>
     </div>
 
         <div class="card-body">

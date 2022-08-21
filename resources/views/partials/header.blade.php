@@ -3,8 +3,8 @@
         <a href="{{ route('home') }}" class="nav__logo"
           ><img
             width="250"
-            style="height: 70px; object-fit: cover"
-            src="{{ asset('frontend/assets/images/logo-go-lombok____.png') }}"
+            style="height: 70px"
+            src="{{ asset('frontend/assets/images/testing.png') }}"
             alt=""
         /></a>
 
@@ -17,12 +17,6 @@
               </a>
             </li>
 
-            <!-- <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="bx bx-user nav__icon"></i>
-                <span class="nav__name">About</span>
-              </a>
-            </li> -->
 
             <li class="nav__item">
               <a href="">
@@ -34,14 +28,14 @@
             <li class="nav__item">
               <a href="">
                 <i class="bx bx-briefcase-alt nav__icon"></i>
-                <span class="nav__name">Paket Travel</span>
+                <span class="nav__name">Package Travel</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="">
                 <i class="bx bx-message-square-detail nav__icon"></i>
-                <span class="nav__name">Kontak Kami</span>
+                <span class="nav__name">Contact Us</span>
               </a>
             </li>
           </ul>

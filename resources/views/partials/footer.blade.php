@@ -5,14 +5,13 @@
             <a href="{{ route('home') }}">
               <img
                 width="250"
-                style="height: 80px; object-fit: cover"
-                src="{{ asset('frontend/assets/images/logo-go-lombok____.png') }}"
+                style="height: 70px"
+                src="{{ asset('frontend/assets/images/testing.png') }}"
                 alt=""
               />
             </a>
             <p class="title-alt mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, aut.
+            Travel is the movement of people between distant geographical locations.
             </p>
           </div>
           <div class="col-lg-3 mb-3">
@@ -31,13 +30,13 @@
           <div class="col-lg-3 mb-3">
             <ul class="list-group list-group-flush">
               <li class="list-group-item" style="border-bottom: none">
-                <a href="#" class="title">Facebook</a>
+              <a href="https://www.facebook.com" class="title">Facebook</a>
               </li>
               <li class="list-group-item" style="border-bottom: none">
-                <a href="#" class="title">Instagram</a>
+              <a href="https://www.instagram.com" class="title">Instagram</a>
               </li>
               <li class="list-group-item" style="border-bottom: none">
-                <a href="#" class="title">Youtube</a>
+              <a href="https://www.youtube.com" class="title">Youtube</a>
               </li>
             </ul>
           </div>
@@ -49,13 +48,13 @@
                 >
               </li>
               <li class="list-group-item" style="border-bottom: none">
-                <span class="title">Jln baturiti jeringo kode post 83351</span>
+                <span class="title">Yangon 000222</span>
               </li>
             </ul>
           </div>
         </div>
         <div class="container-fluid text-center py-4 border-top mt-4">
-          <small>@Copyright • Abdul Aziz 2021 • All reserved</small>
+          <small>@Copyright • Travel Package 2022 • All reserved</small>
         </div>
       </div>
     </footer>

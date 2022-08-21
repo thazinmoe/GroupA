@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
         //Category
         $this->app->bind('App\Contracts\Dao\CategoryDaoInterface', 'App\Dao\CategoryDao');
         $this->app->bind('App\Contracts\Services\CategoryServiceInterface', 'App\Services\CategoryService');
+
+        //travelpackage
+        $this->app->bind('App\Contracts\Dao\TravelPackageDaoInterface','App\Dao\TravelPackageDao');
+        $this->app->bind('App\Contracts\Services\TravelPackageServiceInterface','App\Services\TravelPackageService');
     }
 
     /**

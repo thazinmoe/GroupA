@@ -19,9 +19,13 @@ class AppServiceProvider extends ServiceProvider
         //Category
         $this->app->bind('App\Contracts\Dao\CategoryDaoInterface', 'App\Dao\CategoryDao');
         $this->app->bind('App\Contracts\Services\CategoryServiceInterface', 'App\Services\CategoryService');
-        //Post
-        $this->app->bind('App\Contracts\Dao\PostDaoInterface', 'App\Dao\PostDao');
-        $this->app->bind('App\Contracts\Services\PostServiceInterface', 'App\Services\PostService');
+
+
+
+        
+        
+        
+
     }
 
     /**

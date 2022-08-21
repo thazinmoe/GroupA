@@ -54,7 +54,11 @@
           </div>
         </div>
         <div class="container-fluid text-center py-4 border-top mt-4">
+<<<<<<< HEAD
           <small>@Copyright • Travel Package 2022 • All reserved</small>
+=======
+          <small>@Copyright 2023 • All reserved</small>
+>>>>>>> d2b7fef97f834a56113addab0f0bfc2991b3c172
         </div>
       </div>
     </footer>

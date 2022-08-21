@@ -5,9 +5,9 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Categories</h1>
-            <a href="{{ route('admin.categories.create') }}" class="btn btn-primary btn-sm shadow-sm">
-               Category Create <i class="fa fa-plus"> </i></a>
+        <h1 class="h3 mb-0 text-gray-800">Post</h1>
+            
+            <a href="{{ route('admin.posts.create') }}" class="btn btn-primary btn-sm shadow-sm">Add Post  <i class="fa fa-plus"> </i></a>
     </div>
 
         <div class="card-body">
@@ -27,19 +27,23 @@
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($categories as $category)
+                        @forelse($posts as $post)
                         <tr>
-                            <td>{{ $category->id }}</td>
-                            <td>{{ $category->title }}</td>
+                            <td>{{ $post->id }}</td>
+                            <td>{{ $post->title }}</td>
                             <td>
-                                <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-info">
+                                <img width="150" src="{{ Storage::url($post->image) }}" alt="">
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-info">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <form  class="d-inline" action="{{ route('admin.categories.destroy', $category) }}" method="POST">
+                                <form  class="d-inline" action="{{ route('admin.posts.destroy', $post) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button onClick="return confirm('Are you sure !')" class="btn btn-danger">

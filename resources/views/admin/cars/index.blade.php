@@ -1,16 +1,15 @@
 @extends('admin.layout')
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Categories</h1>
-            <a href="{{ route('admin.categories.create') }}" class="btn btn-primary btn-sm shadow-sm">
-               Category Create <i class="fa fa-plus"> </i></a>
+        <h1 class="h3 mb-0 text-gray-800">CARS</h1>
+            <a href="{{ route('admin.cars.create') }}" class="btn btn-primary btn-sm shadow-sm">Create Car <i class="fa fa-plus"> </i></a>
     </div>
 
-        <div class="card-body">
+     
 
             @if(session('message'))
                 <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -21,25 +20,32 @@
                 </div>
             @endif
 
+        <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($categories as $category)
+                        @forelse($cars as $car)
                         <tr>
-                            <td>{{ $category->id }}</td>
-                            <td>{{ $category->title }}</td>
+                            <td>{{ $car->id }}</td>
+                            <td>{{ $car->name }}</td>
+                            <td>{{ $car->price }}</td>
                             <td>
-                                <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-info">
+                                <img width="150" src="{{ Storage::url($car->image) }}" alt="">
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.cars.edit', $car) }}" class="btn btn-info">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <form  class="d-inline" action="{{ route('admin.categories.destroy', $category) }}" method="POST">
+                                <form  class="d-inline" action="{{ route('admin.cars.destroy', $car) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button onClick="return confirm('Are you sure !')" class="btn btn-danger">

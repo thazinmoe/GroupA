@@ -11,6 +11,13 @@ use App\Http\Requests\StoreCarRequest;
 
 class CarController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:car-list|car-create|car-edit|car-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:car-create', ['only' => ['create','store']]);
+         $this->middleware('permission:car-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:car-delete', ['only' => ['destroy']]);
+    }
     public function index() : View
     {
         $cars = Car::get();
@@ -63,4 +70,3 @@ class CarController extends Controller
         return redirect()->route('admin.cars.index')->with('message', 'Deleted Successfully !');
     }
 }
-

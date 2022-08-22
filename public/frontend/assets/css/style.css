@@ -84,16 +84,17 @@ body {
     color: crimson;
 }
 .btn{
-    margin-top: 50px;
-    border: 1px solid red;
+    margin-top: 30px;
+    border: 1px solid transparent;
     padding: 10px 20px;
-    color: red;
-    font-size: 20px
+    color: #fff;
+    background-color: #1abc9c;
+    font-size: 16px
 }
 .btn:hover {
-    background-color: #42414e;
-    color: chartreuse;
-    border: none;
+    background-color: #fff;
+    color: #1abc9c;
+    border: 1px solid #1abc9c;
 }
 .head span{
     display: block;

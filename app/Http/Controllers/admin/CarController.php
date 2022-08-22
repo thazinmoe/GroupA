@@ -44,12 +44,6 @@ class CarController extends Controller
 
     public function store(StoreCarRequest $request) : RedirectResponse
     {
-//        $data = $request->all();
-//        $data['image'] = $request->file('image')->store(
-//            'assets/car', 'public'
-//        );
-//
-//        Car::create($data);
          $data = $this->carInterface->getStoreCar($request);
         return redirect()->route('admin.cars.index')->with('message', 'Added Successfully !');
     }
@@ -61,16 +55,6 @@ class CarController extends Controller
 
     public function update(StoreCarRequest $request, Car $car)
     {
-//        if($request->image){
-//            File::delete('storage/' . $car->image);
-//        }
-//        
-//        $data = $request->all();
-//        $data['image'] = $request->image ? $request->file('image')->store(
-//            'assets/car', 'public'
-//        ) : $car->image;
-//
-//        $car->update($data);
            $data = $this->carInterface->getUpdateCar($request , $car);
 
         return redirect()->route('admin.cars.index')->with('message', 'Updated Successfully !');
@@ -78,7 +62,6 @@ class CarController extends Controller
 
     public function destroy(Car $car)
     {
-        //$car->delete();
         $car = $this->carInterface->getDeleteCar($car);
 
         return redirect()->route('admin.cars.index')->with('message', 'Deleted Successfully !');

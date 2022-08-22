@@ -65,12 +65,6 @@ class PostController extends Controller
 
     public function store(StorePostRequest $request): RedirectResponse
     {
-        //$data = $request->all();
-        //$data['slug'] = Str::slug($request->title);
-        //$data['image'] = $request->file('image')->store(
-        //    'assets/post', 'public'
-        //);
-        //Post::create($data);
         $data = $this->postInterface->getStorePostList($request);
 
 
@@ -97,17 +91,6 @@ class PostController extends Controller
      */
     public function update(StorePostRequest $request, Post $post): RedirectResponse
     {
-//        if($request->image){
-//            File::delete('storage/' . $post->image);
-//        }
-//
-//        $data = $request->all();
-//        $data['slug'] = Str::slug($request->title);
-//        $data['image'] = $request->image ? $request->file('image')->store(
-//            'assets/post', 'public'
-//        ) : $post->image;
-//
-//        $post->update($data);
 
         $data = $this->postInterface->getUpdatePostList($request , $post);
 
@@ -122,11 +105,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post):  RedirectResponse
     {
-//        if($post->image){
-//            File::delete('storage/' . $post->image);
-//        }
-//
-//        $post->delete();
 
         $post = $this->postInterface->getDeletePostList($post);
 

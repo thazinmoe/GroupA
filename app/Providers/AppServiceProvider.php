@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('App\Contracts\Dao\TravelPackageDaoInterface','App\Dao\TravelPackageDao');
         $this->app->bind('App\Contracts\Services\TravelPackageServiceInterface','App\Services\TravelPackageService');
   
-        //car
+        //Car
         $this->app->bind('App\Contracts\Dao\CarDaoInterface','App\Dao\CarDao');
         $this->app->bind('App\Contracts\Services\CarServiceInterface','App\Services\CarService');
         

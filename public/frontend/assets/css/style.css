@@ -75,34 +75,34 @@ body {
 .hero-content{
     font-family: 'Roboto';
     font-weight: 700;
-    padding-top: 150px;
-    padding-left: 150px;
+    padding-top: 180px;
+    text-align: center;
 }
 .hero-content .head{
-    width: 33%;
-    line-height: 60px;
-    color: crimson;
+    line-height: 80px;
+    font-size: 70px;
+    color: blue;
 }
 .btn{
     margin-top: 50px;
-    border: 1px solid red;
+    border: 1px solid green;
     padding: 10px 20px;
-    color: red;
+    color: blue;
     font-size: 20px
 }
 .btn:hover {
-    background-color: #42414e;
+    background-color: white;
     color: chartreuse;
     border: none;
 }
 .head span{
     display: block;
-    color:chartreuse;
+    color: white;
 }
 .carry{
     position: absolute;
     right: 100px;
-    bottom: 0px;
+    bottom: 20px;
 }
 .carry li{
     display: inline-block;

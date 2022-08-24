@@ -114,7 +114,7 @@ body {
 .carry a{
     color:chartreuse;
 }
-ul {
+.carry ul {
     list-style: none;
 }
 
@@ -191,7 +191,7 @@ a {
   }
   
   .clearfix {
-    display: table;
+    display: block;
     clear: both;
     content: '';
   }

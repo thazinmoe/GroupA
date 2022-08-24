@@ -1,0 +1,629 @@
+.main-visual {
+    position: relative;
+    background: url("../images/mv-cover.jpg") no-repeat center/cover;
+    height: 50vh;
+    margin-bottom: 0;
+}
+.mv-part {
+    padding-top: 80px;
+}
+.main-visual .mv-head {
+    position: absolute;
+    left: 44%;
+    top: 20%;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+.main-visual .mv-head::after {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    content: "";
+    left: 23%;
+    top: 113%;
+    border-radius: 10px;
+    background-color: #000;
+}
+/*second row start*/
+.intro-sec-row {
+    margin-bottom: 0px;
+}
+.intro-package {
+    padding-top: 60px;
+    background-color: #f2f2f2;
+}
+.intro-package .intro-left {
+    float: left;
+    width: 50%;
+}
+.intro-package .intro-left img {
+    width: 540px;
+    border-radius: 10px;
+}
+.intro-package .intro-right {
+    float: right;
+    width: 50%;
+    padding-top: 35px;
+}
+.intro-right h3 {
+    margin-bottom: 35px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.4;
+}
+.intro-right p {  
+    font-size: 18px;  
+    font-weight: 500;
+    line-height: 1.3;
+}
+.tabs-nav {
+    text-align: center;
+}
+.tabs-nav li {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 35px;
+}
+.tabs-nav li:last-child {
+    margin-right: 0;
+}
+.tabs-nav li a {
+    font-size: 18px;
+}
+.tabs-nav li.active {
+    padding-bottom: 7px;
+    border-bottom: 4px solid #1abc9c;
+    border-radius: 4px;
+}
+.tabs-content {
+    margin-top: 40px;
+}
+.tabs-content>div:not(:first-child) {
+    display: none;
+}
+/*thrid row start*/
+.third-row {
+    padding-top: 60px;
+    margin-bottom: 0;
+}
+.category-part h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.category-part .float-left {
+    float : left;
+    width : 18%;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.category-part .float-left h3 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.category-part .float-left li {
+    position: relative;
+    margin-bottom: 20px;
+}
+.category-part .float-left li:before {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -16px;
+    content : url("../images/li-ellipse.png");
+}
+.category-part .float-left li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+.category-part .float-right {
+    float : right;
+    width : 80%;
+}
+.float-right li {
+    float : left;
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+.float-right li:nth-child(3n){
+    margin-right: 0;
+}
+.third-row .float-right .card img {
+    height: 200px;
+    width: 300px;
+}
+.third-row .float-right .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}  
+.third-row .float-right .card h1 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.third-row .float-right .card .price {
+    color: grey;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.third-row .float-right .card button {
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #1abc9c;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid transparent;
+}
+
+.third-row .float-right .card button:hover {
+    transition: 0.5s;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #1abc9c;
+}
+
+.fourth-row {
+    padding-top: 40px;
+    margin-bottom: 0;
+}
+.center-class {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.fourth-row .cmn-head {
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+.fourth-row .small-head{
+    font-size: 14px;
+    font-weight: 500;
+    color: #1abc9c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.fourth-card {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+}
+.inner-float div{
+    float: left;
+}
+.float-img {
+    margin-right: 30px;
+    width: 20%;
+}
+.float-img img {
+    border-radius: 10px;
+}
+.float-texts {
+    padding-top: 20px;
+    padding-right: 10px;
+    width: 50%;
+    border-right: 1px solid #000;
+}
+.float-texts h1 {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.float-texts .desc {
+    width: 580px;
+    line-height: 1.3;
+}
+.float-buttons {
+    width: 20%;
+    margin-left: 15px;
+    padding-top: 40px;
+}
+.float-buttons .location {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.float-buttons .duration {
+    font-weight: 700;
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.float-buttons button {
+    font-size: 15px;
+    padding: 10px 25px;
+    background-color: #1abc9c;
+    border-radius: 5px;
+    color: #fff;
+    border : 1px solid transparent;
+}
+.float-buttons button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #1abc9c;
+    transition: 0.5s;
+}
+
+/* Ipad */
+@media screen and (min-width : 768px) and (max-width : 1160px) {
+    .main-visual {
+        height: 50vh;
+    }
+    .mv-part {
+        padding-top: 10.417vw;
+    }
+    .main-visual .mv-head { 
+        font-size: 3.906vw;
+        padding-top: 4vw;
+        margin-top: 3.51vw;
+    }
+    .main-visual .mv-head::after {
+        height: 0.521vw;
+        border-radius: 1.302vw;
+    }
+    /*second row start*/
+    .intro-sec-row {
+        margin-bottom: 0;
+    }
+    .intro-package {
+        padding-top: 7.813vw;
+    }
+    .intro-package .intro-left {
+        width: 100%;
+        text-align: center;
+    }
+    .intro-package .intro-left img {
+        width: 80%;
+        border-radius: 1.302vw;
+    }
+    .intro-package .intro-right {
+        width: 100%;
+        padding-top: 4.557vw;
+    }
+    .intro-right h3 {
+        margin-bottom: 4.557vw;
+        width: 100%;
+    }
+    .intro-right p {  
+        font-size: 2.344vw;  
+    }
+    .tabs-nav li {
+        margin-right: 4.557vw;
+    }
+    .tabs-nav li:last-child {
+        margin-right: 0;
+    }
+    .tabs-nav li a {
+        font-size: 2.344vw;
+    }
+    .tabs-nav li.active {
+        padding-bottom: 0.911vw;
+        border-bottom: 0.521vw solid #1abc9c;
+        border-radius: 0.521vw;
+    }
+    .tabs-content {
+        margin-top: 5.208vw;
+    }
+    /*thrid row start*/
+    .third-row {
+        padding-top: 7.813vw;
+        margin-bottom: 0;
+    }
+    .category-part h1 {
+        font-size: 3.385vw;
+        margin-bottom: 3.906vw;
+    }
+    .category-part .float-left {
+        width : 100%;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        text-align: center;
+    }
+    .category-part .float-left h3 {
+        margin-bottom: 3.906vw;
+        font-size: 2.604vw;
+    }
+    .category-part .float-left li {
+        margin-bottom: 2.604vw;
+    }
+    .category-part .float-left li:before {
+        margin-top: -0.13vw;
+        margin-left: -16.083vw;
+    }
+
+    .category-part .float-left li a {
+        font-size: 2.344vw;
+    }
+    .category-part .float-right {
+        width : 100%;
+    }
+    .float-right li {
+        float : left;
+        margin-right: 1vw;
+        margin-bottom: 3.906vw;
+    }
+    .float-right li:nth-child(2n){
+        margin-right: 0;
+    }
+    .card {
+        box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);
+        max-width: 39.063vw;
+    }
+    .card h1 {
+        font-size: 2.604vw;
+        margin-top: 1.302vw;
+    }
+    .price {
+        font-size: 2.344vw;
+        margin-bottom: 1.953vw;
+    }
+    .card button {
+        padding: 1.563vw;
+        width: 100%;
+        font-size: 2.344vw;
+        border: 0.13vw solid transparent;
+    }    
+    /*fourth row start*/
+    .fourth-row {
+        padding-top: 5.208vw;
+        margin-bottom: 0;
+    }
+    .center-class {
+        margin-bottom: 2.604vw;
+    }
+    .fourth-row .cmn-head {
+        margin-bottom: 1.302vw;
+    }
+    .fourth-row .small-head{
+        font-size: 1.823vw;
+        margin-bottom: 3.906vw;
+    }
+    .fourth-card {
+        border-radius: 1.302vw;
+        border: 0.13vw solid transparent;
+        margin-bottom: 2.604vw;
+    }
+    
+    .inner-float div{
+        float: left;
+    }
+    .fourth-card .float-img {
+        margin-right: 3.906vw;
+        width: 40%;
+    }
+    .float-img img {
+        border-radius: 1.302vw;
+    }
+    .float-texts {
+        padding-top: 2.604vw;
+        padding-right: 1.302vw;
+        width: 50%;
+        border-right: 0;
+    }
+    .float-texts h1 {
+        margin-bottom: 1.302vw;
+    }
+    .float-texts .desc {
+        width: 100%;
+    }
+    .float-buttons {
+        width: 100%;
+        margin-left: 1.953vw;
+        padding-top: 5.208vw;
+    }
+    .float-buttons .location {
+        float: left;
+        margin-right: 2vw;
+        font-size: 2.344vw;
+        margin-bottom: 1.953vw;
+    }
+    .float-buttons .duration {
+        float: left;
+        margin-right: 2vw;
+        font-size: 1.953vw;
+        margin-bottom: 1.953vw;
+    }
+    .float-buttons button {
+        font-size: 1.953vw;
+        float: left;
+        margin-top: -1vw;
+        margin-bottom: 2vw;
+        padding: 1.302vw 3.255vw;
+        border-radius: 0.651vw;
+        border : 0.13vw solid transparent;
+    }
+    .float-buttons button:hover {
+        border: 0.13vw solid #1abc9c;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:767.9px) {
+    .main-visual {
+        height: 50vh;
+    }
+    .mv-part {
+        padding-top: 12.5vw;
+    }
+    .main-visual .mv-head {
+        font-size: 4.688vw;
+        padding-top:6vw;
+        margin-top: 5vw;
+    }
+    .main-visual .mv-head::after {
+        height: 0.625vw;
+        border-radius: 1.563vw;
+    }
+    /*second row start*/
+    .intro-sec-row {
+        margin-bottom: 0;
+    }
+    .intro-package {
+        padding-top: 9.375vw;
+    }
+    .intro-package .intro-left {
+        width: 100%;
+    }
+    .intro-package .intro-left img {
+        width: 100%;
+        border-radius: 1.563vw;
+    }
+    .intro-package .intro-right {
+        width: 100%;
+        padding-top: 5.469vw;
+    }
+    .intro-right h3 {
+        margin-bottom: 5.469vw;
+        width: 100%;
+    }
+    .intro-right p {  
+        font-size: 2.813vw;  
+    }
+    .tabs-nav li {
+        margin-right: 5.469vw;
+    }
+    .tabs-nav li:last-child {
+        margin-right: 0;
+    }
+    .tabs-nav li a {
+        font-size: 2.813vw;
+    }
+    .tabs-nav li.active {
+        padding-bottom: 1.094vw;
+        border-bottom: 0.625vw solid #1abc9c;
+        border-radius: 0.625vw;
+    }
+    .tabs-content {
+        margin-top: 6.25vw;
+    }
+    /*thrid row start*/
+    .third-row {
+        padding-top: 9.375vw;
+        margin-bottom: 0;
+    }
+    .category-part h1 {
+        font-size: 4.063vw;
+        margin-bottom: 4.688vw;
+    }
+    .category-part .float-left {
+        width : 100%;
+        text-align: center;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    .category-part .float-left h3 {
+        margin-bottom: 4.688vw;
+        font-size: 3.125vw;
+    }
+    .category-part .float-left li {
+        margin-bottom: 3.125vw;
+    }
+    .category-part .float-left li:before {
+        margin-top: -0.13vw;
+        margin-left: -19vw;
+    }
+    .category-part .float-left li a {
+        font-size: 2.813vw;
+    }
+    .category-part .float-right {
+        width : 100%;
+    }
+    .float-right li {
+        width: 100%;
+        margin-bottom: 4.688vw;
+    }
+    .card {
+        box-shadow: 0 0.625vw 1.25vw 0 rgba(0, 0, 0, 0.2);
+        max-width: 46.875vw;
+    }  
+    .card h1 {
+        font-size: 3.125vw;
+        margin-top: 1.563vw;
+    }
+    .price {
+        font-size: 2.813vw;
+        margin-bottom: 2.344vw;
+    }
+    .card button {
+        padding: 1.875vw;
+        width: 100%;
+        font-size: 2.813vw;
+        border: 0.156vw solid transparent;
+    }
+    
+    .fourth-row {
+        padding-top: 6.25vw;
+        margin-bottom: 0;
+    }
+    .center-class {
+        margin-bottom: 3.125vw;
+    }
+    .fourth-row .cmn-head {
+        margin-bottom: 1.563vw;
+    }
+    .fourth-row .small-head{
+        font-size: 2.188vw;
+        margin-bottom: 4.688vw;
+    }
+    .fourth-card {
+        border-radius: 1.563vw;
+        border: 0.156vw solid transparent;
+        margin-bottom: 3.125vw;
+    }
+    .inner-float div{
+        float: left;
+    }
+    .float-img {
+        margin-right: 2vw;
+        width: 49%;
+    }
+    .float-img img {
+        border-radius: 1.563vw;
+    }
+    .float-texts {
+        padding-top: 3.125vw;
+        padding-right: 1.563vw;
+        width: 48%;
+        border-right: 0;
+    }
+    .float-texts h1 {
+        margin-bottom: 1.563vw;
+    }
+    .float-texts .desc {
+        width: 100%;
+    }
+    .float-buttons {
+        width: 100%;
+        margin-left: 2.344vw;
+        padding-top: 6.25vw;
+    }
+    .float-buttons .location {
+        float: left;
+        margin-right: 2vw;
+        font-size: 2.813vw;
+        margin-bottom: 2.344vw;
+    }
+    .float-buttons .duration {
+        float: left;
+        margin-right: 2vw;
+        font-size: 2.344vw;
+        margin-bottom: 2.344vw;
+    }
+    .float-buttons button {
+        font-size: 2.344vw;
+        margin-top: -2vw;
+        margin-bottom: 2vw;
+        padding: 1.563vw 3.906vw;
+        border-radius: 0.781vw;
+        border : 0.156vw solid transparent;
+    }
+    .float-buttons button:hover {
+        border: 0.156vw solid #1abc9c;
+    }
+}

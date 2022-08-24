@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\TravelPackage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Customer_comfirm extends Model
 {
@@ -22,7 +23,7 @@ class Customer_comfirm extends Model
         'completed',
         'package_id',
     ];
-    public function TravelPackage()
+    public function travel_packages()
     {
         return $this->belongsTo(TravelPackage::class,'package_id','id');
     }   

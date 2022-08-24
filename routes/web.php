@@ -28,6 +28,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('viewHome');
 
+//packageTravel
+Route::get('package-travel', [PageController::class, 'package'])->name('package');
+Route::get('package-travel/{id}', [PageController::class, 'package_by_cat'])->name('package_by_cat');
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::group([ 'prefix' => 'admin', 'as' => 'admin.'], function () {

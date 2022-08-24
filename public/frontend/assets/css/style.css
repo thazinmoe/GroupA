@@ -84,16 +84,17 @@ body {
     color: blue;
 }
 .btn{
-    margin-top: 50px;
-    border: 1px solid green;
+    margin-top: 30px;
+    border: 1px solid transparent;
     padding: 10px 20px;
-    color: blue;
-    font-size: 20px
 }
 .btn:hover {
-    background-color: white;
-    color: chartreuse;
-    border: none;
+    margin-top: 30px;
+    border: 1px solid transparent;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    font-size: 16px
 }
 .head span{
     display: block;

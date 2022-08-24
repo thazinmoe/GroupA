@@ -9,14 +9,27 @@ use Illuminate\Support\Facades\File;
 use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
+use App\Contracts\Services\PostServiceInterface;
+
 class PostController extends Controller
 {
-    function __construct()
+    /**
+     * Post interface
+     */
+    private $postInterface;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    function __construct(PostServiceInterface $postServiceInterface)
     {
          $this->middleware('permission:post-list|post-create|post-edit|post-delete', ['only' => ['index','show']]);
          $this->middleware('permission:post-create', ['only' => ['create','store']]);
          $this->middleware('permission:post-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:post-delete', ['only' => ['destroy']]);
+         $this->postInterface = $postServiceInterface;
     }
     /**
      * Display a listing of the resource.
@@ -26,7 +39,8 @@ class PostController extends Controller
 
     public function index(): View
     {
-        $posts = Post::get();
+        //$posts = Post::get();
+        $posts = $this->postInterface->getPostList();
 
         return view('admin.posts.index', compact('posts'));
     }
@@ -51,12 +65,8 @@ class PostController extends Controller
 
     public function store(StorePostRequest $request): RedirectResponse
     {
-        $data = $request->all();
-        $data['slug'] = Str::slug($request->title);
-        $data['image'] = $request->file('image')->store(
-            'assets/post', 'public'
-        );
-        Post::create($data);
+        $data = $this->postInterface->getStorePostList($request);
+
 
         return redirect()->route('admin.posts.index')->with('message', 'Added Successfully !');
     }
@@ -81,17 +91,8 @@ class PostController extends Controller
      */
     public function update(StorePostRequest $request, Post $post): RedirectResponse
     {
-        if($request->image){
-            File::delete('storage/' . $post->image);
-        }
 
-        $data = $request->all();
-        $data['slug'] = Str::slug($request->title);
-        $data['image'] = $request->image ? $request->file('image')->store(
-            'assets/post', 'public'
-        ) : $post->image;
-
-        $post->update($data);
+        $data = $this->postInterface->getUpdatePostList($request , $post);
 
         return redirect()->route('admin.posts.index')->with('message', 'Updated Successfully !');
     }
@@ -104,11 +105,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post):  RedirectResponse
     {
-        if($post->image){
-            File::delete('storage/' . $post->image);
-        }
 
-        $post->delete();
+        $post = $this->postInterface->getDeletePostList($post);
 
         return redirect()->route('admin.posts.index')->with('message', 'Deleted  Successfully !');
         //return redirect()->with('message', 'Deleted  Successfully !');

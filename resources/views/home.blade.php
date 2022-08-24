@@ -3,79 +3,94 @@
 @section('content')
 <main>
       <!--=============== HOME ===============-->
-      <section
-        class="hero"
-        id="hero"
-        style="
-          background-repeat: no-repeat;
-          background-size: cover;
-          height: 100vh;
-          background-image: url('https://images.unsplash.com/photo-1605752660759-2db7b7de8fa9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VuZ2dpZ2klMjBiZWFjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
-        "
-      >
-        <div
-          class="hero-content h-100 d-flex justify-content-center align-items-center flex-column"
-        >
-          <h1 class="text-center text-white display-4">
-            Explore surganya lombok
-          </h1>
-          <a href="#package" class="btn btn-hero mt-5">Book Now</a>
+      <section class="hero" id="hero">
+        <div class="l-inner">
+        <div class="hero-content">
+          <h1 class="head"><b>Travel</b> <span>The World With Us</span></h1>
+          <a href="#package" class="btn">Book Now</a>
+        </div>
+        <div class="carry">
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-car"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-train-subway"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-plane-departure"></i></a></li>
+          </ul>
+        </div>
         </div>
       </section>
+      <!--popular city-->
+    <section class="fourth-link">
+    <div class="l-inner">
+      <h3 class="fourth-head">Popular City</h3>
+      <ul class="fourth-list clearfix">
+        <li>
+          <img src="{{ asset('frontend/assets/images/shwe.jpg') }}" alt="">
+          <div class="para">
+            <p class="p1">Yangon</p>
+            <p>Yangon is Myanmar's most populous city and its most important commercial centre,  also home to the gilded Shwedagon Pagoda</p>
+          </div>
+        </li>
+        <li>
+        <img src="{{ asset('frontend/assets/images/mandalay.jpg') }}" alt="">
+          <div class="para">
+            <p class="p1">Mandalay</p>
+            <p>Mandalay is the economic centre of Upper Myanmar and considered the centre of Burmese culture.</p>
+          </div>
+        </li>
+        <li>
+        <img src="{{ asset('frontend/assets/images/sagaing.jpg') }}" alt="">
+          <div class="para">
+            <p class="p1">Sagaing</p>
+            <p>It is located in the Irrawaddy River, to the south-west of Mandalay on the opposite bank of the river.</p>
+          </div>
+        </li>
+        <li>
+        <img style="height:225px; width:335px" src="{{ asset('http://www.6adventurers.com/wp-content/uploads/2016/11/20161107041044.jpg') }}" alt="">
+          <div class="para">
+            <p class="p1">Taunggyi</p>
+            <p>The city is famous for its hot air balloon festival held annually on the full moon day of Tazaungmon.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
       <!--=============== Why us ===============-->
       <section class="container why-us text-center">
-        <h2 class="section-title">Kenapa Memilih Kami</h2>
-        <hr width="40" class="text-center" />
-        <div class="row mt-5">
-          <div class="col-lg-4 mb-3">
-            <div class="card pt-4 pb-3 px-2">
-              <div class="why-us-content">
-                <i class="bx bx-money why-us-icon mb-4"></i>
-                <h4 class="mb-3">Save Money</h4>
-                <p>
-                  Paket liburan yang terjangkau & berkualitas bagi semua jenis
-                  wisatawan
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-3">
-            <div class="card pt-4 pb-3 px-2">
-              <div class="why-us-content">
-                <i class="bx bxs-heart why-us-icon mb-4"></i>
-                <h4 class="mb-3">Stay Safe</h4>
-                <p>
-                  Menjamin keamanan dan kenyamanan anda melalui standard
-                  operasional yang professional.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-3">
-            <div class="card pt-4 pb-3 px-2">
-              <div class="why-us-content">
-                <i class="bx bx-timer why-us-icon mb-4"></i>
-                <h4 class="mb-3">Save Time</h4>
-                <p>
-                  Anda tidak perlu bingung tentang pemilihan hotel, restaurant
-                  semua kami yang atur.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ul class="chef-pic clearfix">
+        <li class="chef-info">
+          <a href="#">
+          <i class="bx bx-money why-us-icon mb-4"></i>
+          <h4 class="mb-3">Save Money</h4>
+          </a>
+        </li>
+        <li class="chef-info">
+          <a href="#">
+          <i class="bx bxs-heart why-us-icon mb-4"></i>
+          <h4 class="mb-3">Stay Safe</h4>
+          </a>
+        </li>
+        <li class="chef-info">
+          <a href="#">
+          <i class="bx bx-timer why-us-icon mb-4"></i>
+          <h4 class="mb-3">Save Time</h4>
+          </a>
+        </li>
+      </ul>
       </section>
-
+      
       <!--=============== Package ===============-->
-      @foreach($categories as $category)
+      <section class="container text-center">
+        <h2 class="section-title">Package</h2><br>
       <section class="container package text-center" id="package">
+      <div class="row">
+      @foreach($categories as $category)
+      <div class="col-4">
         <h2 class="section-title">{{ $category->title }}</h2>
-        <hr width="40" class="text-center" />
-        <div class="row mt-5 justify-content-center">
+        <div class="mt-5 justify-content-center">
 
         @foreach($category->travel_packages as $travelPackage)
-          <div class="col-lg-3" style="margin-bottom: 140px">
+          <div style="margin-bottom: 140px">
             <div class="card package-card">
               <a href="{{ route('detail', $travelPackage) }}" class="package-link">
                 <div class="package-wrapper-img overflow-hidden">
@@ -86,7 +101,7 @@
                 </div>
                 <div class="package-price d-flex justify-content-center">
                   <span class="btn btn-light position-absolute package-btn">
-                    IDR.{{ number_format($travelPackage->price) }}
+                    {{ number_format($travelPackage->price) }}
                   </span>
                 </div>
                 <h5 class="btn position-absolute w-100">
@@ -98,21 +113,22 @@
         @endforeach
 
         </div>
-      </section>
+        </div>
       @endforeach
-
+      </div>
+      </section>
+      </section>
       <!-- Cars -->
       <section class="container text-center">
-        <h2 class="section-title">Daftar Harga Transpot</h2>
-        <hr width="40" class="text-center"  />
+        <h2 class="section-title">Memory</h2>
         <div class="row">
 
         @foreach(\App\Models\Car::get() as $car)
-          <div class="col-lg-3 mb-5">
+          <div class="col-lg-4 mb-5">
             <div class="card p-3 border-0" style="border-radius: 0;text-align:left;">
               <img style="height: 200px;object-fit: contain;" src="{{ Storage::url($car->image) }}" alt="">
               <h4 class="main-color fw-bold mb-4" style="font-size: 1.4rem">{{ $car->name }}</h4>
-              <span class="fw-bold mb-4" >Harga : IDR.{{ $car->price }}</span> 
+              <span class="fw-bold mb-4" >Price-{{ $car->price }}</span> 
               <span class="d-flex mb-3"><i class='bx bxs-gas-pump main-color fs-4 me-3 '></i> <strong>Driver + BBM</strong> </span> 
               <span class="d-flex"><i class='bx bxs-time-five main-color fs-4 me-3' ></i> <strong>{{ $car->duration }}</strong></span>
               <a href="#" class="btn mt-4 btn-book">Booking</a> 
@@ -127,7 +143,6 @@
       <!--=============== Video ===============-->
       <section class="container text-center">
         <h2 class="section-title">Video Tour</h2>
-        <hr width="40" class="text-center" />
         <div class="row mt-5">
           <div class="col-12">
             <iframe
@@ -143,15 +158,13 @@
       <!--=============== Blog ===============-->
       <section class="container blog text-center">
         <h2 class="section-title">Our Blog</h2>
-        <hr width="40" class="text-center" />
-
         <div class="row justify-content-center mt-5">
         @foreach($posts as $post)
           <div class="col-lg-4 mb-4 blogpost">
             <a href="{{ route('posts.show', $post)  }}">
               <div class="card-post">
                 <div class="card-post-img">
-                  <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHJhdmVsJTIwYmFsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+                  <img src="{{ Storage::url($post->image) }}"
                     alt="{{ $post->title }}">
                 </div>
                 <div class="card-post-data">

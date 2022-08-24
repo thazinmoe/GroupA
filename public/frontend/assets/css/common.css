@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.ttf');
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url('../fonts/Acumin-BdPro.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #fff;
+  color: #202124;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 1920px;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+a {
+  display: block;
+  color: #545454;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+.l-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.cmn-head {
+  color: #202124;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1160px) {
+
+  body {
+    font-size: 2.133vw;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .l-inner {
+    max-width: 79.167vw;
+  }
+  .cmn-head {
+    font-size: 3.125vw;
+  }
+
+}
+
+@media screen and (max-width:767.9px) {
+
+  body {
+    font-size: 2.500vw;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .l-inner {
+    max-width: 90.625vw;
+  }
+
+  .cmn-head {
+    font-size: 3.750vw;
+  }
+}

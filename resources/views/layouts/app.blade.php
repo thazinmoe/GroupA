@@ -17,9 +17,17 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="{{ asset('frontend/assets/libraries/bootstrap/css/bootstrap.min.css') }}">
+    
     @stack('style-alt')
+    <link rel="stylesheet" href=" {{ asset('frontend/assets/css/reset.css') }} " />
+    <link rel="stylesheet" href=" {{ asset('frontend/assets/css/common.css') }} " />
+    <link rel="stylesheet" href=" {{ asset('frontend/assets/css/package-list.css') }} " />
+
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/contactstyle.css') }}" />
+
+    
+
 </head>
 <body>
 
@@ -31,9 +39,11 @@
     @include('partials.footer')
 
     <script src="{{ asset('frontend/assets/libraries/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src=" {{ asset('frontend/assets/libraries/jquery-3.6.0.min.js') }} "></script>
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    @yield('scripts')
+    <script src=" {{ asset('frontend/assets/js/common.js') }} "></script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>-->
+
     @stack('script-alt')
 </body>
 </html>

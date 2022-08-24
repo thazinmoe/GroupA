@@ -74,6 +74,9 @@
                         @endforelse         
                     </tbody>
                 </table>
+                @if(request()->is('admin/travel-packages'))
+                    {!! $travelPackages->links() !!}
+                @endif
             </div>
         </div>
     

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
@@ -21,7 +20,6 @@ class DashboardController extends Controller
     public function __construct(DashboardServiceInterface $dashboardServiceInterface) {
         $this->dashboardInterface = $dashboardServiceInterface;
     }
-
     public function index(){
         $packages = $this->dashboardInterface->package();
         $categories = $this->dashboardInterface->category();

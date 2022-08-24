@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,6 +31,10 @@ class AppServiceProvider extends ServiceProvider
         //Car
         $this->app->bind('App\Contracts\Dao\CarDaoInterface','App\Dao\CarDao');
         $this->app->bind('App\Contracts\Services\CarServiceInterface','App\Services\CarService');
+
+        //dashboard
+        $this->app->bind('App\Contracts\Dao\DashboardDaoInterface','App\Dao\DashboardDao');
+        $this->app->bind('App\Contracts\Services\DashboardServiceInterface','App\Services\DashboardService');
         
         
 
@@ -42,6 +47,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Paginator::useBootstrap();
     }
 }

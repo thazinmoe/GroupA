@@ -27,10 +27,12 @@
     <td>{{ $user->name }}</td>
     <td>{{ $user->email }}</td>
     <td>
-      @if(!empty($user->getRoleNames()))
-        @foreach($user->getRoleNames() as $v)
+    @if(!empty($user->getRoleNames()))
+        @forelse($user->getRoleNames() as $v)
            <label class="badge badge-success">{{ $v }}</label>
-        @endforeach
+           @empty
+           <label class="badge badge-success"> User </label>
+        @endforelse
       @endif
     </td>
     <td>

@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-header">
           <h4>Customer Booking Form
-            <a href="{{ url('/paket-travel') }}" class="btn btn-danger float-end">BACK</a>
+            <a href="{{ url('/package-travel') }}" class="btn btn-danger float-end">BACK</a>
           </h4>
         </div>
         <div class="card-body">

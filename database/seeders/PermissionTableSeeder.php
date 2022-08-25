@@ -38,12 +38,7 @@ class PermissionTableSeeder extends Seeder
            'car-list',
            'car-create',
            'car-edit',
-           'car-delete',
-           'gallery-list',
-           'gallery-create',
-           'gallery-edit',
-           'gallery-delete',
-           'dashboard-list',         
+           'car-delete',       
         ];
      
         foreach ($permissions as $permission) {

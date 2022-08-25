@@ -1,0 +1,216 @@
+/*Post-blade*/
+.Travelblog {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-image: url('../images/balloon.jpg');
+  position:relative;     
+  margin-bottom: 120px;
+  display:block;
+  width: 100%;
+  padding: 0px 0px 300px 0;
+}
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.title_heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 56px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 100%;
+  padding: 86px 262px 0px;
+  text-align: center;
+}
+
+.blog .blog-text {
+ padding-top:90px;
+ text-align:center;
+ color:white;
+ text-decoration: underline solid lightcyan 10%;
+}
+
+.container-blog {
+ top: -140px;
+ z-index: 2; 
+ position: relative;
+ margin-bottom: 5px;
+}
+.container-blog .img-title{
+  
+  text-shadow: 2px 2px #E4A9A8;
+  text-align: center;
+
+}
+.container-blog .blogpost {
+ width : 348px;
+ padding: 10px;
+}
+/*.container-blog .blogpost:nth-child(3n){
+  margin-right: 10px;
+}*/
+.blogpost li {
+ margin-bottom: 30px ;
+}
+
+.blogpost .card-post{
+ border: 2px solid #fff;
+ box-shadow: 1px 1px 15px #ccc;
+}
+
+.blogpost .card-post .post-data{
+    margin: 60px 10px 0px;
+    text-transform: capitalize;
+}
+.blogpost .card-post .post-data span{
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.blogpost .card-post .post-data small{
+  font-weight: 300;
+  color: #959595;
+}
+.blogpost .card-post .post-data h5 {
+  font-weight: 500;
+    margin-top: 0.7rem;
+    color: var(--text-color);
+ }
+
+.blogpost .blogImg{
+ width : 100%;
+ padding-bottom:50px;
+ height: 214.5px;
+}
+.blogpost .blogImg img {
+  border-radius: 5px;
+ }
+ button {
+  display:none;
+ }
+ /*Slick Slider*/
+ .slick-prev:before {
+  position: absolute;
+  content: url('../images/left-arrow.png');
+  opacity: 1;
+}
+
+.slick-next:before {
+  position: absolute;
+  content: url('../images/right-arrow.png');
+  opacity: 1;
+}
+ .slick-prev {
+  top: 46%;
+  left: 9px;
+  z-index: 1;
+}
+
+.slick-next {
+  top: 46%;
+  right: 45px;
+}
+
+/*PostDetail*/
+.blogDetail {
+   width: 100%;
+   padding-right: 200px;
+   padding-left: 200px;
+   margin-top: 70px;
+   margin-bottom: 10px;
+}
+
+.postDetail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 6.5px;
+}
+.postDetail img {
+  width:75%;
+  margin-top: 30px;
+}
+
+.postDetail .detailData {
+  margin-top: 20px;
+  margin-left:30px;
+}
+
+.postDetail .detailData span {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.postDetail .detailData .dataTitle{
+  margin-top: 5px;
+}
+.postDetail .postBody {
+  padding:30px;
+}
+
+.read-more
+{
+
+  text-decoration: none;
+  background-color: #ACCFCB;
+  color: #000000;
+  font-weight: 400;
+  border: none;
+  padding: 7px 9px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  }
+  .read-more:hover {
+    font-weight: bold;
+    background-color: #3D8DAE;
+  }
+
+  #more  {display:  none;}
+
+ 

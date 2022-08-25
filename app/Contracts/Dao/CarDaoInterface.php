@@ -11,7 +11,7 @@ use App\Http\Requests\StoreCarRequest;
  */
 interface CarDaoInterface
 {
-  public function getCar();
+    public function getCar();
     public function getStoreCar(StoreCarRequest $request);
     public function getUpdateCar(StoreCarRequest $request, Car $car);
     public function getDeleteCar(Car $car);

@@ -17,7 +17,7 @@ use App\Http\Requests\StoreTravelPackageRequest;
 class TravelPackageDao implements TravelPackageDaoInterface
 {
     public function gettravelpackage() {
-        $travelPackages = TravelPackage::get();
+        $travelPackages = TravelPackage::paginate(5);
         return $travelPackages;
     }
 

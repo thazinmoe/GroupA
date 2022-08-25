@@ -28,6 +28,19 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('viewHome');
 
+//packageTravel
+Route::get('package-travel', [PageController::class, 'package'])->name('package');
+Route::get('package-travel/{id}', [PageController::class, 'package_by_cat'])->name('package_by_cat');
+Route::get('detail/{travelPackage:slug}', [App\Http\Controllers\PageController::class, 'detail'])->name('detail');
+//posts
+Route::get('posts', [App\Http\Controllers\PageController::class, 'posts'])->name('posts');
+Route::get('posts/{post:slug}', [App\Http\Controllers\PageController::class, 'detailPost'])->name('posts.show');
+
+
+//contact
+Route::get('contact', [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
+Route::post('contact', [App\Http\Controllers\PageController::class, 'getEmail'])->name('contact.email');
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::group([ 'prefix' => 'admin', 'as' => 'admin.'], function () {

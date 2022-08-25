@@ -75,35 +75,35 @@ body {
 .hero-content{
     font-family: 'Roboto';
     font-weight: 700;
-    padding-top: 150px;
-    padding-left: 150px;
+    padding-top: 180px;
+    text-align: center;
 }
 .hero-content .head{
-    width: 33%;
-    line-height: 60px;
-    color: crimson;
+    line-height: 80px;
+    font-size: 70px;
+    color: blue;
 }
 .btn{
     margin-top: 30px;
     border: 1px solid transparent;
     padding: 10px 20px;
+}
+.btn:hover {
+    margin-top: 30px;
+    border: 1px solid transparent;
     color: #fff;
+    padding: 10px 20px;
     background-color: #1abc9c;
     font-size: 16px
 }
-.btn:hover {
-    background-color: #fff;
-    color: #1abc9c;
-    border: 1px solid #1abc9c;
-}
 .head span{
     display: block;
-    color:chartreuse;
+    color: white;
 }
 .carry{
     position: absolute;
     right: 100px;
-    bottom: 0px;
+    bottom: 20px;
 }
 .carry li{
     display: inline-block;
@@ -114,7 +114,7 @@ body {
 .carry a{
     color:chartreuse;
 }
-ul {
+.carry ul {
     list-style: none;
 }
 
@@ -191,7 +191,7 @@ a {
   }
   
   .clearfix {
-    display: table;
+    display: block;
     clear: both;
     content: '';
   }

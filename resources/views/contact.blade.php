@@ -2,14 +2,13 @@
 
 @section('content')
 <section class="hero" id="hero" style="
-          background-repeat: no-repeat;
+          background: url('{{ asset('frontend/assets/images/img_contactcover.jpg')}}') no-repeat center ; 
           background-size: cover;
-          height: 50vh;
-          background-image: url('https://media.istockphoto.com/photos/tropical-beach-with-boats-and-blue-ocean-in-tropical-island-picture-id1068291116?b=1&k=20&m=1068291116&s=170667a&w=0&h=9Bsc3HJkFdNRr0ESpdMeAlfSVLX68mVrz3UY-Ye0p0s=');
+          height:55vh;
         ">
   <div class="hero-content h-100 d-flex justify-content-center align-items-center flex-column">
-    <h1 class="text-center text-white display-4">Kontak Kami</h1>
-    <p class="text-white">Kami butuh feedback untuk pelayanan yang lebih baik</p>
+    <h1 class="text-center text-white display-4">Contact Us</h1>
+    <p class="text-white">Please Fill Your Message</p>
     <hr width="40" class="text-center" />
   </div>
 </section>

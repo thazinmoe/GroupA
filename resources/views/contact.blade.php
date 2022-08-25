@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="hero" id="hero" style="
-          background: url('{{ asset('frontend/assets/images/img_contactcover.jpg')}}') no-repeat center ; 
+          background: url('{{ asset('frontend/assets/images/img_contactcover.jpg')}}') no-repeat center; 
           background-size: cover;
           height:55vh;
         ">

@@ -20,7 +20,7 @@
                     <img src="{{ asset('frontend/assets/images/shwe.jpg') }}" alt="">
                     <div class="para">
                         <p class="p1">Yangon</p>
-                        <p>Yangon is Myanmar's most populous city and its most important commercial centre, also home to the gilded Shwedagon Pagoda</p>
+                        <p>Yangon is Myanmar's most populous city and its most important commercial centre.</p>
                     </div>
                 </li>
                 <li>
@@ -38,7 +38,7 @@
                     </div>
                 </li>
                 <li>
-                    <img style="height:225px; width:335px" src="{{ asset('http://www.6adventurers.com/wp-content/uploads/2016/11/20161107041044.jpg') }}" alt="">
+                    <img style="height:180px; width:335px" src="{{ asset('http://www.6adventurers.com/wp-content/uploads/2016/11/20161107041044.jpg') }}" alt="">
                     <div class="para">
                         <p class="p1">Taunggyi</p>
                         <p>The city is famous for its hot air balloon festival held annually on the full moon day of Tazaungmon.</p>
@@ -75,11 +75,12 @@
     <!--=============== Package ===============-->
     <section class="container text-center">
         <h2 class="section-title">Package</h2><br>
+        <hr width="80" class="text-center" />
+        <div class="row mt-5 justify-content-center">
         <section class="container package text-center" id="package">
             <div class="row">
                 @foreach($categories as $category)
                 <div class="col-4">
-                    <h2 class="section-title">{{ $category->title }}</h2>
                     <div class="mt-5 justify-content-center">
 
                         @foreach($category->travel_packages as $travelPackage)
@@ -111,8 +112,9 @@
     <!-- Cars -->
     <section class="container text-center">
         <h2 class="section-title">Memory</h2>
+        <hr width="80" class="text-center" />
+        <div class="row mt-5 justify-content-center">
         <div class="row">
-
             @foreach(\App\Models\Car::get() as $car)
             <div class="col-lg-4 mb-5">
                 <div class="card p-3 border-0" style="border-radius: 0;text-align:left;">
@@ -133,6 +135,8 @@
     <!--=============== Video ===============-->
     <section class="container text-center">
         <h2 class="section-title">Video Tour</h2>
+        <hr width="80" class="text-center" />
+        <div class="row mt-5 justify-content-center">
         <div class="row mt-5">
             <div class="col-12">
                 <iframe width="100%" height="514" src="https://www.youtube.com/embed/rToNoxmQURQ" title="A JOURNEY through MYANMAR - CINEMATIC VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -143,6 +147,8 @@
     <!--=============== Blog ===============-->
     <section class="container blog text-center">
         <h2 class="section-title">Our Blog</h2>
+        <hr width="80" class="text-center" />
+        <div class="row mt-5 justify-content-center">
         <div class="row justify-content-center mt-5">
             @foreach($posts as $post)
             <div class="col-lg-4 mb-4 blogpost">

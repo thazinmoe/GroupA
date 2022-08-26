@@ -11,48 +11,83 @@ use App\Contracts\Services\CustomerServiceInterface;
  */
 class CustomerService implements CustomerServiceInterface
 {
-  /**
-   * commentDao
-   */
-  private $customerDao;
-  /**
-   * Class Constructor
-   * @param PostDaoInterface
-   * @return
-   */
-  public function __construct(CustomerDaoInterface $customerDaoInterface)
-  {
-    $this->customerDao = $customerDaoInterface;
-  }
+    /**
+     * commentDao
+     */
+    private $customerDao;
+    /**
+     * Class Constructor
+     * @param PostDaoInterface
+     * @return
+     */
+    public function __construct(CustomerDaoInterface $customerDaoInterface)
+    {
+        $this->customerDao = $customerDaoInterface;
+    }
 
-  public function getCustomerList(Request $request)
-  {
-    return $this->customerDao->getCustomerList($request);
-  }
+    /**
+     * getCustomerList function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function getCustomerList(Request $request)
+    {
+        return $this->customerDao->getCustomerList($request);
+    }
 
-  public function getCustomerStore(Request $request)
-  {
-    return $this->customerDao->getCustomerStore($request);
-  }
+    /**
+     * getCustomerStore function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function getCustomerStore(Request $request)
+    {
+        return $this->customerDao->getCustomerStore($request);
+    }
 
-  public function getTravelPackage()
-  {
-    return $this->customerDao->getTravelPackage();
-  }
+    /**
+     * getTravelPackage function
+     *
+     * @return void
+     */
+    public function getTravelPackage()
+    {
+        return $this->customerDao->getTravelPackage();
+    }
 
-  public function getCustomerComfirm($id)
-  {
-    return $this->customerDao->getCustomerComfirm($id);
-  }
- 
-  public function getCustomerComfirmUpdate(Request $request, $id)
-  {
-    return $this->customerDao->getCustomerComfirmUpdate($request, $id);
-  }
+    /**
+     * getCustomerComfirm function
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function getCustomerComfirm($id)
+    {
+        return $this->customerDao->getCustomerComfirm($id);
+    }
 
-  public function getDeleteCustomerList($id)
-  {
-    return $this->customerDao->getDeleteCustomerList($id);
-  }
- 
+    /**
+     * getCustomerComfirmUpdate function
+     *
+     * @param Request $request
+     * @param [type] $id
+     * @return void
+     */
+    public function getCustomerComfirmUpdate(Request $request, $id)
+    {
+        return $this->customerDao->getCustomerComfirmUpdate($request, $id);
+    }
+
+    /**
+     * getDeleteCustomerList function
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function getDeleteCustomerList($id)
+    {
+        return $this->customerDao->getDeleteCustomerList($id);
+    }
 }

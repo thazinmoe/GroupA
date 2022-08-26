@@ -30,72 +30,117 @@ class CustomerController extends Controller
     public function __construct(CustomerServiceInterface $customerServiceInterface)
     {
         $this->customerInterface = $customerServiceInterface;
-    } 
-   
+    }
+
+    /**
+     * index function
+     *
+     * @param Request $request
+     * @return void
+     */
     public function index(Request $request)
     {
-        $customers = $this->customerInterface->getCustomerList($request); 
-    if($customers){          
-            return view('customer.index')->with('customers',$customers);
+        $customers = $this->customerInterface->getCustomerList($request);
+        if ($customers) {
+            return view('customer.index')->with('customers', $customers);
         }
-     }    
-    
-    public function create(TravelPackage $travelPackage): View
-    {       
-        return view('customer.create', compact('travelPackage'));      
     }
-    
+
+    /**
+     * create function
+     *
+     * @param TravelPackage $travelPackage
+     * @return View
+     */
+    public function create(TravelPackage $travelPackage): View
+    {
+        return view('customer.create', compact('travelPackage'));
+    }
+
+    /**
+     * store function
+     *
+     * @param StoreCustomerRequest $request
+     * @return void
+     */
     public function store(StoreCustomerRequest $request)
     {
-        $customer = $this->customerInterface->getCustomerStore($request); 
+        $customer = $this->customerInterface->getCustomerStore($request);
         if ($customer) {
             return back()->with('status', 'Customer Booking Added Successfully');
         }
     }
-   
+
+    /**
+     * edit function
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function edit($id)
     {
-        $data = $this->customerInterface->getTravelPackage(); 
-        $customer = $this->customerInterface->getCustomerComfirm($id); 
+        $data = $this->customerInterface->getTravelPackage();
+        $customer = $this->customerInterface->getCustomerComfirm($id);
         return view('customer.edit', [
             'customer' => $customer,
             'travelPackages' => $data,
         ]);
     }
-    
+
+    /**
+     * update function
+     *
+     * @param Request $request
+     * @param [type] $id
+     * @return void
+     */
     public function update(Request $request, $id)
     {
-        $customer = $this->customerInterface->getCustomerComfirmUpdate($request,$id); 
+        $customer = $this->customerInterface->getCustomerComfirmUpdate($request, $id);
         if ($customer) {
             return back()->with('status', 'Customer Booking Updated Successfully');
         }
     }
 
-    public function completed($id){
+    /**
+     * completed function
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function completed($id)
+    {
         $customer = $this->customerInterface->getCustomerComfirm($id);
-        if ($customer->completed){
+        if ($customer->completed) {
             $customer->update(['completed' => false]);
             return redirect()->back()->with('success', "TODO marked as incomplete!");
-        }else {
+        } else {
             $customer->update(['completed' => true]);
             return redirect()->back()->with('success', "TODO marked as complete!");
         }
     }
 
     /**
-     * To check post create form and redirect to confirm page.
-     * @param PostCreateRequest $request Request form post create
-     * @return View post create confirm
+     * destroy function
+     *
+     * @param [type] $id
+     * @return void
      */
     public function destroy($id)
     {
-        $customer = $this->customerInterface->getDeleteCustomerList($id); 
+        $customer = $this->customerInterface->getDeleteCustomerList($id);
         if ($customer) {
             return redirect()->back()->with('status', 'Customer Booking Deleted Successfully');
         }
     }
-    public function exportexcel(){ 
+
+    /**
+     * exportexcel function
+     *
+     * @return void
+     */
+    public function exportexcel()
+    {
         return Excel::download(new ExportUser, 'customerBooking.xlsx');
     }
- 
 }

@@ -11,6 +11,7 @@ use App\Models\Customer_comfirm;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\StoreCustomerRequest;
 use App\Notifications\ComfirmEmailNotification;
 use App\Contracts\Services\CustomerServiceInterface;
 
@@ -44,7 +45,7 @@ class CustomerController extends Controller
         return view('customer.create', compact('travelPackage'));      
     }
     
-    public function store(Request $request)
+    public function store(StoreCustomerRequest $request)
     {
         $customer = $this->customerInterface->getCustomerStore($request); 
         if ($customer) {

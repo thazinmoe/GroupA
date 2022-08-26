@@ -38,25 +38,6 @@
                 <span class="nav__name">Contact Us</span>
               </a>
             </li>
-
-            @guest
-            <li class="nav__item"><a class="nav__link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-            <li class="nav__item"><a class="nav__link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-            @else
-            <li class="nav-item dropdown pure-menu-item ">
-              <a id="name" class="nav__link">
-                {{ Auth::user()->name}}
-              </a>
-            </li>
-            <li>
-              <a class="nav__link" style="color: #000000;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-              </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>
-            </li>
-            @endguest
           </ul>
         </div>
       </nav>

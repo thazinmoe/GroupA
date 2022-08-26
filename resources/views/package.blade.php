@@ -97,7 +97,7 @@
               <div class="float-buttons">
                 <p class="location">Location : {{$pack->location}}</p>
                 <p class="duration">Duration : {{$pack->duration}}</p>
-                <a href="{{ route('detail', $pack) }}">
+                <a href=" {{ route('detail',$pack->slug) }} ">
                   <button>Book Now</button>
                 </a>
               </div>

@@ -122,9 +122,6 @@
 .blogpost .blogImg img {
   border-radius: 5px;
  }
- button {
-  display:none;
- }
  /*Slick Slider*/
  .slick-prev:before {
   position: absolute;

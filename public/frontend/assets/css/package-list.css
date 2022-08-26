@@ -333,8 +333,7 @@
         margin-bottom: 2.604vw;
     }
     .category-part .float-left li:before {
-        margin-top: -0.13vw;
-        margin-left: -16.083vw;
+        display: none;
     }
 
     .category-part .float-left li a {
@@ -525,8 +524,7 @@
         margin-bottom: 3.125vw;
     }
     .category-part .float-left li:before {
-        margin-top: -0.13vw;
-        margin-left: -19vw;
+        display: none;
     }
     .category-part .float-left li a {
         font-size: 2.813vw;

@@ -31,6 +31,7 @@ class StoreTravelPackageRequest extends FormRequest
             'image' => 'required|image',
             'price' => 'required|integer',
             'category_id' => 'required',
+            'car_id' => 'required',
         ];
     }
 }

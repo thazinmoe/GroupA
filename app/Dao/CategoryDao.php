@@ -11,11 +11,23 @@ use App\Http\Requests\StoreCategoryRequest;
  */
 class CategoryDao implements CategoryDaoInterface
 {
+  /**
+   * getCategoryList function
+   *
+   * @return void
+   */
   public function getCategoryList()
   {
     $categories = Category::get();
     return $categories;
   }
+
+  /**
+   * getStoreCategoryList function
+   *
+   * @param StoreCategoryRequest $request
+   * @return void
+   */
   public function getStoreCategoryList(StoreCategoryRequest $request)
   {
     return Category::create($request->validated());

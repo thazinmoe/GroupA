@@ -10,6 +10,18 @@ use App\Http\Requests\StoreCategoryRequest;
  */
 interface CategoryDaoInterface
 {
+    /**
+     * getCategoryList function
+     *
+     * @return void
+     */
     public function getCategoryList();
+
+    /**
+     * getStoreCategoryList function
+     *
+     * @param StoreCategoryRequest $request
+     * @return void
+     */
     public function getStoreCategoryList(StoreCategoryRequest $request);
 }

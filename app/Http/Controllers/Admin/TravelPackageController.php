@@ -8,10 +8,8 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\TravelPackage;
 use App\Contracts\Services\TravelPackageServiceInterface;
-use Illuminate\Contracts\View\View;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
-use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreTravelPackageRequest;
 
 class TravelPackageController extends Controller
@@ -35,7 +33,7 @@ class TravelPackageController extends Controller
          $this->travelpackageInterface = $travelpackageServiceInterface;
     }
 
-    public function index(): View
+    public function index()
     {
         $travelPackages = $this->travelpackageInterface->gettravelpackage();
 
@@ -48,20 +46,20 @@ class TravelPackageController extends Controller
         return view('admin.travel-packages.index',compact('travelPackages'));
     }
 
-    public function create(): View
+    public function create()
     {
         $categories = $this->travelpackageInterface->getcategory();
         $cars = $this->travelpackageInterface->getcar();
         return view('admin.travel-packages.create', compact('categories','cars'));
     }
 
-    public function store(StoreTravelPackageRequest $request): RedirectResponse
+    public function store(StoreTravelPackageRequest $request)
     {
         $this->travelpackageInterface->packageStore($request);
         return redirect()->route('admin.travel-packages.index')->with('message', 'Package Added Successfully !');
     }
 
-    public function edit(TravelPackage $travelPackage): View
+    public function edit(TravelPackage $travelPackage)
     {
         $categories = Category::get();
         $cars = Car::get();
@@ -71,13 +69,13 @@ class TravelPackageController extends Controller
         return view('admin.travel-packages.edit', compact('travelPackage', 'categories','cars'));
     }
 
-    public function update(StoreTravelPackageRequest $request, TravelPackage $travelPackage): RedirectResponse
+    public function update(StoreTravelPackageRequest $request, TravelPackage $travelPackage)
     {
         $this->travelpackageInterface->packageUpdate($request,$travelPackage);
         return redirect()->route('admin.travel-packages.index')->with('message', 'Updated Successfully !');
     }
 
-    public function destroy(TravelPackage $travelPackage): RedirectResponse
+    public function destroy(TravelPackage $travelPackage)
     {
         $this->travelpackageInterface->packageDestroy($travelPackage);
         return redirect()->route('admin.travel-packages.index')->with('message', 'Deleted Successfully');

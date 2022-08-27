@@ -71,7 +71,7 @@
                               <td class="line">{{ $customer->phno }}</td>
                               <td class="line">{{ $customer->package_name }}</td>
                               <td>
-                                  <a href="{{asset('/' . $customer->id . '/completed')}}" class="btn btn-info">
+                                  <a href="{{asset('admin/' . $customer->id . '/completed')}}" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>
                                   </a>                            
                                     <a href="{{ url('admin/delete-customer/'.$customer->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure you want to Remove?');">
@@ -87,7 +87,7 @@
                               <td>{{ $customer->phno }}</td>
                               <td>{{ $customer->package_name }}</td>
                               <td>
-                                  <a href="{{asset('/' . $customer->id . '/completed')}}" class="btn btn-info">
+                                  <a href="{{asset('admin/' . $customer->id . '/completed')}}" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>
                                   </a>  
                                   <a href="{{ url('admin/delete-customer/'.$customer->id) }}" class="btn btn-danger">

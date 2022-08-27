@@ -39,7 +39,7 @@
                         <select name="car_id" id="car_id"  class="form-control">
                             <option value="">Select Cars</option>
                             @foreach($cars as $car)
-                                <option value="{{$car->price}}">{{$car->name}}</option>
+                                <option value="{{$car->price}}">{{$car->name}} - {{number_format($car->price)}} MMK</option>
                             @endforeach
                         </select>
                     </div>

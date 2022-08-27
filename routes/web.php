@@ -76,7 +76,6 @@ Route::group(['middleware' => 'auth'], function () {
          Route::get('users/{id}',[UserController::class, 'show'])->name('users.show');
          Route::delete('users/{id}',[UserController::class, 'destroy'])->name('users.destroy'); 
          Route::get('exportuserexcel', [UserController::class, 'exportuserexcel']);
-         Route::get('exportexcel', [CustomerController::class, 'exportexcel']);
          // end user
        
         // start category (Thazin Moe)
@@ -89,6 +88,7 @@ Route::group(['middleware' => 'auth'], function () {
         // end category 
 
         //customer-info(Thazin Moe)
+        Route::get('exportexcel', [CustomerController::class, 'exportexcel']);
         Route::get('customers', [CustomerController::class, 'index'])->name('customers');
         Route::get('delete-customer/{id}', [CustomerController::class, 'destroy'])->name('destroy');
         Route::get('/{id}/completed', [CustomerController::class, 'completed']);

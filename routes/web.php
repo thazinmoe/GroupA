@@ -58,7 +58,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         //role and permission(TZM&EMM)
         // start role 
-        Route::get('admin/roles',[RoleController::class, 'index'])->name('roles.index');
+        Route::get('roles',[RoleController::class, 'index'])->name('roles.index');
         Route::get('roles/create',[RoleController::class, 'create'])->name('roles.create');
         Route::post('roles',[RoleController::class, 'store'])->name('roles.store');
         Route::get('roles/{id}/edit',[RoleController::class, 'edit'])->name('roles.edit');      
@@ -68,7 +68,7 @@ Route::group(['middleware' => 'auth'], function () {
         // end role
 
          // start user (TZM&EMM)
-         Route::get('admin/users',[UserController::class, 'index'])->name('users.index');
+         Route::get('users',[UserController::class, 'index'])->name('users.index');
          Route::get('users/create',[UserController::class, 'create'])->name('users.create');
          Route::post('users',[UserController::class, 'store'])->name('users.store');
          Route::get('users/{id}/edit',[UserController::class, 'edit'])->name('users.edit');      
@@ -80,13 +80,12 @@ Route::group(['middleware' => 'auth'], function () {
          // end user
        
         // start category (Thazin Moe)
-        Route::get('admin/categories',[CategoryController::class, 'index'])->name('categories.index');
+        Route::get('categories',[CategoryController::class, 'index'])->name('categories.index');
         Route::get('categories/create',[CategoryController::class, 'create'])->name('categories.create');
         Route::post('categories',[CategoryController::class, 'store'])->name('categories.store');
         Route::get('categories/{category}/edit',[CategoryController::class, 'edit'])->name('categories.edit');      
         Route::put('categories/{category}',[CategoryController::class, 'update'])->name('categories.update');
         Route::delete('categories/{category}',[CategoryController::class, 'destroy'])->name('categories.destroy');
-        Route::get('categories', [CustomerController::class, 'exportexcel']);
         // end category 
 
         //customer-info(Thazin Moe)
@@ -96,7 +95,7 @@ Route::group(['middleware' => 'auth'], function () {
         
         // start post(Eaindra MyoMyint)  
         Route::get('posts',[PostController::class, 'index'])->name('posts.index');
-        Route::get('admin/posts/create',[PostController::class, 'create'])->name('posts.create');
+        Route::get('posts/create',[PostController::class, 'create'])->name('posts.create');
         Route::post('posts',[PostController::class, 'store'])->name('posts.store');
         Route::get('posts/{post}/edit',[PostController::class, 'edit'])->name('posts.edit');      
         Route::put('posts/{post}',[PostController::class, 'update'])->name('posts.update');
@@ -105,7 +104,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         // start car (Thein Htike Soe)
         Route::get('cars',[CarController::class, 'index'])->name('cars.index');
-        Route::get('admin/cars/create',[CarController::class, 'create'])->name('cars.create');
+        Route::get('cars/create',[CarController::class, 'create'])->name('cars.create');
         Route::post('cars',[CarController::class, 'store'])->name('cars.store');
         Route::get('cars/{car}/edit',[CarController::class, 'edit'])->name('cars.edit');      
         Route::put('cars/{car}',[CarController::class, 'update'])->name('cars.update');
@@ -114,7 +113,7 @@ Route::group(['middleware' => 'auth'], function () {
         
         // start travel Package(Hnin Yu Yu Lwin)
         Route::get('travel-packages',[TravelPackageController::class, 'index'])->name('travel-packages.index');
-        Route::get('admin/travel-packages/create',[TravelPackageController::class, 'create'])->name('travel-packages.create');
+        Route::get('travel-packages/create',[TravelPackageController::class, 'create'])->name('travel-packages.create');
         Route::post('travel-packages',[TravelPackageController::class, 'store'])->name('travel-packages.store');
         Route::get('travel-packages/{travelPackage}/edit',[TravelPackageController::class, 'edit'])->name('travel-packages.edit');      
         Route::put('travel-packages/{travelPackage}',[TravelPackageController::class, 'update'])->name('travel-packages.update');

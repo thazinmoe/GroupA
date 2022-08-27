@@ -80,7 +80,7 @@
           <h1 class="cmn-head">Popular Packages</h1>
           <span class="small-head">Everything in this packages are awesome.</span>
         </div>
-        @foreach($popu_packages as $pack)
+        @forelse($popu_packages as $pack)
           <div class="fourth-card clearfix">
             <div class="inner-float">
               <div class="float-img">
@@ -105,7 +105,12 @@
             </div>        
             
           </div>  
-        @endforeach 
+          
+        @empty
+          <div class="alert alert-warning">
+            Data is not Available!!
+          </div>
+        @endforelse 
       </div>
     </section>
 

@@ -1,5 +1,5 @@
                 <ul class="clearfix">
-                @foreach($travelPackages as $travel)
+                @forelse($travelPackages as $travel)
                 <li>                  
                 <a href="{{ route('detail', $travel) }}" class="package-link">
                   <div class="card">
@@ -10,7 +10,11 @@
                   </div>
                 </a>
                 </li>
-                @endforeach
+                @empty
+                <div class="alert alert-danger">
+                  No Data Available!!
+                </div>
+                @endforelse
                 
               </ul>    
               <div class="pagination">

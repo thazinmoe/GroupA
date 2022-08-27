@@ -212,10 +212,12 @@
     border-right: 1px solid #000;
 }
 .float-texts h1 {
+    font-size: 18px;
     margin-bottom: 10px;
     line-height: 1.5;
 }
 .float-texts .desc {
+    font-size: 16px;
     width: 580px;
     line-height: 1.3;
 }
@@ -354,15 +356,15 @@
         box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);
         max-width: 39.063vw;
     }
-    .card h1 {
+    .third-row .float-right .card h1 {
         font-size: 2.604vw;
         margin-top: 1.302vw;
     }
-    .price {
+    .third-row .float-right .card .price {
         font-size: 2.344vw;
         margin-bottom: 1.953vw;
     }
-    .card button {
+    .third-row .float-right .card button {
         padding: 1.563vw;
         width: 100%;
         font-size: 2.344vw;
@@ -406,9 +408,11 @@
         border-right: 0;
     }
     .float-texts h1 {
+        font-size: 2.344vw;
         margin-bottom: 1.302vw;
     }
     .float-texts .desc {
+        font-size: 2.083vw;
         width: 100%;
     }
     .float-buttons {
@@ -540,15 +544,15 @@
         box-shadow: 0 0.625vw 1.25vw 0 rgba(0, 0, 0, 0.2);
         max-width: 46.875vw;
     }  
-    .card h1 {
+    .third-row .float-right .card h1 {
         font-size: 3.125vw;
         margin-top: 1.563vw;
     }
-    .price {
+    .third-row .float-right .card .price {
         font-size: 2.813vw;
         margin-bottom: 2.344vw;
     }
-    .card button {
+    .third-row .float-right .card button {
         padding: 1.875vw;
         width: 100%;
         font-size: 2.813vw;
@@ -591,9 +595,11 @@
         border-right: 0;
     }
     .float-texts h1 {
+        font-size: 2.813vw;
         margin-bottom: 1.563vw;
     }
     .float-texts .desc {
+        font-size: 2.500vw;
         width: 100%;
     }
     .float-buttons {

@@ -41,15 +41,6 @@ interface CustomerDaoInterface
     public function getCustomerComfirm($id);
 
     /**
-     * getCustomerComfirmUpdate function
-     *
-     * @param Request $request
-     * @param [type] $id
-     * @return void
-     */
-    public function getCustomerComfirmUpdate(Request $request, $id);
-
-    /**
      * getDeleteCustomerList function
      *
      * @param [type] $id

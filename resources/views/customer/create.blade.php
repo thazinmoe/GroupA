@@ -33,20 +33,20 @@
               @enderror
             </div>
             <div class="form-group mb-3">
-              <label for="email">Package Name</label>
+              <label for="packagename">Package Name</label>
               <input type="text" name="package_id" value="{{$travelPackage->name}}" class="form-control" disabled>              
             </div>
             <div class="form-group mb-3">
-              <label for="email">Package Duration</label>
+              <label for="packageduration">Package Duration</label>
               <input type="text" name="duration" value="{{$travelPackage->duration}}" class="form-control" disabled>              
             </div>
             <div class="form-group mb-3">
-              <label for="email">Package Price</label>
+              <label for="packageprice">Package Price</label>
               <input type="text" name="price" value="{{$travelPackage->price}}" class="form-control" disabled>              
               <input type="text" name="package_price" value="{{$travelPackage->price}}" class="form-control" hidden>              
             </div>
             <div class="form-group mb-3">
-              <label for="email">Package Count</label>                         
+              <label for="packagecount">Package Count</label>                         
               <input type="number" name="package_count"  class="form-control">              
             </div>
             <input type="hidden" name="package_id" value="{{$travelPackage->id}}" class="form-control">   

@@ -608,13 +608,13 @@ footer .list-group-item a:hover {
 }
 
 .btn-book {
-    background-color: var(--main-color);
+    background-color: #1abc9c;
     color: #fff;
     box-shadow: 0 1rem 4rem rgba(26, 188, 156, 0.218);
 }
 
 .btn-book:hover {
-    color: #fff;
+    color: #1abc9c;
 }
 
 /* style contact */

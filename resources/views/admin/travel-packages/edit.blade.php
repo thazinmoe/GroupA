@@ -68,7 +68,7 @@
                 <!--  -->
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" value="{{ $travelPackage->price - $carOriginPrice  }}" />
+                    <input type="number" class="form-control" id="price" name="price" value="{{ $travelPackage->price - $car_price }}" />
                 </div>
             <button type="submit" class="btn btn-primary btn-block">Edit</button>
             </form>
@@ -81,14 +81,3 @@
 
 </div>
 @endsection
-
-@push('script-alt')
-<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#description' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
-@endpush

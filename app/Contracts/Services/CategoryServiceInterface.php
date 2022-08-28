@@ -10,6 +10,18 @@ use App\Http\Requests\StoreCategoryRequest;
  */
 interface CategoryServiceInterface
 {
-  public function getCategoryList();
-  public function getStoreCategoryList(StoreCategoryRequest $request);
+    /**
+     * getCategoryList function
+     *
+     * @return void
+     */
+    public function getCategoryList();
+
+    /**
+     * getStoreCategoryList function
+     *
+     * @param StoreCategoryRequest $request
+     * @return void
+     */
+    public function getStoreCategoryList(StoreCategoryRequest $request);
 }

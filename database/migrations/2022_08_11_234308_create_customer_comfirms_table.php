@@ -18,6 +18,8 @@ class CreateCustomerComfirmsTable extends Migration
             $table->string('customer_name');
             $table->string('email');
             $table->string('phno');
+            $table->string('package_price')->nullable(); 
+            $table->string('package_count')->nullable(); 
             $table->boolean('completed')->default(false);
             $table->integer('package_id')->nullable();      
             $table->timestamps();

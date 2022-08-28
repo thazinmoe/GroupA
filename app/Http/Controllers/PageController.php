@@ -37,10 +37,10 @@ class PageController extends Controller
         }
 
         $popu_packages = TravelPackage::leftJoin('customer_comfirms', 'package_id', '=', 'travel_packages.id')
-        ->select('travel_packages.id','travel_packages.name','travel_packages.image','travel_packages.description','travel_packages.price','travel_packages.location','travel_packages.duration', DB::raw("count('customer_comfirms.package_id') as customer_count"))
+        ->select('travel_packages.id','travel_packages.name','travel_packages.image','travel_packages.description','travel_packages.price','travel_packages.location','travel_packages.duration','travel_packages.slug', DB::raw("count('customer_comfirms.package_id') as customer_count"))
         ->groupBy('travel_packages.id')
         ->orderBy('customer_count','desc')
-        ->having('customer_count','>',3)
+        ->having('customer_count','>',4)
         ->get();    
         
         return view('package', compact('travelPackages','categories','popu_packages'));
@@ -51,10 +51,10 @@ class PageController extends Controller
         $travelPackages = TravelPackage::where('category_id',$id)->get();
 
         $popu_packages = TravelPackage::leftJoin('customer_comfirms', 'package_id', '=', 'travel_packages.id')
-        ->select('travel_packages.id','travel_packages.name','travel_packages.image','travel_packages.description','travel_packages.price','travel_packages.location','travel_packages.duration', DB::raw("count('customer_comfirms.package_id') as customer_count"))
+        ->select('travel_packages.id','travel_packages.name','travel_packages.image','travel_packages.description','travel_packages.price','travel_packages.location','travel_packages.duration','travel_packages.slug', DB::raw("count('customer_comfirms.package_id') as customer_count"))
         ->groupBy('travel_packages.id')
         ->orderBy('customer_count','desc')
-        ->having('customer_count','>',3)
+        ->having('customer_count','>',4)
         ->get();    
 
         return view('package',compact('travelPackages','categories','popu_packages'));

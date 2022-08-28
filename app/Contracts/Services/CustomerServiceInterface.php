@@ -9,10 +9,51 @@ use Illuminate\Http\Request;
  */
 interface CustomerServiceInterface
 {
-  public function getCustomerList(Request $request);
-  public function getCustomerStore(Request $request);
-  public function getTravelPackage();
-  public function getCustomerComfirm($id);
-  public function getCustomerComfirmUpdate(Request $request, $id);
-  public function getDeleteCustomerList($id);
+    /**
+     * getCustomerList function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function getCustomerList(Request $request);
+
+    /**
+     * getCustomerStore function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function getCustomerStore(Request $request);
+
+    /**
+     * getTravelPackage function
+     *
+     * @return void
+     */
+    public function getTravelPackage();
+
+    /**
+     * getCustomerComfirm function
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function getCustomerComfirm($id);
+
+    /**
+     * getCustomerComfirmUpdate function
+     *
+     * @param Request $request
+     * @param [type] $id
+     * @return void
+     */
+    public function getCustomerComfirmUpdate(Request $request, $id);
+
+    /**
+     * getDeleteCustomerList function
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function getDeleteCustomerList($id);
 }

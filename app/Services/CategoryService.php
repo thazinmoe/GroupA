@@ -27,10 +27,22 @@ class CategoryService implements CategoryServiceInterface
     $this->categoryDao = $categoryDaoInterface;
   }
 
+  /**
+   * getCategoryList function
+   *
+   * @return void
+   */
   public function getCategoryList()
   {
     return $this->categoryDao->getCategoryList();
   }
+
+  /**
+   * getStoreCategoryList function
+   *
+   * @param StoreCategoryRequest $request
+   * @return void
+   */
   public function getStoreCategoryList(StoreCategoryRequest $request)
   {
     return $this->categoryDao->getStoreCategoryList($request);

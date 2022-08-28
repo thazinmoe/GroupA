@@ -26,7 +26,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="{{ route('package') }}" class="nav__link {{ request()->is('paket-travel') ? ' active-link' : '' }}">
+              <a href="{{ route('package') }}" class="nav__link {{ request()->is('package-travel') ? ' active-link' : '' }}">
                 <i class="bx bx-briefcase-alt nav__icon"></i>
                 <span class="nav__name">Package Travel</span>
               </a>

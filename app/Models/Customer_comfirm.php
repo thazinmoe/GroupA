@@ -20,9 +20,12 @@ class Customer_comfirm extends Model
         'customer_name',
         'email',
         'phno',
+        'package_price',
+        'package_count',
         'completed',
         'package_id',
     ];
+    
     public function travel_packages()
     {
         return $this->belongsTo(TravelPackage::class,'package_id','id');

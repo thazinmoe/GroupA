@@ -50,6 +50,7 @@ Route::get('add-customer/{travelPackage:slug}', [CustomerController::class, 'cre
 Route::post('add-customer/{travelPackage:slug}', [CustomerController::class, 'store'])->name('add-customer');
 //end customer
 
+Route::group(['middleware' => 'prevent-back-history'],function(){
 Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
@@ -123,4 +124,5 @@ Route::group(['middleware' => 'auth'], function () {
         // end travel package  
 
     });
+});
 });

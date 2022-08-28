@@ -70,11 +70,12 @@ class TravelPackageDao implements TravelPackageDaoInterface
      */
     public function packageStore(StoreTravelPackageRequest $request) {
         $data = $request->all();
-        $carId = Car::find($request->car_id);
-        $carOriginPrice = $carId->price;
-        $car_price = $carOriginPrice;
-        $pack_price = $data['price'];        
-        $total = $car_price + $pack_price;        
+
+        $car_id = Car::find($request->car_id);
+        $car_price = $car_id->price;
+        $pack_price = $data['price'];
+        $total = $car_price + $pack_price;
+                
         $data['price'] = $total;
         $data['image'] = $request->file('image')->store(
             'assets/package', 'public'
@@ -96,11 +97,11 @@ class TravelPackageDao implements TravelPackageDaoInterface
 
         $data = $request->all();
         
-        $carId = Car::find($request->car_id);
-        $carOriginPrice = $carId->price;
-        $car_price = $carOriginPrice; 
-        $pack_price = $data['price'];        
+        $car_id = Car::find($request->car_id);
+        $car_price = $car_id->price;
+        $pack_price = $data['price'];
         $total = $car_price + $pack_price;
+        
         $data['price'] = $total;
         if(request()->hasFile('image') && request('image') != ''){
             $imagePath = public_path('storage/'.$travelPackage->image);

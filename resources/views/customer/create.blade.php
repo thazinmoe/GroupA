@@ -43,6 +43,11 @@
             <div class="form-group mb-3">
               <label for="email">Package Price</label>
               <input type="text" name="price" value="{{$travelPackage->price}}" class="form-control" disabled>              
+              <input type="text" name="package_price" value="{{$travelPackage->price}}" class="form-control" hidden>              
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Package Count</label>                         
+              <input type="number" name="package_count"  class="form-control">              
             </div>
             <input type="hidden" name="package_id" value="{{$travelPackage->id}}" class="form-control">   
             <div class="form-group mb-3">

@@ -55,9 +55,11 @@ class CustomerDao implements CustomerDaoInterface
         $customer->customer_name = $request->customer_name;
         $customer->email = $request->email;
         $customer->phno = $request->phno;
+        $customer->package_price = $request->package_price * $request->package_count;
+        $customer->package_count = $request->package_count;
         $customer->package_id = $request->package_id;
         $customer->save();
-        $customer->notify(new ComfirmEmailNotification($customer));
+        // $customer->notify(new ComfirmEmailNotification($customer));
         return $customer;
     }
 

@@ -43,13 +43,11 @@ class TravelPackageDao implements TravelPackageDaoInterface
 
     public function packageStore(StoreTravelPackageRequest $request) {
         $data = $request->all();
-
-        $car_price = $data['car_id'];
-
-        $pack_price = $data['price'];
-        
-        $total = $car_price + $pack_price;
-        
+        $carId = Car::find($request->car_id);
+        $carOriginPrice = $carId->price;
+        $car_price = $carOriginPrice;
+        $pack_price = $data['price'];        
+        $total = $car_price + $pack_price;        
         $data['price'] = $total;
         $data['image'] = $request->file('image')->store(
             'assets/package', 'public'
@@ -65,12 +63,11 @@ class TravelPackageDao implements TravelPackageDaoInterface
 
         $data = $request->all();
         
-        $car_price = $data['car_id'];
-
-        $pack_price = $data['price'];
-        
+        $carId = Car::find($request->car_id);
+        $carOriginPrice = $carId->price;
+        $car_price = $carOriginPrice; 
+        $pack_price = $data['price'];        
         $total = $car_price + $pack_price;
-
         $data['price'] = $total;
         $data['image'] = $request->image ? $request->file('image')->store(
             'assets/package', 'public'
@@ -79,7 +76,7 @@ class TravelPackageDao implements TravelPackageDaoInterface
         $slug = Str::slug($request->name);
         return $travelPackage->update($data + ["slug" => $slug]);
     }
-
+    
     public function packageDestroy(TravelPackage $travelPackage) {
         $destination = 'storage/' . $travelPackage->image;
         if (File::exists($destination)) {

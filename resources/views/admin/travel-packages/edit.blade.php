@@ -39,7 +39,7 @@
                     <select name="car_id" id="car_id" class="form-control">
                         <option value="">Select to Edit Cars</option>
                         @foreach($cars as $car)
-                            <option value="{{$car->price}}">{{$car->name}} - {{number_format($car->price)}} MMK</option>
+                            <option value="{{$car->id}}">{{$car->name}} - {{number_format($car->price)}} MMK</option>
                         @endforeach
                     </select>
                 </div>
@@ -68,7 +68,7 @@
                 <!--  -->
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" value="{{ $travelPackage->price }}" />
+                    <input type="number" class="form-control" id="price" name="price" value="{{ $travelPackage->price - $carOriginPrice  }}" />
                 </div>
             <button type="submit" class="btn btn-primary btn-block">Edit</button>
             </form>

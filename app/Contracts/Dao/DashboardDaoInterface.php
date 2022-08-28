@@ -9,8 +9,31 @@ use Illuminate\Http\Request;
  */
 interface DashboardDaoInterface
 {
+    /**
+     * package function
+     *
+     * @return void
+     */
     public function package();
+
+    /**
+     * category function
+     *
+     * @return void
+     */
     public function category();
+
+    /**
+     * post function
+     *
+     * @return void
+     */
     public function post();
+
+    /**
+     * car function
+     *
+     * @return void
+     */
     public function car();
 }

@@ -28,18 +28,38 @@ class DashboardService implements DashboardServiceInterface
         $this->dashboardDao = $dashboardDaoInterface;
     }
 
+    /**
+     * package function
+     *
+     * @return void
+     */
     public function package() {
         return $this->dashboardDao->package();
     }
 
+    /**
+     * category function
+     *
+     * @return void
+     */
     public function category() {
         return $this->dashboardDao->category();
     }
 
+    /**
+     * post function
+     *
+     * @return void
+     */
     public function post() {
         return $this->dashboardDao->post();
     }
     
+    /**
+     * car function
+     *
+     * @return void
+     */
     public function car() {
         return $this->dashboardDao->car();
     }

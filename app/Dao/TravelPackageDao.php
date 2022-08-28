@@ -16,11 +16,22 @@ use App\Http\Requests\StoreTravelPackageRequest;
  */
 class TravelPackageDao implements TravelPackageDaoInterface
 {
+    /**
+     * gettravelpackage function
+     *
+     * @return void
+     */
     public function gettravelpackage() {
         $travelPackages = TravelPackage::orderBy('id','desc')->paginate(5);
         return $travelPackages;
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return void
+     */
     public function getsearch(Request $request) {
         
         if($request->isMethod('post')){
@@ -31,16 +42,32 @@ class TravelPackageDao implements TravelPackageDaoInterface
         return $travelPackages;
     }
 
+    /**
+     * getcategory function
+     *
+     * @return void
+     */
     public function getcategory() {
         $categories = Category::get();
         return $categories;
     }
 
+    /**
+     * getcar function
+     *
+     * @return void
+     */
     public function getcar() {
         $cars = Car::get();
         return $cars;
     }
 
+    /**
+     * packageStore function
+     *
+     * @param StoreTravelPackageRequest $request
+     * @return void
+     */
     public function packageStore(StoreTravelPackageRequest $request) {
         $data = $request->all();
 
@@ -58,6 +85,13 @@ class TravelPackageDao implements TravelPackageDaoInterface
         return TravelPackage::create($data + ["slug" => $slug]);
     }
 
+    /**
+     * packageUpdate function
+     *
+     * @param StoreTravelPackageRequest $request
+     * @param TravelPackage $travelPackage
+     * @return void
+     */
     public function packageUpdate(StoreTravelPackageRequest $request,TravelPackage $travelPackage) {
         if ($request->image) {
             File::delete('storage/' . $travelPackage->image);
@@ -80,6 +114,12 @@ class TravelPackageDao implements TravelPackageDaoInterface
         return $travelPackage->update($data + ["slug" => $slug]);
     }
 
+    /**
+     * packageDestroy function
+     *
+     * @param TravelPackage $travelPackage
+     * @return void
+     */
     public function packageDestroy(TravelPackage $travelPackage) {
         $destination = 'storage/' . $travelPackage->image;
         if (File::exists($destination)) {

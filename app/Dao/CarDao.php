@@ -2,49 +2,74 @@
 
 namespace App\Dao;
 
-use App\Models\Car;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\File;
 use App\Contracts\Dao\CarDaoInterface;
 use App\Http\Requests\StoreCarRequest;
+use App\Models\Car;
+use Illuminate\Support\Facades\File;
 
 /**
  * Data accessing object for post
  */
 class CarDao implements CarDaoInterface
 {
-  public function getCar()
-  {
-    $car = Car::get();
-    return $car;
-  }
-  public function getStoreCar(StoreCarRequest $request)
-  {
-       $data = $request->all();
-       $data['image'] = $request->file('image')->store(
-        'assets/car', 'public'
-       );
+    /**
+     * getCar function
+     *
+     * @return void
+     */
+    public function getCar()
+    {
+        $car = Car::get();
+        return $car;
+    }
 
-       Car::create($data);
-    
-  }
-  public function getUpdateCar(StoreCarRequest $request, Car $car)
-  {
-         if($request->image){
-         File::delete('storage/' . $car->image);
-         }
-  
+    /**
+     * getStoreCar function
+     *
+     * @param StoreCarRequest $request
+     * @return void
+     */
+    public function getStoreCar(StoreCarRequest $request)
+    {
+        $data = $request->all();
+        $data['image'] = $request->file('image')->store(
+            'assets/car', 'public'
+        );
+
+        Car::create($data);
+    }
+
+    /**
+     * getUpdateCar function
+     *
+     * @param StoreCarRequest $request
+     * @param Car $car
+     * @return void
+     */
+    public function getUpdateCar(StoreCarRequest $request, Car $car)
+    {
+        if ($request->image) {
+            File::delete('storage/' . $car->image);
+        }
+
         $data = $request->all();
         $data['image'] = $request->image ? $request->file('image')->store(
-         'assets/car', 'public'
-      ) : $car->image;
+            'assets/car', 'public'
+        ) : $car->image;
 
         $car->update($data);
-    
-  }
-  public function getDeleteCar(Car $car)
-  {
-    $car->delete();
-    
-  }
+
+    }
+
+    /**
+     * getDeleteCar function
+     *
+     * @param Car $car
+     * @return void
+     */
+    public function getDeleteCar(Car $car)
+    {
+        $car->delete();
+
+    }
 }

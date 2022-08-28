@@ -106,9 +106,15 @@ class TravelPackageDao implements TravelPackageDaoInterface
         $total = $car_price + $pack_price;
 
         $data['price'] = $total;
-        $data['image'] = $request->image ? $request->file('image')->store(
-            'assets/package', 'public'
-        ) : $travelPackage->image;
+
+        if(request()->hasFile('image') && request('image') != ''){
+            $imagePath = public_path('storage/'.$travelPackage->image);
+            if(File::exists($imagePath)){
+                unlink($imagePath);
+            }
+            $image = request()->file('image')->store('assets/package', 'public');
+            $data['image'] = $image;
+        }
 
         $slug = Str::slug($request->name);
         return $travelPackage->update($data + ["slug" => $slug]);

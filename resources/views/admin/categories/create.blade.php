@@ -27,7 +27,7 @@
                         <label for="title">Title</label>
                         <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" />
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" class="btn btn-primary ">Submit</button>
                 </form>
             </div>
         </div>

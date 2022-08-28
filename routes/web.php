@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -28,21 +29,21 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('viewHome');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [PageController::class, 'home'])->name('viewHome');
 
 //packageTravel(Hnin Yu Yu Lwin)
 Route::get('package-travel', [PageController::class, 'package'])->name('package');
 Route::get('package-travel/{id}', [PageController::class, 'package_by_cat'])->name('package_by_cat');
-Route::get('detail/{travelPackage:slug}', [App\Http\Controllers\PageController::class, 'detail'])->name('detail');
+Route::get('detail/{travelPackage:slug}', [PageController::class, 'detail'])->name('detail');
 
 //posts(Eaindra MyoMyint)
-Route::get('posts', [App\Http\Controllers\PageController::class, 'posts'])->name('posts');
-Route::get('posts/{post:slug}', [App\Http\Controllers\PageController::class, 'detailPost'])->name('posts.show');
+Route::get('posts', [PageController::class, 'posts'])->name('posts');
+Route::get('posts/{post:slug}', [PageController::class, 'detailPost'])->name('posts.show');
 
 //contact(Thazin Moe)
-Route::get('contact', [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
-Route::post('contact', [App\Http\Controllers\PageController::class, 'getEmail'])->name('contact.email');
+Route::get('contact', [PageController::class, 'contact'])->name('contact');
+Route::post('contact', [PageController::class, 'getEmail'])->name('contact.email');
 
 //start customer(Thazin Moe)
 Route::get('add-customer/{travelPackage:slug}', [CustomerController::class, 'create'])->name('add-customer');
@@ -118,7 +119,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('travel-packages/{travelPackage}/edit', [TravelPackageController::class, 'edit'])->name('travel-packages.edit');
         Route::put('travel-packages/{travelPackage}', [TravelPackageController::class, 'update'])->name('travel-packages.update');
         Route::delete('travel-packages/{travelPackage}', [TravelPackageController::class, 'destroy'])->name('travel-packages.destroy');
-        Route::post('travel-packages/search', [App\Http\Controllers\Admin\TravelPackageController::class, 'search'])->name('package-search');
+        Route::post('travel-packages/search', [TravelPackageController::class, 'search'])->name('package-search');
         // end travel package  
 
     });

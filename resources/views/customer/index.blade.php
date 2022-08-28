@@ -71,9 +71,9 @@
                               <td class="line">{{ $customer->customer_name }}</td>
                               <td class="line">{{ $customer->email }}</td>
                               <td class="line">{{ $customer->phno }}</td>
+                              <td class="line">{{ $customer->package_name }}</td>
                               <td class="line">{{ $customer->package_price }}</td>
                               <td class="line">{{ $customer->package_count }}</td>
-                              <td class="line">{{ $customer->package_name }}</td>
                               <td>
                                   <a href="{{asset('admin/' . $customer->id . '/completed')}}" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>
@@ -89,9 +89,9 @@
                               <td>{{ $customer->customer_name }}</td>
                               <td>{{ $customer->email }}</td>
                               <td>{{ $customer->phno }}</td>
+                              <td>{{ $customer->package_name }}</td>
                               <td>{{ $customer->package_price }}</td>
                               <td>{{ $customer->package_count }}</td>
-                              <td>{{ $customer->package_name }}</td>
                               <td>
                                   <a href="{{asset('admin/' . $customer->id . '/completed')}}" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>

@@ -18,8 +18,8 @@ $('.slick_slider1').slick({
 });
 
 $(document).ready(function() {
-  $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
-  $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
+  //$('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
+  //$('.acc-container .acc:nth-child(1) .acc-content').slideDown();
   $('.acc-head').on('click', function() {
       if($(this).hasClass('active')) {
         $(this).siblings('.acc-content').slideUp();

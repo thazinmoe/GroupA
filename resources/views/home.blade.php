@@ -103,7 +103,7 @@
         <a href="{{ route('package') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
                 <i class="bx bx-home-alt nav__icon"></i>
                 <span class="nav__name">View More</span>
-              </a>
+        </a>
       </section>
   </section>
   <!-- Cars -->
@@ -167,7 +167,7 @@
       <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
                 <i class="bx bx-home-alt nav__icon"></i>
                 <span class="nav__name">View More</span>
-          </a>
+        </a>
   </section>
 </main>
 @endsection

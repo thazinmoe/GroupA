@@ -1,22 +1,22 @@
-.contact {
+.contacts {
   height: 50vh;
   background: url('../images/img_contactcover.jpg') no-repeat center;
   background-size: cover;
 }
 
 .contact form {
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 32px auto;
+  padding: 32px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   background: #fff;
-  border-radius: .5rem;
-  max-width: 60rem;
+  border-radius: 8px;
+  width: 70%;
 }
 
 .contact form h3 {
-  padding-bottom: 1.5rem;
+  padding-bottom: 24px;
   color: #000;
-  font-size: 2.5rem;
+  font-size: 50px;
   text-align: center;
   text-transform: capitalize;
 }
@@ -24,32 +24,150 @@
 .contact form .inputBox input,
 .contact form textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 16px;
   background: #eee;
-  font-size: 1.7rem;
-  border-radius: .5rem;
+  font-size: 28px;
+  border-radius: 8px;
 }
 
 .contact form .inputBox {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .contact form .inputBox label {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .contact .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: .9rem 3rem;
+  margin-top: 16px;
+  padding: 15px 48px;
   background: #1abc9c;
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 23px;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 8px;
 }
 
 .contact .btn:hover {
   background: #20c997;
   opacity: 1;
+}
+
+/* Ipad */
+@media screen and (min-width : 768px) and (max-width : 1160px){
+  .contacts {
+    height: 50vh;
+    background: url('../images/img_contactcover.jpg') no-repeat center;
+    background-size: cover;
+  }
+  
+  .contact form {
+    margin: 4.267vw auto;
+    padding: 4.267vw;
+    box-shadow: 0.667vw 0.667vw 2.667vw rgba(0, 0, 0, 0.5);
+    background: #fff;
+    border-radius: 1.067vw;
+    width: 70%;
+  }
+  
+  .contact form h3 {
+    padding-bottom: 1.867vw;
+    color: #000;
+    font-size: 4.933vw;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .contact form .inputBox input,
+  .contact form textarea {
+    width: 100%;
+    padding: 2.133vw;
+    background: #eee;
+    font-size: 2.667vw;
+    border-radius: 1.067vw;
+  }
+  
+  .contact form .inputBox {
+    margin-bottom: 4.267vw;
+  }
+  
+  .contact form .inputBox label {
+    font-size: 3.2vw;
+  }
+  
+  .contact .btn {
+    display: inline-block;
+    margin-top: 2.133vw;
+    padding: 1vw 3.4vw;
+    background: #1abc9c;
+    color: #fff;
+    font-size: 3vw;
+    cursor: pointer;
+    border-radius: 1.067vw;
+  }
+  
+  .contact .btn:hover {
+    background: #20c997;
+    opacity: 1;
+  }
+}
+
+/* Phone */
+@media screen and (max-width:767.9px){
+  .contacts {
+    height: 50vh;
+    background: url('../images/img_contactcover.jpg') no-repeat center;
+    background-size: cover;
+  }
+  
+  .contact form {
+    margin: 4.267vw auto;
+    padding: 4.267vw;
+    box-shadow: 0.667vw 0.667vw 2.667vw rgba(0, 0, 0, 0.5);
+    background: #fff;
+    border-radius: 1.067vw;
+    width: 70%;
+  }
+  
+  .contact form h3 {
+    padding-bottom: 3.2vw;
+    color: #000;
+    font-size: 4.967vw;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .contact form .inputBox input,
+  .contact form textarea {
+    width: 100%;
+    padding: 2.133vw;
+    background: #eee;
+    font-size: 3.733vw;
+    border-radius: 1.067vw;
+  }
+  
+  .contact form .inputBox {
+    margin-bottom: 4.267vw;
+  }
+  
+  .contact form .inputBox label {
+    font-size: 3.2vw;
+  }
+  
+  .contact .btn {
+    display: inline-block;
+    margin-top: 2.133vw;
+    padding: 1vw 2.4vw;
+    background: #1abc9c;
+    color: #fff;
+    font-size: 3.067vw;
+    cursor: pointer;
+    border-radius: 1.067vw;
+  }
+  
+  .contact .btn:hover {
+    background: #20c997;
+    opacity: 1;
+  }
 }

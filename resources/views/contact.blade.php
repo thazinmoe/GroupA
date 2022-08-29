@@ -44,7 +44,7 @@
       <p style="color: red;">{{$message}}</p>
       @enderror
     </div>
-    <button type="submit" class="btn">Submit</button>
+    <button type="submit" class="btn">Send</button>
   </form>
 </div>
 <!-- contact section ends -->

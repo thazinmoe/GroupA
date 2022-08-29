@@ -43,11 +43,14 @@
             <div class="form-group mb-3">
               <label for="packageprice">Package Price</label>
               <input type="text" name="price" value="{{$travelPackage->price}}" class="form-control" disabled>              
-              <input type="text" name="package_price" value="{{$travelPackage->price}}" class="form-control" hidden>              
+              <input type="text" name="package_price" value="{{$travelPackage->price}}" class="form-control" hidden>             
             </div>
             <div class="form-group mb-3">
               <label for="packagecount">Package Count</label>                         
-              <input type="number" name="package_count"  class="form-control">              
+              <input type="number" name="package_count"  class="form-control  @error('package_count') is-invalid @enderror">
+              @error('package_count')
+              <p style="color: red; margin-bottom:25px;">{{$message}}</p>
+              @enderror              
             </div>
             <input type="hidden" name="package_id" value="{{$travelPackage->id}}" class="form-control">   
             <div class="form-group mb-3">

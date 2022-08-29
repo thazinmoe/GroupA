@@ -27,7 +27,7 @@
           <img src="{{ asset('frontend/assets/images/mandalay.jpg') }}" alt="">
           <div class="para">
             <p class="p1">Mandalay</p>
-            <p>Mandalay is the economic centre of Upper Myanmar and considered the centre of Burmese culture.</p>
+            <p>Mandalay is the economic centre of Upper Myanmar and considered the centre.</p>
           </div>
         </li>
         <li>

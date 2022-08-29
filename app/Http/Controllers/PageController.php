@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\View\View;
@@ -25,7 +26,11 @@ class PageController extends Controller
 
     public function detail(TravelPackage $travelPackage): View
     {
-        return view('detail', compact('travelPackage'));
+        $car = Car::find($travelPackage->car_id);
+        $car_name = $car->name;
+        $category = Category::find($travelPackage->category_id);
+        $category_name = $category->title;
+        return view('detail', compact('travelPackage','car_name','category_name'));
     }
 
     public function package(Request $request){

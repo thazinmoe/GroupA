@@ -146,7 +146,7 @@
     <h2 class="section-title">Our Blog</h2>
     <hr width="80" class="text-center" />
     <div class="row mt-5 justify-content-center">
-      <div class="row justify-content-center mt-5">
+      <div class="row slick_slider justify-content-center mt-5">
         @foreach($posts as $post)
         <div class="col-lg-4 mb-4 blogpost">
           <a href="{{ route('posts.show', $post)  }}">

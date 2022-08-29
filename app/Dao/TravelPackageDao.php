@@ -16,11 +16,22 @@ use App\Http\Requests\StoreTravelPackageRequest;
  */
 class TravelPackageDao implements TravelPackageDaoInterface
 {
+    /**
+     * gettravelpackage function
+     *
+     * @return void
+     */
     public function gettravelpackage() {
-        $travelPackages = TravelPackage::paginate(5);
+        $travelPackages = TravelPackage::orderBy('id','desc')->paginate(5);
         return $travelPackages;
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return void
+     */
     public function getsearch(Request $request) {
         
         if($request->isMethod('post')){
@@ -31,25 +42,40 @@ class TravelPackageDao implements TravelPackageDaoInterface
         return $travelPackages;
     }
 
+    /**
+     * getcategory function
+     *
+     * @return void
+     */
     public function getcategory() {
         $categories = Category::get();
         return $categories;
     }
 
+    /**
+     * getcar function
+     *
+     * @return void
+     */
     public function getcar() {
         $cars = Car::get();
         return $cars;
     }
 
+    /**
+     * packageStore function
+     *
+     * @param StoreTravelPackageRequest $request
+     * @return void
+     */
     public function packageStore(StoreTravelPackageRequest $request) {
         $data = $request->all();
 
-        $car_price = $data['car_id'];
-
+        $car_id = Car::find($request->car_id);
+        $car_price = $car_id->price;
         $pack_price = $data['price'];
-        
         $total = $car_price + $pack_price;
-        
+                
         $data['price'] = $total;
         $data['image'] = $request->file('image')->store(
             'assets/package', 'public'
@@ -57,7 +83,13 @@ class TravelPackageDao implements TravelPackageDaoInterface
         $slug = Str::slug($request->name);
         return TravelPackage::create($data + ["slug" => $slug]);
     }
-
+    /**
+     * packageUpdate function
+     *
+     * @param StoreTravelPackageRequest $request
+     * @param TravelPackage $travelPackage
+     * @return void
+     */
     public function packageUpdate(StoreTravelPackageRequest $request,TravelPackage $travelPackage) {
         if ($request->image) {
             File::delete('storage/' . $travelPackage->image);
@@ -65,21 +97,25 @@ class TravelPackageDao implements TravelPackageDaoInterface
 
         $data = $request->all();
         
-        $car_price = $data['car_id'];
-
+        $car_id = Car::find($request->car_id);
+        $car_price = $car_id->price;
         $pack_price = $data['price'];
-        
         $total = $car_price + $pack_price;
-
+        
         $data['price'] = $total;
-        $data['image'] = $request->image ? $request->file('image')->store(
-            'assets/package', 'public'
-        ) : $travelPackage->image;
+        if(request()->hasFile('image') && request('image') != ''){
+            $imagePath = public_path('storage/'.$travelPackage->image);
+            if(File::exists($imagePath)){
+                unlink($imagePath);
+            }
+            $image = request()->file('image')->store('assets/package', 'public');
+            $data['image'] = $image;
+        }
 
         $slug = Str::slug($request->name);
         return $travelPackage->update($data + ["slug" => $slug]);
     }
-
+    
     public function packageDestroy(TravelPackage $travelPackage) {
         $destination = 'storage/' . $travelPackage->image;
         if (File::exists($destination)) {

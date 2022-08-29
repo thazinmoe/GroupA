@@ -38,8 +38,14 @@
     </section><!-- Blog -->
 
      <section class="container">
-      <h3 class="text-center mb-4">Popular Post</h3>
-        <div class="row justify-content-center">
+      <div class="txt-left"><h3 class="text-center mb-4">Posts</h3></div>
+      
+        <a href="{{ route('posts') }}" class="txt-right nav__link  {{ request()->is('posts') ? ' active-link' : '' }}">
+                <i class="bx bx-book-alt nav__icon"></i>
+                <span class="nav__name txt-right">All Posts</span>
+              </a>
+      
+        <div class="row slick_slider justify-content-center">
 
             @foreach(\App\Models\Post::get() as $post)
             <div class="col-lg-4 mb-4">
@@ -57,6 +63,15 @@
                     <p class="title-alt mt-5">
                       {{ $post->excerpt }}
                     </p>
+                    <!--<p>
+              {{ \Illuminate\Support\Str::limit($post->content, 200, '') }}
+              @if (strlen($post->content) > 200)
+                  <span id="dots">...</span>
+                  <span id="more">{{ substr($post->content, 100) }}</span>
+              @endif
+            </p>
+
+            <button onclick="myFunction()" id="myBtn" class="read-more">Read more</button>-->
                   </div>
                 </div>
               </a>

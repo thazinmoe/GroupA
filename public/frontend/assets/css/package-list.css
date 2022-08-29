@@ -1,627 +1,781 @@
 .main-visual {
-    position: relative;
-    background: url("../images/mv-cover.jpg") no-repeat center/cover;
-    height: 50vh;
-    margin-bottom: 0;
+  position: relative;
+  height: 50vh;
+  margin-bottom: 0;
+  background: url("../images/mv-cover.jpg") no-repeat center/cover;
 }
+
 .mv-part {
-    padding-top: 80px;
+  padding-top: 80px;
 }
+
 .main-visual .mv-head {
-    position: absolute;
-    left: 44%;
-    top: 20%;
-    font-weight: 700;
-    font-size: 30px;
-    text-align: center;
-    color: #fff;
-    padding-top: 50px;
-    margin-top: 50px;
+  position: absolute;
+  top: 20%;
+  left: 44%;
+  margin-top: 50px;
+  padding-top: 50px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
 }
+
 .main-visual .mv-head::after {
-    position: absolute;
-    width: 50%;
-    height: 4px;
-    content: "";
-    left: 23%;
-    top: 113%;
-    border-radius: 10px;
-    background-color: #000;
+  position: absolute;
+  top: 113%;
+  left: 23%;
+  width: 50%;
+  height: 4px;
+  background-color: #000;
+  content: "";
+  border-radius: 10px;
 }
+
 /*second row start*/
 .intro-sec-row {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
+
 .intro-package {
-    padding-top: 60px;
-    background-color: #f2f2f2;
+  padding-top: 60px;
+  background-color: #f2f2f2;
 }
+
 .intro-package .intro-left {
-    float: left;
-    width: 50%;
+  float: left;
+  width: 50%;
 }
+
 .intro-package .intro-left img {
-    width: 540px;
-    border-radius: 10px;
+  width: 540px;
+  border-radius: 10px;
 }
+
 .intro-package .intro-right {
-    float: right;
-    width: 50%;
-    padding-top: 35px;
+  float: right;
+  width: 50%;
+  padding-top: 35px;
 }
+
 .intro-right h3 {
-    margin-bottom: 35px;
-    text-align: center;
-    width: 100%;
-    line-height: 1.4;
+  width: 100%;
+  line-height: 1.4;
+  font-size: 25px;
+  margin-bottom: 35px;
+  text-align: center;
 }
-.intro-right p {  
-    font-size: 18px;  
-    font-weight: 500;
-    line-height: 1.3;
+
+.intro-right p {
+  line-height: 1.3;
+  font-size: 18px;
+  font-weight: 500;
 }
+
 .tabs-nav {
-    text-align: center;
+  text-align: center;
 }
+
 .tabs-nav li {
-    display: inline-block;
-    font-weight: bold;
-    margin-right: 35px;
+  display: inline-block;
+  margin-right: 35px;
+  font-weight: bold;
 }
+
 .tabs-nav li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
+
 .tabs-nav li a {
-    font-size: 18px;
+  font-size: 18px;
 }
+
 .tabs-nav li.active {
-    padding-bottom: 7px;
-    border-bottom: 4px solid #1abc9c;
-    border-radius: 4px;
+  padding-bottom: 7px;
+  border-bottom: 4px solid #1abc9c;
+  border-radius: 4px;
 }
+
 .tabs-content {
-    margin-top: 40px;
+  margin-top: 40px;
 }
+
 .tabs-content>div:not(:first-child) {
-    display: none;
+  display: none;
 }
+
 /*thrid row start*/
 .third-row {
-    padding-top: 60px;
-    margin-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 60px;
 }
+
 .category-part h1 {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  text-align: center;
 }
+
 .category-part .float-left {
-    float : left;
-    width : 18%;
-    margin-right: 20px;
-    margin-top: 25px;
+  float: left;
+  width: 18%;
+  margin-top: 25px;
+  margin-left: 23px;
 }
+
 .category-part .float-left h3 {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
 }
+
 .category-part .float-left li {
-    position: relative;
-    margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
+
 .category-part .float-left li:before {
-    position: absolute;
-    margin-top: -1px;
-    margin-left: -16px;
-    content : url("../images/li-ellipse.png");
+  position: absolute;
+  margin-top: -1px;
+  margin-left: -16px;
+  content: url("../images/li-ellipse.png");
 }
+
 .category-part .float-left li a {
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
+
 .category-part .float-right {
-    float : right;
-    width : 80%;
+  float: right;
+  width: 80%;
 }
+
 .float-right li {
-    float : left;
-    margin-right: 25px;
-    margin-bottom: 30px;
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 30px;
 }
-.float-right li:nth-child(3n){
-    margin-right: 0;
+
+.float-right li:nth-child(3n) {
+  margin-right: 0;
 }
+
 .third-row .float-right .card img {
-    height: 200px;
-    width: 300px;
+  width: 300px;
+  height: 200px;
 }
+
 .third-row .float-right .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}  
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 300px;
+}
+
 .third-row .float-right .card h1 {
-    font-size: 20px;
-    margin-top: 10px;
+  margin-top: 10px;
+  font-size: 20px;
 }
+
 .third-row .float-right .card .price {
-    color: grey;
-    font-size: 18px;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  color: grey;
+  font-size: 18px;
 }
+
 .third-row .float-right .card button {
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #1abc9c;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-    border: 1px solid transparent;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid transparent;
+  background-color: #1abc9c;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  outline: 0;
+  cursor: pointer;
 }
 
 .third-row .float-right .card button:hover {
-    transition: 0.5s;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #1abc9c;
+  border: 1px solid #1abc9c;
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
 }
 
 .fourth-row {
-    padding-top: 40px;
-    margin-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 40px;
 }
+
 .center-class {
-    text-align: center;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
+
 .fourth-row .cmn-head {
-    color: #1a1a1a;
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
 }
-.fourth-row .small-head{
-    font-size: 14px;
-    font-weight: 500;
-    color: #1abc9c;
-    text-align: center;
-    margin-bottom: 30px;
+
+.fourth-row .small-head {
+  margin-bottom: 30px;
+  color: #1abc9c;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
 }
+
 .fourth-card {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background-color: #f2f2f2;
+  border-radius: 10px;
 }
-.inner-float div{
-    float: left;
+
+.inner-float div {
+  float: left;
 }
+
 .float-img {
-    margin-right: 30px;
-    width: 20%;
+  width: 20%;
+  margin-right: 30px;
 }
+
 .float-img img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
+
 .float-texts {
-    padding-top: 20px;
-    padding-right: 10px;
-    width: 50%;
-    border-right: 1px solid #000;
+  width: 50%;
+  padding-top: 20px;
+  padding-right: 10px;
+  border-right: 1px solid #000;
 }
+
 .float-texts h1 {
-    margin-bottom: 10px;
-    line-height: 1.5;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
+
 .float-texts .desc {
-    width: 580px;
-    line-height: 1.3;
+  width: 580px;
+  line-height: 1.3;
+  font-size: 16px;
 }
+
+.float-texts .price {
+  line-height: 1.3;
+  font-size: 16px;
+}
+
 .float-buttons {
-    width: 20%;
-    margin-left: 15px;
-    padding-top: 40px;
+  width: 20%;
+  margin-left: 15px;
+  padding-top: 40px;
 }
+
 .float-buttons .location {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
 }
+
 .float-buttons .duration {
-    font-weight: 700;
-    font-size: 15px;
-    font-style: italic;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: italic;
 }
+
 .float-buttons button {
-    font-size: 15px;
-    padding: 10px 25px;
-    background-color: #1abc9c;
-    border-radius: 5px;
-    color: #fff;
-    border : 1px solid transparent;
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
 }
+
 .float-buttons button:hover {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #1abc9c;
-    transition: 0.5s;
+  border: 1px solid #1abc9c;
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
 }
 
 /* Ipad */
 @media screen and (min-width : 768px) and (max-width : 1160px) {
-    .main-visual {
-        height: 50vh;
-    }
-    .mv-part {
-        padding-top: 10.417vw;
-    }
-    .main-visual .mv-head { 
-        font-size: 3.906vw;
-        padding-top: 4vw;
-        margin-top: 3.51vw;
-    }
-    .main-visual .mv-head::after {
-        height: 0.521vw;
-        border-radius: 1.302vw;
-    }
-    /*second row start*/
-    .intro-sec-row {
-        margin-bottom: 0;
-    }
-    .intro-package {
-        padding-top: 7.813vw;
-    }
-    .intro-package .intro-left {
-        width: 100%;
-        text-align: center;
-    }
-    .intro-package .intro-left img {
-        width: 80%;
-        border-radius: 1.302vw;
-    }
-    .intro-package .intro-right {
-        width: 100%;
-        padding-top: 4.557vw;
-    }
-    .intro-right h3 {
-        margin-bottom: 4.557vw;
-        width: 100%;
-    }
-    .intro-right p {  
-        font-size: 2.344vw;  
-    }
-    .tabs-nav li {
-        margin-right: 4.557vw;
-    }
-    .tabs-nav li:last-child {
-        margin-right: 0;
-    }
-    .tabs-nav li a {
-        font-size: 2.344vw;
-    }
-    .tabs-nav li.active {
-        padding-bottom: 0.911vw;
-        border-bottom: 0.521vw solid #1abc9c;
-        border-radius: 0.521vw;
-    }
-    .tabs-content {
-        margin-top: 5.208vw;
-    }
-    /*thrid row start*/
-    .third-row {
-        padding-top: 7.813vw;
-        margin-bottom: 0;
-    }
-    .category-part h1 {
-        font-size: 3.385vw;
-        margin-bottom: 3.906vw;
-    }
-    .category-part .float-left {
-        width : 100%;
-        margin-top: 2vw;
-        margin-bottom: 2vw;
-        text-align: center;
-    }
-    .category-part .float-left h3 {
-        margin-bottom: 3.906vw;
-        font-size: 2.604vw;
-    }
-    .category-part .float-left li {
-        margin-bottom: 2.604vw;
-    }
-    .category-part .float-left li:before {
-        display: none;
-    }
+  .main-visual {
+    height: 50vh;
+  }
 
-    .category-part .float-left li a {
-        font-size: 2.344vw;
-    }
-    .category-part .float-right {
-        width : 100%;
-    }
-    .float-right li {
-        float : left;
-        margin-right: 1vw;
-        margin-bottom: 3.906vw;
-    }
-    .float-right li:nth-child(2n){
-        margin-right: 0;
-    }
-    .card {
-        box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);
-        max-width: 39.063vw;
-    }
-    .card h1 {
-        font-size: 2.604vw;
-        margin-top: 1.302vw;
-    }
-    .price {
-        font-size: 2.344vw;
-        margin-bottom: 1.953vw;
-    }
-    .card button {
-        padding: 1.563vw;
-        width: 100%;
-        font-size: 2.344vw;
-        border: 0.13vw solid transparent;
-    }    
-    /*fourth row start*/
-    .fourth-row {
-        padding-top: 5.208vw;
-        margin-bottom: 0;
-    }
-    .center-class {
-        margin-bottom: 2.604vw;
-    }
-    .fourth-row .cmn-head {
-        margin-bottom: 1.302vw;
-    }
-    .fourth-row .small-head{
-        font-size: 1.823vw;
-        margin-bottom: 3.906vw;
-    }
-    .fourth-card {
-        border-radius: 1.302vw;
-        border: 0.13vw solid transparent;
-        margin-bottom: 2.604vw;
-    }
-    
-    .inner-float div{
-        float: left;
-    }
-    .fourth-card .float-img {
-        margin-right: 3.906vw;
-        width: 40%;
-    }
-    .float-img img {
-        border-radius: 1.302vw;
-    }
-    .float-texts {
-        padding-top: 2.604vw;
-        padding-right: 1.302vw;
-        width: 50%;
-        border-right: 0;
-    }
-    .float-texts h1 {
-        margin-bottom: 1.302vw;
-    }
-    .float-texts .desc {
-        width: 100%;
-    }
-    .float-buttons {
-        width: 100%;
-        margin-left: 1.953vw;
-        padding-top: 5.208vw;
-    }
-    .float-buttons .location {
-        float: left;
-        margin-right: 2vw;
-        font-size: 2.344vw;
-        margin-bottom: 1.953vw;
-    }
-    .float-buttons .duration {
-        float: left;
-        margin-right: 2vw;
-        font-size: 1.953vw;
-        margin-bottom: 1.953vw;
-    }
-    .float-buttons button {
-        font-size: 1.953vw;
-        float: left;
-        margin-top: -1vw;
-        margin-bottom: 2vw;
-        padding: 1.302vw 3.255vw;
-        border-radius: 0.651vw;
-        border : 0.13vw solid transparent;
-    }
-    .float-buttons button:hover {
-        border: 0.13vw solid #1abc9c;
-    }
+  .mv-part {
+    padding-top: 10.417vw;
+  }
+
+  .main-visual .mv-head {
+    margin-top: 3.51vw;
+    padding-top: 4vw;
+    font-size: 3.906vw;
+  }
+
+  .main-visual .mv-head::after {
+    height: 0.521vw;
+    border-radius: 1.302vw;
+  }
+
+  /*second row start*/
+  .intro-sec-row {
+    margin-bottom: 0;
+  }
+
+  .intro-package {
+    padding-top: 7.813vw;
+  }
+
+  .intro-package .intro-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-package .intro-left img {
+    width: 80%;
+    border-radius: 1.302vw;
+  }
+
+  .intro-package .intro-right {
+    width: 100%;
+    padding-top: 4.557vw;
+  }
+
+  .intro-right h3 {
+    font-size: 3.255vw;
+    width: 100%;
+    margin-bottom: 4.557vw;
+  }
+
+  .intro-right p {
+    font-size: 2.344vw;
+  }
+
+  .tabs-nav li {
+    margin-right: 4.557vw;
+  }
+
+  .tabs-nav li:last-child {
+    margin-right: 0;
+  }
+
+  .tabs-nav li a {
+    font-size: 2.344vw;
+  }
+
+  .tabs-nav li.active {
+    padding-bottom: 0.911vw;
+    border-bottom: 0.521vw solid #1abc9c;
+    border-radius: 0.521vw;
+  }
+
+  .tabs-content {
+    margin-top: 5.208vw;
+  }
+
+  /*thrid row start*/
+  .third-row {
+    margin-bottom: 0;
+    padding-top: 7.813vw;
+  }
+
+  .category-part h1 {
+    margin-bottom: 3.906vw;
+    font-size: 3.385vw;
+  }
+
+  .category-part .float-left {
+    width: 100%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    text-align: center;
+  }
+
+  .category-part .float-left h3 {
+    margin-bottom: 3.906vw;
+    font-size: 2.604vw;
+  }
+
+  .category-part .float-left li {
+    margin-bottom: 2.604vw;
+  }
+
+  .category-part .float-left li:before {
+    display: none;
+  }
+
+  .category-part .float-left li a {
+    font-size: 2.344vw;
+  }
+
+  .category-part .float-right {
+    width: 100%;
+  }
+
+  .float-right li {
+    float: left;
+    margin-right: 1vw;
+    margin-bottom: 3.906vw;
+  }
+
+  .float-right li:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .card {
+    box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);
+    max-width: 39.063vw;
+  }
+
+  .third-row .float-right .card h1 {
+    margin-top: 1.302vw;
+  }
+
+  .third-row .float-right .card .price {
+    margin-bottom: 1.953vw;
+    font-size: 2.344vw;
+  }
+
+  .third-row .float-right .card button {
+    width: 100%;
+    padding: 1.563vw;
+    border: 0.13vw solid transparent;
+    font-size: 2.344vw;
+  }
+
+  /*fourth row start*/
+  .fourth-row {
+    margin-bottom: 0;
+    padding-top: 5.208vw;
+  }
+
+  .center-class {
+    margin-bottom: 2.604vw;
+  }
+
+  .fourth-row .cmn-head {
+    margin-bottom: 1.302vw;
+  }
+
+  .fourth-row .small-head {
+    margin-bottom: 3.906vw;
+    font-size: 1.823vw;
+  }
+
+  .fourth-card {
+    margin-bottom: 2.604vw;
+    border: 0.13vw solid transparent;
+    border-radius: 1.302vw;
+  }
+
+  .inner-float div {
+    float: left;
+  }
+
+  .fourth-card .float-img {
+    width: 40%;
+    margin-right: 3.906vw;
+  }
+
+  .float-img img {
+    border-radius: 1.302vw;
+  }
+
+  .float-texts {
+    width: 50%;
+    padding-top: 2.604vw;
+    padding-right: 1.302vw;
+    border-right: 0;
+  }
+
+  .float-texts h1 {
+    margin-bottom: 1.302vw;
+    font-size: 2.344vw;
+  }
+
+  .float-texts .desc {
+    width: 100%;
+    font-size: 2.083vw;
+  }
+
+  .float-texts .price {
+    font-size: 2.083vw;
+  }
+
+  .float-buttons {
+    width: 100%;
+    margin-left: 1.953vw;
+    padding-top: 5.208vw;
+  }
+
+  .float-buttons .location {
+    float: left;
+    margin-right: 2vw;
+    margin-bottom: 1.953vw;
+    font-size: 2.344vw;
+  }
+
+  .float-buttons .duration {
+    float: left;
+    margin-right: 2vw;
+    margin-bottom: 1.953vw;
+    font-size: 1.953vw;
+  }
+
+  .float-buttons button {
+    float: left;
+    margin-top: -1vw;
+    margin-bottom: 2vw;
+    padding: 1.302vw 3.255vw;
+    border: 0.13vw solid transparent;
+    font-size: 1.953vw;
+    border-radius: 0.651vw;
+  }
+
+  .float-buttons button:hover {
+    border: 0.13vw solid #1abc9c;
+  }
 }
 
 /* Mobile */
 @media screen and (max-width:767.9px) {
-    .main-visual {
-        height: 50vh;
-    }
-    .mv-part {
-        padding-top: 12.5vw;
-    }
-    .main-visual .mv-head {
-        font-size: 4.688vw;
-        padding-top:6vw;
-        margin-top: 5vw;
-    }
-    .main-visual .mv-head::after {
-        height: 0.625vw;
-        border-radius: 1.563vw;
-    }
-    /*second row start*/
-    .intro-sec-row {
-        margin-bottom: 0;
-    }
-    .intro-package {
-        padding-top: 9.375vw;
-    }
-    .intro-package .intro-left {
-        width: 100%;
-    }
-    .intro-package .intro-left img {
-        width: 100%;
-        border-radius: 1.563vw;
-    }
-    .intro-package .intro-right {
-        width: 100%;
-        padding-top: 5.469vw;
-    }
-    .intro-right h3 {
-        margin-bottom: 5.469vw;
-        width: 100%;
-    }
-    .intro-right p {  
-        font-size: 2.813vw;  
-    }
-    .tabs-nav li {
-        margin-right: 5.469vw;
-    }
-    .tabs-nav li:last-child {
-        margin-right: 0;
-    }
-    .tabs-nav li a {
-        font-size: 2.813vw;
-    }
-    .tabs-nav li.active {
-        padding-bottom: 1.094vw;
-        border-bottom: 0.625vw solid #1abc9c;
-        border-radius: 0.625vw;
-    }
-    .tabs-content {
-        margin-top: 6.25vw;
-    }
-    /*thrid row start*/
-    .third-row {
-        padding-top: 9.375vw;
-        margin-bottom: 0;
-    }
-    .category-part h1 {
-        font-size: 4.063vw;
-        margin-bottom: 4.688vw;
-    }
-    .category-part .float-left {
-        width : 100%;
-        text-align: center;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-    }
-    .category-part .float-left h3 {
-        margin-bottom: 4.688vw;
-        font-size: 3.125vw;
-    }
-    .category-part .float-left li {
-        margin-bottom: 3.125vw;
-    }
-    .category-part .float-left li:before {
-        display: none;
-    }
-    .category-part .float-left li a {
-        font-size: 2.813vw;
-    }
-    .category-part .float-right {
-        width : 100%;
-    }
-    .float-right li {
-        width: 100%;
-        margin-bottom: 4.688vw;
-    }
-    .card {
-        box-shadow: 0 0.625vw 1.25vw 0 rgba(0, 0, 0, 0.2);
-        max-width: 46.875vw;
-    }  
-    .card h1 {
-        font-size: 3.125vw;
-        margin-top: 1.563vw;
-    }
-    .price {
-        font-size: 2.813vw;
-        margin-bottom: 2.344vw;
-    }
-    .card button {
-        padding: 1.875vw;
-        width: 100%;
-        font-size: 2.813vw;
-        border: 0.156vw solid transparent;
-    }
-    
-    .fourth-row {
-        padding-top: 6.25vw;
-        margin-bottom: 0;
-    }
-    .center-class {
-        margin-bottom: 3.125vw;
-    }
-    .fourth-row .cmn-head {
-        margin-bottom: 1.563vw;
-    }
-    .fourth-row .small-head{
-        font-size: 2.188vw;
-        margin-bottom: 4.688vw;
-    }
-    .fourth-card {
-        border-radius: 1.563vw;
-        border: 0.156vw solid transparent;
-        margin-bottom: 3.125vw;
-    }
-    .inner-float div{
-        float: left;
-    }
-    .float-img {
-        margin-right: 2vw;
-        width: 49%;
-    }
-    .float-img img {
-        border-radius: 1.563vw;
-    }
-    .float-texts {
-        padding-top: 3.125vw;
-        padding-right: 1.563vw;
-        width: 48%;
-        border-right: 0;
-    }
-    .float-texts h1 {
-        margin-bottom: 1.563vw;
-    }
-    .float-texts .desc {
-        width: 100%;
-    }
-    .float-buttons {
-        width: 100%;
-        margin-left: 2.344vw;
-        padding-top: 6.25vw;
-    }
-    .float-buttons .location {
-        float: left;
-        margin-right: 2vw;
-        font-size: 2.813vw;
-        margin-bottom: 2.344vw;
-    }
-    .float-buttons .duration {
-        float: left;
-        margin-right: 2vw;
-        font-size: 2.344vw;
-        margin-bottom: 2.344vw;
-    }
-    .float-buttons button {
-        font-size: 2.344vw;
-        margin-top: -2vw;
-        margin-bottom: 2vw;
-        padding: 1.563vw 3.906vw;
-        border-radius: 0.781vw;
-        border : 0.156vw solid transparent;
-    }
-    .float-buttons button:hover {
-        border: 0.156vw solid #1abc9c;
-    }
+  .main-visual {
+    height: 50vh;
+  }
+
+  .mv-part {
+    padding-top: 12.5vw;
+  }
+
+  .main-visual .mv-head {
+    margin-top: 5vw;
+    padding-top: 6vw;
+    font-size: 4.688vw;
+  }
+
+  .main-visual .mv-head::after {
+    height: 0.625vw;
+    border-radius: 1.563vw;
+  }
+
+  /*second row start*/
+  .intro-sec-row {
+    margin-bottom: 0;
+  }
+
+  .intro-package {
+    padding-top: 9.375vw;
+  }
+
+  .intro-package .intro-left {
+    width: 100%;
+  }
+
+  .intro-package .intro-left img {
+    width: 100%;
+    border-radius: 1.563vw;
+  }
+
+  .intro-package .intro-right {
+    width: 100%;
+    padding-top: 5.469vw;
+  }
+
+  .intro-right h3 {
+    font-size: 3.906vw;
+    width: 100%;
+    margin-bottom: 5.469vw;
+  }
+
+  .intro-right p {
+    font-size: 2.813vw;
+  }
+
+  .tabs-nav li {
+    margin-right: 5.469vw;
+  }
+
+  .tabs-nav li:last-child {
+    margin-right: 0;
+  }
+
+  .tabs-nav li a {
+    font-size: 2.813vw;
+  }
+
+  .tabs-nav li.active {
+    padding-bottom: 1.094vw;
+    border-bottom: 0.625vw solid #1abc9c;
+    border-radius: 0.625vw;
+  }
+
+  .tabs-content {
+    margin-top: 6.25vw;
+  }
+
+  /*thrid row start*/
+  .third-row {
+    margin-bottom: 0;
+    padding-top: 9.375vw;
+  }
+
+  .category-part h1 {
+    margin-bottom: 4.688vw;
+    font-size: 4.063vw;
+  }
+
+  .category-part .float-left {
+    width: 100%;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    text-align: center;
+  }
+
+  .category-part .float-left h3 {
+    margin-bottom: 4.688vw;
+    font-size: 3.125vw;
+  }
+
+  .category-part .float-left li {
+    margin-bottom: 3.125vw;
+  }
+
+  .category-part .float-left li:before {
+    display: none;
+  }
+
+  .category-part .float-left li a {
+    font-size: 2.813vw;
+  }
+
+  .category-part .float-right {
+    width: 100%;
+  }
+
+  .float-right li {
+    width: 100%;
+    margin-bottom: 4.688vw;
+  }
+
+  .card {
+    box-shadow: 0 0.625vw 1.25vw 0 rgba(0, 0, 0, 0.2);
+    max-width: 46.875vw;
+  }
+
+  .third-row .float-right .card h1 {
+    margin-top: 1.563vw;
+    font-size: 3.125vw;
+  }
+
+  .third-row .float-right .card .price {
+    margin-bottom: 2.344vw;
+    font-size: 2.813vw;
+  }
+
+  .third-row .float-right .card button {
+    width: 100%;
+    padding: 1.875vw;
+    border: 0.156vw solid transparent;
+    font-size: 2.813vw;
+  }
+
+  .fourth-row {
+    margin-bottom: 0;
+    padding-top: 6.25vw;
+  }
+
+  .center-class {
+    margin-bottom: 3.125vw;
+  }
+
+  .fourth-row .cmn-head {
+    margin-bottom: 1.563vw;
+  }
+
+  .fourth-row .small-head {
+    margin-bottom: 4.688vw;
+    font-size: 2.188vw;
+  }
+
+  .fourth-card {
+    margin-bottom: 3.125vw;
+    border: 0.156vw solid transparent;
+    border-radius: 1.563vw;
+  }
+
+  .inner-float div {
+    float: left;
+  }
+
+  .float-img {
+    width: 49%;
+    margin-right: 2vw;
+  }
+
+  .float-img img {
+    border-radius: 1.563vw;
+  }
+
+  .float-texts {
+    width: 48%;
+    padding-top: 3.125vw;
+    padding-right: 1.563vw;
+    border-right: 0;
+  }
+
+  .float-texts h1 {
+    margin-bottom: 1.563vw;
+    font-size: 2.813vw;
+  }
+
+  .float-texts .desc {
+    width: 100%;
+    font-size: 2.500vw;
+  }
+
+  .float-texts .price {
+    font-size: 2.500vw;
+  }
+
+  .float-buttons {
+    width: 100%;
+    margin-left: 2.344vw;
+    padding-top: 6.25vw;
+  }
+
+  .float-buttons .location {
+    float: left;
+    margin-right: 2vw;
+    margin-bottom: 2.344vw;
+    font-size: 2.813vw;
+  }
+
+  .float-buttons .duration {
+    float: left;
+    margin-right: 2vw;
+    margin-bottom: 2.344vw;
+    font-size: 2.344vw;
+  }
+
+  .float-buttons button {
+    margin-top: -2vw;
+    margin-bottom: 2vw;
+    padding: 1.563vw 3.906vw;
+    border: 0.156vw solid transparent;
+    font-size: 2.344vw;
+    border-radius: 0.781vw;
+  }
+
+  .float-buttons button:hover {
+    border: 0.156vw solid #1abc9c;
+  }
 }

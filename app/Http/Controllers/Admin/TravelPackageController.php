@@ -62,11 +62,12 @@ class TravelPackageController extends Controller
     public function edit(TravelPackage $travelPackage)
     {
         $categories = Category::get();
-        $cars = Car::get();
-
+        $cars = Car::get();     
+        $car_id = Car::find($travelPackage->car_id);
+        $car_price = $car_id->price;
         $categories = $this->travelpackageInterface->getcategory();
         $cars = $this->travelpackageInterface->getcar();
-        return view('admin.travel-packages.edit', compact('travelPackage', 'categories','cars'));
+        return view('admin.travel-packages.edit', compact('travelPackage', 'categories','cars','car_price'));
     }
 
     public function update(StoreTravelPackageRequest $request, TravelPackage $travelPackage)

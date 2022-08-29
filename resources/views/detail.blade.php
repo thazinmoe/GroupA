@@ -41,7 +41,27 @@
           </div>
           <div class="col-12 col-md-12 col-lg-5">
             <div class="card bordered card-form" style="padding: 30px 40px">
-              <h4 class="text-center">Start Booking</h4>
+              <h4 class="text-center mb-3">Start Booking</h4>              
+              <div
+                class="alert alert-secondary"
+                style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
+                role="alert"
+              >
+                Category :
+                <span class="text-gray-500 font-weight-light"
+                  >{{ $category_name }}</span
+                >
+              </div>
+              <div
+                class="alert alert-secondary"
+                style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
+                role="alert"
+              >
+                Car :
+                <span class="text-gray-500 font-weight-light"
+                  >{{ $car_name }}</span
+                >
+              </div>
               <div
                 class="alert alert-secondary"
                 style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
@@ -59,6 +79,7 @@
                   >{{ number_format($travelPackage->price) }} MMK</span
                 >
               </div>
+<<<<<<< HEAD
               <h5 class="">Send Payment</h5>
              <div class="card-bank d-flex align-items-center justify-content-around">
                 <img height="40" width="80" src="{{ asset('frontend/assets/images/testing.png') }}" alt="">
@@ -67,6 +88,8 @@
                   <b>09 00022233</b>
                 </div>
              </div>
+=======
+>>>>>>> b199a44d42daf5842c9f79a656a2ac8e0aeea357
               <a onClick="return confirm('Are you sure booking ?')" class="btn btn-book btn-block mt-3" href="{{ route('add-customer', $travelPackage) }}"
                 >Continue to Book</a
               >

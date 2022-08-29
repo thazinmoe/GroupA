@@ -26,24 +26,71 @@ class TravelPackageService implements TravelPackageServiceInterface
     {
         $this->travelpackageDao = $travelpackageDaoInterface;
     }
+
+    /**
+     * gettravelpackage function
+     *
+     * @return void
+     */
     public function gettravelpackage() {
         return $this->travelpackageDao->gettravelpackage();
     }
+
+    /**
+     * getsearch function
+     *
+     * @param Request $request
+     * @return void
+     */
     public function getsearch(Request $request) {
         return $this->travelpackageDao->getsearch($request);
     }
+
+    /**
+     * getcategory function
+     *
+     * @return void
+     */
     public function getcategory() {
         return $this->travelpackageDao->getcategory();
     }
+
+    /**
+     * getcar function
+     *
+     * @return void
+     */
     public function getcar() {
         return $this->travelpackageDao->getcar();
     }
+
+    /**
+     * packageStore function
+     *
+     * @param StoreTravelPackageRequest $request
+     * @return void
+     */
     public function packageStore(StoreTravelPackageRequest $request) {
         return $this->travelpackageDao->packageStore($request);
     }
+
+    /**
+     * packageUpdate function
+     *
+     * @param StoreTravelPackageRequest $request
+     * @param TravelPackage $travelPackage
+     * @return void
+     */
     public function packageUpdate(StoreTravelPackageRequest $request,TravelPackage $travelPackage) {
         return $this->travelpackageDao->packageUpdate($request,$travelPackage);
     }
+
+    /**
+     * packageDestroy function
+     *
+     * @param TravelPackage $travelPackage
+     * @return void
+     */
     public function packageDestroy(TravelPackage $travelPackage) {
         return $this->travelpackageDao->packageDestroy($travelPackage);
     }

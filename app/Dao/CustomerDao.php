@@ -55,6 +55,8 @@ class CustomerDao implements CustomerDaoInterface
         $customer->customer_name = $request->customer_name;
         $customer->email = $request->email;
         $customer->phno = $request->phno;
+        $customer->package_price = $request->package_price * $request->package_count;
+        $customer->package_count = $request->package_count;
         $customer->package_id = $request->package_id;
         $customer->save();
         $customer->notify(new ComfirmEmailNotification($customer));
@@ -81,24 +83,6 @@ class CustomerDao implements CustomerDaoInterface
     public function getCustomerComfirm($id)
     {
         $customer = Customer_comfirm::find($id);
-        return $customer;
-    }
-
-    /**
-     * getCustomerComfirmUpdate function
-     *
-     * @param Request $request
-     * @param [type] $id
-     * @return void
-     */
-    public function getCustomerComfirmUpdate(Request $request, $id)
-    {
-        $customer = Customer_comfirm::find($id);
-        $customer->customer_name = $request->input('customer_name');
-        $customer->email = $request->input('email');
-        $customer->phno = $request->input('phno');
-        $customer->package_id = $request->input('package_id');
-        $customer->update();
         return $customer;
     }
 

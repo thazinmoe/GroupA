@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="container-fluid text-center py-4 border-top mt-4">
-          <small>@Copyright • Travel Package 2022 • All reserved</small>
+          <small>@Copyright • Travel Package <?php echo date("Y");?> • All reserved</small>
         </div>
       </div>
     </footer>

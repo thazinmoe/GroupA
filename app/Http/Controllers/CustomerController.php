@@ -72,37 +72,6 @@ class CustomerController extends Controller
     }
 
     /**
-     * edit function
-     *
-     * @param [type] $id
-     * @return void
-     */
-    public function edit($id)
-    {
-        $data = $this->customerInterface->getTravelPackage();
-        $customer = $this->customerInterface->getCustomerComfirm($id);
-        return view('customer.edit', [
-            'customer' => $customer,
-            'travelPackages' => $data,
-        ]);
-    }
-
-    /**
-     * update function
-     *
-     * @param Request $request
-     * @param [type] $id
-     * @return void
-     */
-    public function update(Request $request, $id)
-    {
-        $customer = $this->customerInterface->getCustomerComfirmUpdate($request, $id);
-        if ($customer) {
-            return back()->with('status', 'Customer Booking Updated Successfully');
-        }
-    }
-
-    /**
      * completed function
      *
      * @param [type] $id

@@ -74,8 +74,8 @@
  margin-bottom: 5px;
 }
 .container-blog .img-title{
-  
-  text-shadow: 2px 2px #E4A9A8;
+  font-weight: 700;
+  font-size: larger;
   text-align: center;
 
 }
@@ -96,7 +96,7 @@
 }
 
 .blogpost .card-post .post-data{
-    margin: 60px 10px 0px;
+    margin: 12px 10px 12px;
     text-transform: capitalize;
 }
 .blogpost .card-post .post-data span{
@@ -122,6 +122,7 @@
 .blogpost .blogImg img {
   border-radius: 5px;
  }
+ 
  /*Slick Slider*/
  .slick-prev:before {
   position: absolute;
@@ -142,8 +143,68 @@
 
 .slick-next {
   top: 46%;
-  right: 45px;
+  right: 78px;
 }
+.acc-container {
+  max-width: 700px;
+  width: 450px;
+  margin-left: 85px;
+}
+
+.acc {
+  margin-bottom: 10px;
+}
+
+.acc p {
+  font-size: 15px;
+
+}
+
+.acc-head {
+  background-color: #3D8DAE;
+  padding: 15px 10px;
+  font-size: 22px;
+  position: relative;
+  cursor: pointer;
+ }
+
+ .acc-head::before,
+ .acc-head::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  background-color: #fff;
+  transition: all .3s;
+ }
+
+ .acc-head::before {
+  right: 30px;
+  width: 3px;
+  height: 20px;
+  margin-top: -10px;
+}
+
+.acc-head::after {
+  right: 21px;
+  width: 20px;
+  height: 3px;
+  margin-top: -2px;
+}
+
+.acc-head p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.acc-content {
+  padding: 15px 10px;
+  display: none;
+}
+        
+.acc-head.active::before {
+    transform: rotate(90deg);
+}
+
 
 /*PostDetail*/
 .blogDetail {
@@ -209,5 +270,13 @@
   }
 
   #more  {display:  none;}
+
+  .container .txt-left {
+    float:left;
+  }
+
+  .container .txt-right {
+    float:right;
+  }
 
  

@@ -69,18 +69,6 @@ class CustomerService implements CustomerServiceInterface
     }
 
     /**
-     * getCustomerComfirmUpdate function
-     *
-     * @param Request $request
-     * @param [type] $id
-     * @return void
-     */
-    public function getCustomerComfirmUpdate(Request $request, $id)
-    {
-        return $this->customerDao->getCustomerComfirmUpdate($request, $id);
-    }
-
-    /**
      * getDeleteCustomerList function
      *
      * @param [type] $id

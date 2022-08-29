@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero" id="hero">
+<section class="contact" id="hero">
   <div class="hero-content h-100 d-flex justify-content-center align-items-center flex-column">
     <h1 class="text-center text-white display-4">Contact Us</h1>
     <p class="text-white">Please Fill Your Message</p>

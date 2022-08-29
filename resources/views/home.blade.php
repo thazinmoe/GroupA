@@ -37,13 +37,6 @@
             <p>It is located in the Irrawaddy River, to the south-west of Mandalay on the opposite bank of the river.</p>
           </div>
         </li>
-        <li>
-          <img style="height:180px; width:335px" src="{{ asset('http://www.6adventurers.com/wp-content/uploads/2016/11/20161107041044.jpg') }}" alt="">
-          <div class="para">
-            <p class="p1">Taunggyi</p>
-            <p>The city is famous for its hot air balloon festival held annually on the full moon day of Tazaungmon.</p>
-          </div>
-        </li>
       </ul>
     </div>
   </section>
@@ -105,13 +98,17 @@
 
             </div>
           </div>
+          <a href="{{ route('package') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">View More</span>
+              </a>
           @endforeach
         </div>
       </section>
   </section>
   <!-- Cars -->
   <section class="container text-center">
-    <h2 class="section-title">Memory</h2>
+    <h2 class="section-title">Car</h2>
     <hr width="80" class="text-center" />
     <div class="row mt-5 justify-content-center">
       <div class="row">
@@ -163,7 +160,12 @@
               </div>
             </div>
           </a>
+          
         </div>
+        <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">View More</span>
+              </a>
         @endforeach
       </div>
   </section>

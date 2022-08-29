@@ -76,7 +76,20 @@ img {
   .cmn-head {
     font-size: 3.125vw;
   }
-
+  .fourth-list{
+    width: 100%;
+  }
+  .fourth-list li {
+    border-radius: 10px;
+    width: 30%;
+    margin: 47px 29px 8px 0;
+    padding-bottom: 5px;
+  }
+  
+  .fourth-list li img{
+    height: 200px;
+    width: 300px;
+  }
 }
 
 @media screen and (max-width:767.9px) {
@@ -96,4 +109,5 @@ img {
   .cmn-head {
     font-size: 3.750vw;
   }
+  
 }

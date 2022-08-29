@@ -44,7 +44,7 @@ class CarController extends Controller
 
     public function store(StoreCarRequest $request) : RedirectResponse
     {
-         $data = $this->carInterface->getStoreCar($request);
+        $data = $this->carInterface->getStoreCar($request);
         return redirect()->route('admin.cars.index')->with('message', 'Added Successfully !');
     }
 
@@ -55,7 +55,7 @@ class CarController extends Controller
 
     public function update(StoreCarRequest $request, Car $car)
     {
-           $data = $this->carInterface->getUpdateCar($request , $car);
+        $data = $this->carInterface->getUpdateCar($request , $car);
 
         return redirect()->route('admin.cars.index')->with('message', 'Updated Successfully !');
     }

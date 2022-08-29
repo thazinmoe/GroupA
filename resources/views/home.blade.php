@@ -98,12 +98,12 @@
 
             </div>
           </div>
-          <a href="{{ route('package') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
+          @endforeach
+        </div>
+        <a href="{{ route('package') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
                 <i class="bx bx-home-alt nav__icon"></i>
                 <span class="nav__name">View More</span>
               </a>
-          @endforeach
-        </div>
       </section>
   </section>
   <!-- Cars -->
@@ -162,12 +162,12 @@
           </a>
           
         </div>
-        <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
-                <i class="bx bx-home-alt nav__icon"></i>
-                <span class="nav__name">View More</span>
-              </a>
         @endforeach
       </div>
+      <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">View More</span>
+          </a>
   </section>
 </main>
 @endsection

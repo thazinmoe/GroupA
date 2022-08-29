@@ -138,7 +138,11 @@ a {
     font-size: 40px;
     text-align: center;
   }
-  
+  .fourth-list{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 30px;
+  }
   .fourth-list li:nth-of-type(3n) {
     margin-right: 0;
   }

@@ -54,7 +54,7 @@
         <!--=============== Blog Image ===============-->
       <section class="container-blog">
         <h2 class="img-title">Gallery</h2><br>
-        <div class="row slick_slider justify-content-center mt-20">
+        <div class="row l-inner slick_slider justify-content-center mt-20">
         @foreach($posts as $post)
           <div class="blogpost slider">
             <ul>

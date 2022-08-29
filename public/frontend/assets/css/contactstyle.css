@@ -5,12 +5,12 @@
 }
 
 .contact form {
+  width: 70%;
   margin: 32px auto;
   padding: 32px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   background: #fff;
   border-radius: 8px;
-  width: 70%;
 }
 
 .contact form h3 {
@@ -55,22 +55,22 @@
 }
 
 /* Ipad */
-@media screen and (min-width : 768px) and (max-width : 1160px){
+@media screen and (min-width : 768px) and (max-width : 1160px) {
   .contacts {
     height: 50vh;
     background: url('../images/img_contactcover.jpg') no-repeat center;
     background-size: cover;
   }
-  
+
   .contact form {
+    width: 70%;
     margin: 4.267vw auto;
     padding: 4.267vw;
     box-shadow: 0.667vw 0.667vw 2.667vw rgba(0, 0, 0, 0.5);
     background: #fff;
     border-radius: 1.067vw;
-    width: 70%;
   }
-  
+
   .contact form h3 {
     padding-bottom: 1.867vw;
     color: #000;
@@ -78,7 +78,7 @@
     text-align: center;
     text-transform: capitalize;
   }
-  
+
   .contact form .inputBox input,
   .contact form textarea {
     width: 100%;
@@ -87,15 +87,15 @@
     font-size: 2.667vw;
     border-radius: 1.067vw;
   }
-  
+
   .contact form .inputBox {
     margin-bottom: 4.267vw;
   }
-  
+
   .contact form .inputBox label {
     font-size: 3.2vw;
   }
-  
+
   .contact .btn {
     display: inline-block;
     margin-top: 2.133vw;
@@ -106,7 +106,7 @@
     cursor: pointer;
     border-radius: 1.067vw;
   }
-  
+
   .contact .btn:hover {
     background: #20c997;
     opacity: 1;
@@ -114,22 +114,22 @@
 }
 
 /* Phone */
-@media screen and (max-width:767.9px){
+@media screen and (max-width:767.9px) {
   .contacts {
     height: 50vh;
     background: url('../images/img_contactcover.jpg') no-repeat center;
     background-size: cover;
   }
-  
+
   .contact form {
+    width: 70%;
     margin: 4.267vw auto;
     padding: 4.267vw;
     box-shadow: 0.667vw 0.667vw 2.667vw rgba(0, 0, 0, 0.5);
     background: #fff;
     border-radius: 1.067vw;
-    width: 70%;
   }
-  
+
   .contact form h3 {
     padding-bottom: 3.2vw;
     color: #000;
@@ -137,7 +137,7 @@
     text-align: center;
     text-transform: capitalize;
   }
-  
+
   .contact form .inputBox input,
   .contact form textarea {
     width: 100%;
@@ -146,15 +146,15 @@
     font-size: 3.733vw;
     border-radius: 1.067vw;
   }
-  
+
   .contact form .inputBox {
     margin-bottom: 4.267vw;
   }
-  
+
   .contact form .inputBox label {
     font-size: 3.2vw;
   }
-  
+
   .contact .btn {
     display: inline-block;
     margin-top: 2.133vw;
@@ -165,7 +165,7 @@
     cursor: pointer;
     border-radius: 1.067vw;
   }
-  
+
   .contact .btn:hover {
     background: #20c997;
     opacity: 1;

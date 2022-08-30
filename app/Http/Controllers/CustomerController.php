@@ -82,10 +82,10 @@ class CustomerController extends Controller
         $customer = $this->customerInterface->getCustomerComfirm($id);
         if ($customer->completed) {
             $customer->update(['completed' => false]);
-            return redirect()->back()->with('success', "TODO marked as incomplete!");
+            return redirect()->back();
         } else {
             $customer->update(['completed' => true]);
-            return redirect()->back()->with('success', "TODO marked as complete!");
+            return redirect()->back();
         }
     }
 

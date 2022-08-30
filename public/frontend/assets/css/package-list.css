@@ -153,7 +153,7 @@
 
 .float-right li {
   float: left;
-  margin-right: 25px;
+  margin-right: 10px;
   margin-bottom: 30px;
 }
 
@@ -175,7 +175,7 @@
 
 .third-row .float-right .card h1 {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .third-row .float-right .card .price {
@@ -423,7 +423,7 @@
 
   .float-right li {
     float: left;
-    margin-right: 1vw;
+    margin-right: 1.102vw;
     margin-bottom: 3.906vw;
   }
 
@@ -431,12 +431,13 @@
     margin-right: 0;
   }
 
-  .card {
-    box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);
-    max-width: 39.063vw;
+  .third-row .float-right .card {
+    box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);   
+    max-width: 39vw;
   }
 
   .third-row .float-right .card h1 {
+    font-size: 2.344vw;
     margin-top: 1.302vw;
   }
 
@@ -666,14 +667,9 @@
     margin-bottom: 4.688vw;
   }
 
-  .card {
-    box-shadow: 0 0.625vw 1.25vw 0 rgba(0, 0, 0, 0.2);
-    max-width: 46.875vw;
-  }
-
   .third-row .float-right .card h1 {
     margin-top: 1.563vw;
-    font-size: 3.125vw;
+    font-size: 2.813vw;
   }
 
   .third-row .float-right .card .price {

@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/contactstyle.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/postStyle.css') }}" />
-
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/cast.css') }}" />
+    
     
 
 </head>

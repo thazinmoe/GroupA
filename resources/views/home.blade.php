@@ -41,98 +41,60 @@
     </div>
   </section>
 
-  <!--=============== Why us ===============-->
-  <section class="container why-us text-center">
-    <ul class="chef-pic clearfix">
-      <li class="chef-info">
-        <a href="#">
-          <i class="bx bx-money why-us-icon mb-4"></i>
-          <h4 class="mb-3">Save Money</h4>
-        </a>
-      </li>
-      <li class="chef-info">
-        <a href="#">
-          <i class="bx bxs-heart why-us-icon mb-4"></i>
-          <h4 class="mb-3">Stay Safe</h4>
-        </a>
-      </li>
-      <li class="chef-info">
-        <a href="#">
-          <i class="bx bx-timer why-us-icon mb-4"></i>
-          <h4 class="mb-3">Save Time</h4>
-        </a>
-      </li>
-    </ul>
-  </section>
-
   <!--=============== Package ===============-->
-  <section class="container text-center">
-    <h2 class="section-title">Package</h2><br>
-    <hr width="80" class="text-center" />
-    <div class="row mt-5 justify-content-center">
-      <section class="container package text-center" id="package">
-        <div class="row">
-          @foreach($categories as $category)
-          <div class="col-4">
-            <div class="mt-5 justify-content-center">
-
-              @foreach($category->travel_packages as $travelPackage)
-              <div style="margin-bottom: 140px">
-                <div class="card package-card">
-                  <a href="{{ route('detail', $travelPackage) }}" class="package-link">
-                    <div class="package-wrapper-img overflow-hidden">
-                      <img src="{{ Storage::url($travelPackage->image) }}" class="img-fluid" />
-                    </div>
-                    <div class="package-price d-flex justify-content-center">
-                      <span class="btn btn-light position-absolute package-btn">
-                        {{ number_format($travelPackage->price) }}
-                      </span>
-                    </div>
-                    <h5 class="btn position-absolute w-100">
-                      {{ $travelPackage->name }}
-                    </h5>
-                  </a>
-                </div>
-              </div>
-              @endforeach
-
+  <section class="home-package">
+    <div class="l-inner">
+    <div class="project">
+      <h3 class="fourth-head">Package</h3>
+      
+      <div class="project-content">
+      @foreach($categories as $category)
+          @foreach($category->travel_packages as $travelPackage)
+          <div class="project-card">
+            <a href="{{ route('detail', $travelPackage) }}">
+            <div class="project-card-bg">
+              <img src="{{ Storage::url($travelPackage->image) }}"
+                      class="img-fluid" alt="">
             </div>
+            <div class="project-card-text">
+              <a href="#" class="project-btn"> {{ $travelPackage->name }}</a>
+            </div>
+
           </div>
           @endforeach
-        </div>
-        <a href="{{ route('package') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
-                <i class="bx bx-home-alt nav__icon"></i>
-                <span class="nav__name">View More</span>
-        </a>
-      </section>
+      @endforeach
+      
+      </div>
+      <div class="txt-view">
+      <a  href="{{ route('package') }}"><button>View More</button></a>
+      </div>
+      </div>
+    </div>
   </section>
-  <!-- Cars -->
-  <section class="container text-center">
-    <h2 class="section-title">Car</h2>
-    <hr width="80" class="text-center" />
-    <div class="row mt-5 justify-content-center">
-      <div class="row">
-        @foreach(\App\Models\Car::get() as $car)
-        <div class="col-lg-4 mb-5">
-          <div class="card p-3 border-0" style="border-radius: 0;text-align:left;">
-            <img style="height: 200px;object-fit: contain;" src="{{ Storage::url($car->image) }}" alt="">
-            <h4 class="main-color fw-bold mb-4" style="font-size: 1.4rem">{{ $car->name }}</h4>
-            <span class="fw-bold mb-4">Price-{{ $car->price }}</span>
-            <span class="d-flex mb-3"><i class='bx bxs-gas-pump main-color fs-4 me-3 '></i> <strong>Driver + BBM</strong> </span>
-            <span class="d-flex"><i class='bx bxs-time-five main-color fs-4 me-3'></i> <strong>{{ $car->duration }}</strong></span>
-            <a href="#" class="btn mt-4 btn-book">Booking</a>
 
-          </div>
+  <!-- Cars -->
+  <section class="home-car">
+    <div class="l-inner">
+    <h2 class="fourth-head">Car</h2>
+    <div class="car-lp">
+        @foreach($car as $car)
+        <div class="car-sec">
+            <img src="{{ Storage::url($car->image) }}" alt="">
+            <h4 class="car-name">{{ $car->name }}</h4>
+            <p class="car-price">Price-{{ $car->price }}</p>
+            <p class="dua"><i class='bx bxs-gas-pump main-color fs-4 me-3 '></i> <strong>Driver + BBM</strong> </p>
+            <p class="dua"><i class='bx bxs-time-five main-color fs-4 me-3'></i> <strong>{{ $car->duration }}</strong></p>
+            <a href="#" class="boo">Booking</a>
         </div>
         @endforeach
 
+      </div>
       </div>
   </section>
 
   <!--=============== Video ===============-->
   <section class="container text-center">
     <h2 class="section-title">Video Tour</h2>
-    <hr width="80" class="text-center" />
     <div class="row mt-5 justify-content-center">
       <div class="row mt-5">
         <div class="col-12">
@@ -142,13 +104,12 @@
   </section>
 
   <!--=============== Blog ===============-->
-  <section class="container blog text-center">
-    <h2 class="section-title">Our Blog</h2>
-    <hr width="80" class="text-center" />
-    <div class="row mt-5 justify-content-center">
+  <section class="home-blog">
+    <div class="l-inner">
+    <h2 class="fourth-head">Our Blog</h2>
       <div class="row slick_slider justify-content-center mt-5">
         @foreach($posts as $post)
-        <div class="col-lg-4 mb-4 blogpost">
+        <div class="blogpost">
           <a href="{{ route('posts.show', $post)  }}">
             <div class="card-post">
               <div class="card-post-img">
@@ -164,10 +125,17 @@
         </div>
         @endforeach
       </div>
-      <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
-                <i class="bx bx-home-alt nav__icon"></i>
-                <span class="nav__name">View More</span>
-        </a>
+      </div>
+        <div class="txt-view">
+       <a  href="{{ route('posts') }}"><button>View More</button></a>
+      </div>
   </section>
 </main>
 @endsection
+
+@push('script-alt')
+  <script>
+      $('.project-content .project-card').hide();
+      $('.project-content .project-card:lt(6)').show();
+  </script>
+@endpush

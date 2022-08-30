@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Admin\CarController;
 use App\Http\Controllers\Admin\PostController;
@@ -112,7 +113,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('cars/{car}', [CarController::class, 'update'])->name('cars.update');
         Route::delete('cars/{car}', [CarController::class, 'destroy'])->name('cars.destroy');
         // end car 
-
+         
         // start travel Package(Hnin Yu Yu Lwin)
         Route::get('travel-packages', [TravelPackageController::class, 'index'])->name('travel-packages.index');
         Route::get('travel-packages/create', [TravelPackageController::class, 'create'])->name('travel-packages.create');

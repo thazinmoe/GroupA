@@ -20,8 +20,8 @@ class PageController extends Controller
     {
         $categories = Category::with('travel_packages')->get();
         $posts = Post::get();
-
-        return view('home', compact('categories','posts'));
+        $car   = Car::get();
+        return view('home', compact('categories','posts','car'));
     }
 
     public function detail(TravelPackage $travelPackage): View

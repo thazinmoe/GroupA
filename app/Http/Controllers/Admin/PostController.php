@@ -39,7 +39,7 @@ class PostController extends Controller
 
     public function index(): View
     {
-        //$posts = Post::get();
+        
         $posts = $this->postInterface->getPostList();
 
         return view('admin.posts.index', compact('posts'));
@@ -66,8 +66,6 @@ class PostController extends Controller
     public function store(StorePostRequest $request): RedirectResponse
     {
         $data = $this->postInterface->getStorePostList($request);
-
-
         return redirect()->route('admin.posts.index')->with('message', 'Added Successfully !');
     }
 

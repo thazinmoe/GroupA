@@ -60,10 +60,7 @@
             
 
         </div>
-        <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
-                <i class="bx bx-home-alt nav__icon"></i>
-                <span class="nav__name">View More</span>
-        </a>
+        
     </section> <!--All Blog -->
     </main>
 @endsection

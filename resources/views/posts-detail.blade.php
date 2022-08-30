@@ -57,8 +57,6 @@
               
             </div>
             @endforeach
-            
-
         </div>
         
     </section> <!--All Blog -->

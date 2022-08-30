@@ -27,15 +27,15 @@
             </div>
                   
         </div>          
-            
+         
     </section><!-- Blog Detail-->
 
     <section class="container">
       <div class="txt-left"><h3 class="text-center mb-4">Posts</h3></div>
       
-        <a href="{{ route('posts') }}" class="txt-right nav__link  {{ request()->is('posts') ? ' active-link' : '' }}">
-                <i class="bx bx-book-alt nav__icon"></i>
-                <span class="nav__name txt-right">All Posts</span>
+        <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name txt-right">View More</span>
         </a>
       
         <div class="row slick_slider justify-content-center">
@@ -57,8 +57,13 @@
               
             </div>
             @endforeach
+            
 
         </div>
+        <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">View More</span>
+        </a>
     </section> <!--All Blog -->
     </main>
 @endsection

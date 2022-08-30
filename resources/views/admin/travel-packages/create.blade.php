@@ -30,7 +30,11 @@
                         <select name="category_id" class="form-control" >
                             <option value="">Select Travel Category</option>
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                @if (old('category_id') == $category->id)
+                                    <option value="{{ $category->id }}" selected>{{ $category->title }}</option>
+                                @else
+                                    <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                @endif
                             @endforeach
                         </select>
                     </div>
@@ -39,7 +43,11 @@
                         <select name="car_id" id="car_id"  class="form-control">
                             <option value="">Select Cars</option>
                             @foreach($cars as $car)
-                                <option value="{{$car->id}}">{{$car->name}} - {{number_format($car->price)}} MMK</option>
+                                @if (old('car_id') == $car->id)
+                                    <option value="{{ $car->id }}" selected>{{ $car->name }} - {{number_format($car->price)}} MMK</option>
+                                @else
+                                    <option value="{{ $car->id }}">{{ $car->name }} - {{number_format($car->price)}} MMK</option>
+                                @endif
                             @endforeach
                         </select>
                     </div>
@@ -69,7 +77,7 @@
                         <label for="price">Price</label>
                         <input type="number" class="form-control" id="price" name="price" value="{{ old('price') }}" />
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Create</button>
+                    <button type="submit" class="btn btn-primary">Create Package</button>
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@
 @section('content')
       <!--=============== HOME ===============-->
       <section class="main-visual">
-        <div class="l-inner">
+        <div class="l-inner-package">
           <div class="mv-part">
             <h1 class="mv-head">Package Travel</h1>
           </div>          
@@ -15,7 +15,7 @@
       
     <section class="intro-sec-row">
       <div class="intro-package">
-        <div class="l-inner">
+        <div class="l-inner-package">
           <div class="clearfix">
             <div class="intro-left">
               <img src="{{ asset('frontend/assets/images/second-mv.jpg') }}" alt="Intro Image">
@@ -48,7 +48,7 @@
     </section>
 
     <section class="third-row">
-      <div class="l-inner">
+      <div class="l-inner-package">
         <div class="category-part">
           <h1 class="cmn-head">Available Packages</h1>
           <div class="clearfix">
@@ -75,7 +75,7 @@
     </section>
 
     <section class="fourth-row">
-      <div class="l-inner">
+      <div class="l-inner-package">
         <div class="center-class">
           <h1 class="cmn-head">Popular Packages</h1>
           <span class="small-head">Everything in this packages are awesome.</span>

@@ -48,7 +48,7 @@ img {
   max-width: 100%;
 }
 
-.l-inner {
+.l-inner-package {
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -70,26 +70,12 @@ img {
     max-width: 100%;
   }
 
-  .l-inner {
+  .l-inner-package {
     max-width: 79.167vw;
   }
 
   .cmn-head {
     font-size: 3.125vw;
-  }
-  .fourth-list{
-    width: 100%;
-  }
-  .fourth-list li {
-    border-radius: 10px;
-    width: 30%;
-    margin: 47px 29px 8px 0;
-    padding-bottom: 5px;
-  }
-  
-  .fourth-list li img{
-    height: 200px;
-    width: 300px;
   }
 }
 
@@ -103,12 +89,12 @@ img {
     max-width: 100%;
   }
 
-  .l-inner {
+  .l-inner-package {
     max-width: 90.625vw;
   }
 
   .cmn-head {
     font-size: 3.750vw;
   }
-  
+
 }

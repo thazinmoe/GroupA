@@ -79,20 +79,16 @@
                   >{{ number_format($travelPackage->price) }} MMK</span
                 >
               </div>
-<<<<<<< HEAD
-              <h5 class="">Send Payment</h5>
-             <div class="card-bank d-flex align-items-center justify-content-around">
+              <h5 class="mb-3">Send Payment</h5>
+             <div class="card-bank d-flex align-items-center justify-content-around mb-3">
                 <img height="40" width="80" src="{{ asset('frontend/assets/images/testing.png') }}" alt="">
                 <div class="card-bank-content d-flex flex-column">
                   <span>Group-A</span>
-                  <b>09 00022233</b>
+                  <b>09-00022233</b>
                 </div>
              </div>
-=======
->>>>>>> b199a44d42daf5842c9f79a656a2ac8e0aeea357
-              <a onClick="return confirm('Are you sure booking ?')" class="btn btn-book btn-block mt-3" href="{{ route('add-customer', $travelPackage) }}"
-                >Continue to Book</a
-              >
+              <a onClick="return confirm('Are you sure booking ?')" class="btn btn-book btn-sm mt-3" href="{{ route('add-customer', $travelPackage) }}"
+                >Continue to Book</a>
             </div>
           </div>
         </div>

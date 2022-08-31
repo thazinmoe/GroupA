@@ -20,7 +20,7 @@ class PostDao implements PostDaoInterface
      */
     public function getPostList()
     {
-        $posts = Post::get();
+        $posts = Post::orderBy('created_at', 'desc')->Paginate(3);
         return $posts;
     }
 

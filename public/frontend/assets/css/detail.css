@@ -74,6 +74,7 @@
 }
 
 .pack-float-right p {
+    font-size : 16px;
     background-color: #f5f5f5;
     padding: 18px;
     border-radius: 10px;
@@ -166,6 +167,7 @@
     }
     
     .pack-float-right p {
+        font-size : 2.083vw;
         padding: 2.344vw;
         border-radius: 1.302vw;
         margin-bottom: 1.302vw;
@@ -254,6 +256,7 @@
     }
     
     .pack-float-right p {
+        font-size: 2.5vw;
         padding: 2.813vw;
         border-radius: 1.563vw;
         margin-bottom: 1.563vw;

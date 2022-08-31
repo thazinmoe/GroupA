@@ -101,6 +101,15 @@
     font-size: 14px;
 }
 
+.show_confirm button{
+    font-size: 15px;
+    padding: 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
 /*I-pad*/
 @media screen and (min-width : 768px) and (max-width : 1160px) {
     .detail-title {
@@ -190,6 +199,12 @@
     }
     .phone-float-right h5 {
         font-size: 1.823vw;
+    }    
+
+    .show_confirm button{
+        font-size: 1.953vw;
+        padding: 1.953vw;
+        border-radius: 1.042vw;
     }
 }
 
@@ -279,6 +294,11 @@
     }
     .phone-float-right h5 {
         font-size: 2.188vw;
+    }    
+
+    .show_confirm button{
+        font-size: 2.344vw;
+        padding: 2.344vw;
+        border-radius: 1.25vw;
     }
-    
 }

@@ -66,6 +66,9 @@
                     <h5>016-486-4656-45</h5>
                   </div>
                 </div>
+                <a href="{{ route('add-customer', $travelPackage) }}" class="show_confirm">
+                  <button>Continue to Book</button>
+                </a>
               </div>
           </div>
         </div>
@@ -118,6 +121,7 @@
 
 @push('script-alt')
     <script src="{{ asset('frontend/assets/libraries/swipper/js/app.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
      <script>
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -129,6 +133,22 @@
         coverflowEffect: {
           rotate: 0,
         },
+      });
+      $('.show_confirm').click(function(event) {
+          event.preventDefault();
+          var url =  $(this).attr('href');
+          swal({
+              title: 'Are you sure to continue to book?',
+              text : 'This will take you to booking page.',
+              icon: "success",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willBook) => {
+            if (willBook) {
+              window.location.href = url;
+            }
+          });
       });
     </script>
 @endpush

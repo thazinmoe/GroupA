@@ -75,11 +75,11 @@ body {
 .hero-content{
     font-family: 'Roboto';
     font-weight: 700;
-    padding-top: 180px;
+    padding-top: 150px;
     text-align: center;
 }
 .hero-content .head{
-    line-height: 80px;
+    line-height: 100px;
     font-size: 70px;
     color: aqua;
 }
@@ -101,7 +101,6 @@ body {
 }
 .head span{
     display: block;
-    color: rgba(34, 255, 84, 0.5);
 }
 .carry{
     position: absolute;

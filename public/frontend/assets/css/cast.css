@@ -94,10 +94,10 @@
 }
 .project-btn{
   text-decoration: none;
-  color: pink;
-  border: 2px solid green;
+  color: #000;
+  border: 2px solid #000;
   padding: 10px 10px;
-  background-color: blue;
+  background-color: aqua;
   display: inline-block;
   border-radius: 20px;
 
@@ -150,8 +150,9 @@
 .car-sec{
   width: 30%;
 }
-.car-sec li img{
+.car-sec  img{
   height: 200px;
+  width: 100%;
   object-fit: contain;
 }
 .car-name{

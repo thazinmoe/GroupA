@@ -4,7 +4,7 @@
           ><img
             width="250"
             style="height: 70px"
-            src="{{ asset('frontend/assets/images/testing.png') }}"
+            src="{{ asset('frontend/assets/images/car_logo.png') }}"
             alt=""
         /></a>
 

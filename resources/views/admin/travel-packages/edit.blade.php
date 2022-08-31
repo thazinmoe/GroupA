@@ -30,7 +30,11 @@
                     <select class="form-control" id="category_id" name="category_id">
                         <option value="">Select to Edit Cateogry</option>
                         @foreach($categories as $category)
-                        <option value="{{ $category->id }}" {{$category->id == $travelPackage->category_id ? 'selected' : ''}}>{{$category->title}}</option>
+                            @if (old('category_id',$travelPackage->category_id) == $category->id)
+                                <option value="{{ $category->id }}" selected>{{ $category->title }}</option>
+                            @else
+                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                            @endif
                         @endforeach
                     </select>
                 </div>
@@ -39,38 +43,42 @@
                     <select name="car_id" id="car_id" class="form-control">
                         <option value="">Select to Edit Cars</option>
                         @foreach($cars as $car)
-                            <option value="{{$car->id}}" {{$car->id == $travelPackage->car_id ? 'selected' : '' }} >{{$car->name}} - {{number_format($car->price)}} MMK</option>
+                        @if (old('car_id',$travelPackage->car_id) == $car->id)
+                            <option value="{{ $car->id }}" selected>{{ $car->name }} - {{number_format($car->price)}} MMK</option>
+                        @else
+                            <option value="{{ $car->id }}">{{ $car->name }} - {{number_format($car->price)}} MMK</option>
+                        @endif
                         @endforeach
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $travelPackage->name }}" />
+                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name',$travelPackage->name) }}" />
                 </div>
                 <div class="form-group">
                     <label for="location">Location</label>
-                    <input type="text" class="form-control" id="location" name="location" value="{{ $travelPackage->location }}" }}" />
+                    <input type="text" class="form-control" id="location" name="location" value="{{ old('location',$travelPackage->location) }}" }}" />
                 </div>
                 <div class="form-group">
                     <label for="duration">Duration</label>
-                    <input type="text" class="form-control" id="duration" name="duration" value="{{ $travelPackage->duration }}" }}" />
+                    <input type="text" class="form-control" id="duration" name="duration" value="{{ old('duration',$travelPackage->duration) }}" }}" />
                 </div>
                 <div class="form-group">
-                    <label for="description">description</label>
-                    <textarea name="description" id="description" class="form-control">{{ $travelPackage->description }}</textarea>
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" class="form-control">{{ old('description',$travelPackage->description) }}</textarea>
                 </div>
                 <!--  -->                
                 <div class="form-group">
                     <label for="image">Image</label><br>
                     <img src="{{Storage::url($travelPackage->image)}}" alt="Image" width=150><br><br>
-                    <input type="file" class="form-control" id="image" name="image" value="{{ $travelPackage->image }}" />
+                    <input type="file" class="form-control" id="image" name="image" value="{{ old('image',$travelPackage->image) }}" />
                 </div>
                 <!--  -->
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" value="{{ $travelPackage->price - $car_price }}" />
+                    <input type="number" class="form-control" id="price" name="price" value="{{ old('price',$travelPackage->price - $car_price) }}" />
                 </div>
-            <button type="submit" class="btn btn-primary btn-block">Edit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
     </div>

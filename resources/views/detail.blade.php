@@ -84,7 +84,7 @@
                 <img height="40" width="80" src="{{ asset('frontend/assets/images/testing.png') }}" alt="">
                 <div class="card-bank-content d-flex flex-column">
                   <span>Group-A</span>
-                  <b>09 00022233</b>
+                  <b>09-00022233</b>
                 </div>
              </div>
               <a onClick="return confirm('Are you sure booking ?')" class="btn btn-book btn-block mt-3" href="{{ route('add-customer', $travelPackage) }}"

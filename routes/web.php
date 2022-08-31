@@ -29,10 +29,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [PageController::class, 'home'])->name('viewHome');
-
 //packageTravel(Hnin Yu Yu Lwin)
 Route::get('package-travel', [PageController::class, 'package'])->name('package');
 Route::get('package-travel/{id}', [PageController::class, 'package_by_cat'])->name('package_by_cat');
@@ -52,6 +48,9 @@ Route::post('add-customer/{travelPackage:slug}', [CustomerController::class, 'st
 //end customer
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
+Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [PageController::class, 'home'])->name('viewHome');
 Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {

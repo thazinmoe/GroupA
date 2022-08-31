@@ -92,7 +92,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel ChartJS Chart</title>
 </head>
     
 <body>
@@ -110,7 +109,7 @@
       const data = {
         labels: labels,
         datasets: [{
-          label: '',
+          label: 'Dataset',
           backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgb(255, 99, 132)',
           data: users,

@@ -48,7 +48,7 @@ img {
   max-width: 100%;
 }
 
-.l-inner {
+.l-inner-package {
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -70,7 +70,7 @@ img {
     max-width: 100%;
   }
 
-  .l-inner {
+  .l-inner-package {
     max-width: 79.167vw;
   }
 
@@ -89,12 +89,12 @@ img {
     max-width: 100%;
   }
 
-  .l-inner {
+  .l-inner-package {
     max-width: 90.625vw;
   }
 
   .cmn-head {
     font-size: 3.750vw;
   }
-  
+
 }

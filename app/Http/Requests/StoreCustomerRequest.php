@@ -27,6 +27,8 @@ class StoreCustomerRequest extends FormRequest
             'customer_name' => 'required',
             'email' => 'required|email|unique:users,email',
             'phno' => 'required',           
+            'package_price' => 'required',           
+            'package_count' => 'required',           
         ];
     }
 }

@@ -81,8 +81,7 @@
         <div class="car-sec">
             <img src="{{ Storage::url($car->image) }}" alt="">
             <h4 class="car-name">{{ $car->name }}</h4>
-            <p class="car-price">Price-{{ $car->price }}</p>
-            <p class="dua"><i class='bx bxs-gas-pump main-color fs-4 me-3 '></i> <strong>Driver + BBM</strong> </p>
+            <p class="car-price">Price-{{ $car->price }}MMK</p>
             <p class="dua"><i class='bx bxs-time-five main-color fs-4 me-3'></i> <strong>{{ $car->duration }}</strong></p>
             <a href="#" class="boo">Booking</a>
         </div>

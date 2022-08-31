@@ -94,9 +94,7 @@
 
 .container-blog {
   position: relative;
-  top: -140px;
-  z-index: 2;
-  margin-bottom: 5px;
+  margin-bottom:0px;
 }
 
 .container-blog .row {
@@ -163,13 +161,13 @@
 /*Slick Slider*/
 .slick-prev:before {
   position: absolute;
-  content: url('../images/left-arrow.png');
+  content: url('../images/img-left-arrow.png');
   opacity: 1;
 }
 
 .slick-next:before {
   position: absolute;
-  content: url('../images/right-arrow.png');
+  content: url('../images/img-right-arrow.png');
   opacity: 1;
 }
 
@@ -181,7 +179,7 @@
 
 .slick-next {
   top: 46%;
-  right: 78px;
+  right: 44px;
 }
 
 .acc-container {
@@ -367,9 +365,7 @@
 
   .container-blog {
     position: relative;
-    top: -140px;
-    z-index: 2;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .container-blog .row {
@@ -437,25 +433,25 @@
   /*Slick Slider*/
   .slick-prev:before {
     position: absolute;
-    background: url('../images/left-arrow.png');
+    content: url('../images/img-left-arrow.png');
     opacity: 1;
   }
 
   .slick-next:before {
     position: absolute;
-    background: url('../images/right-arrow.png');
+    content: url('../images/img-right-arrow.png');
     opacity: 1;
   }
 
-  .slick-prev {
-    top:40%;
+  .container-blog .slick-prev {
+    top:30%;
     left: 9px;
     z-index: 1;
   }
 
-  .slick-next {
-    top: 40%;
-    right: 78px;
+  .container-blog .slick-next {
+    top: 30%;
+    right: 38px;
   }
 
   .intro-package .intro-left .blogImg1 {
@@ -604,9 +600,7 @@
 
   .container-blog {
     position: relative;
-    top: -140px;
-    z-index: 2;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .container-blog .row {
@@ -673,25 +667,24 @@
   /*Slick Slider*/
   .slick-prev:before {
     position: absolute;
-    background: url('../images/left-arrow.png');
+    content: url('../images/img-left-arrow.png');
     opacity: 1;
   }
 
   .slick-next:before {
     position: absolute;
-    background: url('../images/right-arrow.png');
+    content: url('../images/img-right-arrow.png');
     opacity: 1;
   }
 
-  .slick-prev {
-    top: 30%;
-    left: 9px;
-    z-index: 1;
+  .container-blog .slick-prev {
+    top: 22%;
+    left: 2px;
   }
 
-  .slick-next {
-    top: 30%;
-    right: 78px;
+  .container-blog .slick-next {
+    top: 22%;
+    right: 37px;
   }
 
   .intro-package .intro-left .blogImg1 {

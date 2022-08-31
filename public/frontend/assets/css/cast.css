@@ -94,17 +94,18 @@
 }
 .project-btn{
   text-decoration: none;
-  color: #000;
-  border: 2px solid #000;
+  color: #fff;
   padding: 10px 10px;
-  background-color: aqua;
+  background-color: #1abc9c;
   display: inline-block;
   border-radius: 20px;
 
 }
 .project-btn:hover{
-  background-color: green;
+  background-color: #fff;
   border-radius: 20px;
+  color: #000;
+  border: 1px solid #1abc9c;
 }
 
 .project-card-bg::after{

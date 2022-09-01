@@ -72,7 +72,9 @@ class PageController extends Controller
     }
 
     public function detailPost(Post $post){
-        return view('posts-detail',compact('post'));
+        $posts = Post::get();
+
+        return view('posts-detail',compact('posts','post'));
     }
 
     public function contact(){

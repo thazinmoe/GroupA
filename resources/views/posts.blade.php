@@ -48,20 +48,20 @@
         <h2 class="cmn-head" style="text-align:center">Gallery</h2><br>
         <div class="row l-inner slick_slider justify-content-center mt-20">
         @foreach($posts as $post)
-          <div class="blogpost slider">
+            <div class="blogpost">
                 <ul>
                     <li>
-                        <div class="card-post-Img">
-                            <div class="blogImg">
-                                <img src="{{ Storage::url($post->image) }}"
+                            <div class="card-post">
+                                <div class="blogImg">
+                                    <img src="{{ Storage::url($post->image) }}"
                                         alt="{{ $post->title }}">
+                                        <!--<img src="{{ asset('frontend/assets/images/balloon.jpg') }}" alt="">-->
+                                </div>
                             </div>
-                        </div>
-                        
                     </li>
                 </ul>
-          </div>
-        @endforeach
+            </div>
+            @endforeach
         </div>    
     </section><!--containerImg-blog-->
 
@@ -74,7 +74,7 @@
                     @foreach($posts as $post)
                         <div class="blogpost">
                             <img src="{{ Storage::url($post->image) }}"
-                                                alt="{{ $post->title }}" class="blogImg1"/>
+                                                alt="{{ $post->title }}" class="blogImg2"/>
                                 
                         </div>
                     @endforeach

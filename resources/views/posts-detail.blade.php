@@ -30,7 +30,7 @@
          
     </section><!-- Blog Detail-->
 
-    <section class="container">
+    <section class="container-blog">
       <div class="txt-left"><h3 class="text-center mb-4">Posts</h3></div>
       
         <a href="{{ route('posts') }}" class="nav__link {{ request()->is('/') ? ' active-link' : '' }}">
@@ -40,7 +40,7 @@
       
         <div class="row slick_slider justify-content-center">
 
-            @foreach(\App\Models\Post::get() as $post)
+            <!--@foreach($posts as $post)
             <div class="col-lg-4 mb-4">
               <a href="{{ route('posts.show', $post) }}">
                 <div class="card text-center p-4">
@@ -55,6 +55,29 @@
                 </div>
               </a>
               
+            </div>
+            @endforeach-->
+            @foreach($posts as $post)
+            <div class="blogpost">
+                <ul>
+                    <li>
+                        <a href="{{ route('posts.show', $post)  }}">
+                            <div class="card-post">
+                            
+                            
+                                <div class="blogImg">
+                                    <img src="{{ Storage::url($post->image) }}"
+                                        alt="{{ $post->title }}">
+                                        <!--<img src="{{ asset('frontend/assets/images/balloon.jpg') }}" alt="">-->
+                                </div>
+                                <div class="post-data">
+                                    <span>Travel</span> <small>- {{ $post->created_at->diffForHumans() }}</small>
+                                    <h5>{{ $post->excerpt }}</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
             @endforeach
         </div>

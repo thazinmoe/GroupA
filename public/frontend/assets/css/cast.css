@@ -1,4 +1,7 @@
 /*Popular City*/
+body{
+  overflow-x: hidden;
+}
 .fourth-link {
   width: 100%;
   margin: 0 auto;
@@ -6,7 +9,6 @@
   margin-bottom: 75px;
   box-sizing: border-box;
 }
-
 .fourth-head {
   font-family: 'IBM Plex Sans';
   font-weight: 900;
@@ -21,7 +23,7 @@
   margin-right: 0;
 }
 
-.fourth-list li {
+.card-p {
   border-radius: 10px;
   float: left;
   background-color: #f3f3f3;
@@ -123,6 +125,7 @@
   opacity: 1;
 }
 .txt-view{
+  margin-bottom: 30px;
   text-align: center;
 }
 .txt-view a{
@@ -197,6 +200,9 @@
 }
 
 /*Blog*/
+.home-blog{
+  margin: 0 auto;
+}
 .blogpost{
   margin-bottom: 30px;
 }
@@ -227,4 +233,539 @@
   font-weight: 500;
   margin-top: 0.7rem;
   color: var(--text-color);
+}
+
+
+@media screen and (min-width : 768px) and (max-width : 1160px) {
+  /*Popular City*/
+  body{
+    overflow-x: hidden;
+  }
+.fourth-link {
+  padding-top: 40px;
+  margin-bottom: 75px;
+}
+
+.fourth-head {
+  font-size: 40px;
+}
+.fourth-list{
+  margin-left: 18px;
+}
+
+.fourth-list li {
+  border-radius: 10px;
+  width: 30%;
+  height: 330px;
+  margin: 47px 29px 8px 0;
+  padding-bottom: 5px;
+}
+.fourth-list li img{
+  height: 200px;
+  width: 400px;
+}
+.para {
+  padding: 38px 0px 30px 0px;
+}
+
+.p1 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.p2 {
+  font-size: 16px;
+}
+.txt-para{
+  font-size: 13px;
+}
+
+/*Package*/
+.project-content{
+  width: 100%;
+  padding: 30px 0px;
+}
+.project-card{
+  width: 30%;
+  height: 223px; 
+  margin: 20px 0px;
+}
+.project-card-bg{
+  height: 100%; 
+}
+.project-card-bg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.project-card-text{
+  width: 100%;
+  bottom: 20px;
+}
+.project-btn{
+  padding: 10px 10px;
+  border-radius: 20px;
+
+}
+.project-btn:hover{
+  border-radius: 20px;
+}
+
+.project-card-bg::after{
+  width: 100%;
+  height: 100%;
+}
+.project-card-bg:hover:after{
+  opacity: 1;
+}
+.txt-view a{
+  font-size: 20px;
+}
+.txt-view button{
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.txt-view button:hover{
+  border-radius: 8px;
+}
+.name{
+  font-size: 30px;
+}
+.home-car{
+  width: 100%;
+  margin-bottom: 50px;
+}
+.car-lp{
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.car-sec{
+  width: 30%;
+}
+.car-sec  img{
+  height: 200px;
+  width: 100%;
+}
+.car-name{
+  font-size: 30px;
+  padding: 10px 0px;
+}
+.car-price {
+  font-size: 16px;
+  margin: 0px 0px 20px 86px;
+}
+.dua{
+  margin-bottom: 10px;
+}
+
+.boo{
+  padding: 15px 0px;
+}
+
+/*Blog*/
+.home-blog .blog-post{
+  margin-bottom: 30px;
+  width: 100%;
+}
+.card-post{
+  margin: 0px 10px;
+  width: 84%;
+  margin-left: 34px;
+}
+.card-post-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+.card-post-data {
+  text-align: left;
+}
+
+.card-post-data span {
+  font-weight: 600;
+}
+.card-post-data small {
+  font-weight: 300;
+}
+.card-post-data h5 {
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+.slick-prev:before {
+  position: absolute;
+  content: url('../images/img-left-arrow.png');
+  opacity: 1;
+}
+
+.slick-next:before {
+  position: absolute;
+  content: url('../images/img-right-arrow.png');
+  opacity: 1;
+}
+
+.home-blog .slick-prev {
+  top:30%;
+  left: 30px;
+  z-index: 1;
+}
+
+.home-blog .slick-next {
+  top: 30%;
+  right: 50px;
+}
+}
+
+@media screen and (max-width:767.9px) {
+  body{
+    overflow-x: hidden;
+  }
+.fourth-link {
+  padding-top: 40px;
+  margin-bottom: 75px;
+}
+
+.fourth-head {
+  font-size: 40px;
+}
+.fourth-list{
+  margin-left: 18px;
+}
+
+.fourth-list li {
+    border-radius: 10px;
+    width: 30%;
+    height: 366px;
+    margin: 47px 6px 8px 8px;
+    padding-bottom: 5px;
+}
+.fourth-list li img{
+  height: 200px;
+  width: 400px;
+}
+.para {
+  padding: 38px 0px 30px 0px;
+}
+
+.p1 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.p2 {
+  font-size: 16px;
+}
+
+/*Package*/
+.project-content{
+  width: 100%;
+  padding: 30px 0px;
+}
+.project-card{
+  width: 30%;
+  height: 300px; 
+  margin: 20px 0px;
+}
+.project-card-bg{
+  height: 100%; 
+}
+.project-card-bg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.project-card-text{
+  width: 100%;
+  bottom: 20px;
+}
+.project-btn{
+  padding: 10px 10px;
+  border-radius: 20px;
+
+}
+.project-btn:hover{
+  border-radius: 20px;
+}
+
+.project-card-bg::after{
+  width: 100%;
+  height: 100%;
+}
+.project-card-bg:hover:after{
+  opacity: 1;
+}
+.txt-view a{
+  font-size: 20px;
+}
+.txt-view button{
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.txt-view button:hover{
+  border-radius: 8px;
+}
+.name{
+  font-size: 20px;
+}
+.home-car{
+  width: 100%;
+  margin-bottom: 50px;
+}
+.car-lp{
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.car-sec{
+  width: 30%;
+}
+.car-sec  img{
+  height: 200px;
+  width: 100%;
+}
+.car-name{
+  font-size: 14px;
+  padding: 10px 0px;
+}
+.car-price {
+  font-size: 10px;
+    margin: 0px 0px 20px 30px;
+}
+.dua{
+  margin-bottom: 10px;
+}
+
+.boo{
+  padding: 15px 0px;
+}
+
+/*Blog*/
+.blogpost{
+  margin-bottom: 30px;
+  width: 100%;
+}
+.card-post{
+  margin: 0px 10px;
+  width: 84%;
+  margin-left: 34px;
+}
+.card-post-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+.card-post-data {
+  text-align: left;
+}
+
+.card-post-data span {
+  font-weight: 600;
+}
+.card-post-data small {
+  font-weight: 300;
+}
+.card-post-data h5 {
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+.slick-prev:before {
+  position: absolute;
+  content: url('../images/img-left-arrow.png');
+  opacity: 1;
+}
+
+.slick-next:before {
+  position: absolute;
+  content: url('../images/img-right-arrow.png');
+  opacity: 1;
+}
+
+.home-blog .slick-prev {
+  top:30%;
+  left: 30px;
+  z-index: 1;
+}
+
+.home-blog .slick-next {
+  top: 30%;
+  right: 50px;
+}
+}
+
+@media screen and (max-width:480px) {
+  body{
+    overflow-x: hidden;
+  }
+.fourth-link {
+  padding-top: 40px;
+  margin-bottom: 75px;
+}
+
+.fourth-head {
+  font-size: 40px;
+}
+.fourth-list{
+  margin-left: 18px;
+}
+
+.fourth-list li {
+    border-radius: 10px;
+    width: 30%;
+    height: 253px;
+    margin: 47px 11px 8px 0;
+    padding-bottom: 5px;
+}
+.fourth-list li img{
+  height: 118px;
+  width: 400px;
+}
+.para {
+  padding: 38px 0px 30px 0px;
+}
+.txt-para{
+  font-size: 10px;
+}
+.p1 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.p2 {
+  font-size: 16px;
+}
+
+/*Package*/
+.project-content{
+  width: 100%;
+  padding: 30px 0px;
+}
+.project-card{
+  width: 30%;
+  height: 187px; 
+  margin: 20px 0px;
+}
+.project-card-bg{
+  height: 100%; 
+}
+.project-card-bg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.project-card-text{
+  width: 100%;
+  bottom: 20px;
+}
+.project-btn{
+  padding: 10px 10px;
+  border-radius: 20px;
+
+}
+.project-btn:hover{
+  border-radius: 20px;
+}
+
+.project-card-bg::after{
+  width: 100%;
+  height: 100%;
+}
+.project-card-bg:hover:after{
+  opacity: 1;
+}
+.txt-view a{
+  font-size: 20px;
+}
+.txt-view button{
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.txt-view button:hover{
+  border-radius: 8px;
+}
+.name{
+  font-size: 20px;
+}
+.home-car{
+  width: 100%;
+  margin-bottom: 50px;
+}
+.car-lp{
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.car-sec{
+  width: 30%;
+}
+.car-sec  img{
+  height: 200px;
+  width: 100%;
+}
+.car-name{
+  font-size: 14px;
+  padding: 10px 0px;
+}
+.car-price {
+  font-size: 10px;
+    margin: 0px 0px 20px 30px;
+}
+.dua{
+  margin-bottom: 10px;
+}
+
+.boo{
+  padding: 15px 0px;
+}
+
+/*Blog*/
+.home-blog .blog-post{
+  margin-bottom: 30px;
+  width: 100%;
+}
+.card-post{
+  margin: 0px 10px;
+  width: 84%;
+  margin-left: 34px;
+}
+.card-post-img img{
+  width: 100%;
+  height: 250px;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+.card-post-data {
+  text-align: left;
+}
+
+.card-post-data span {
+  font-weight: 600;
+}
+.card-post-data small {
+  font-weight: 300;
+}
+.card-post-data h5 {
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+.slick-prev:before {
+  position: absolute;
+  content: url('../images/img-left-arrow.png');
+  opacity: 1;
+}
+
+.slick-next:before {
+  position: absolute;
+  content: url('../images/img-right-arrow.png');
+  opacity: 1;
+}
+
+.home-blog .slick-prev {
+  top:30%;
+  left: 30px;
+  z-index: 1;
+}
+
+.home-blog .slick-next {
+  top: 30%;
+  right: 50px;
+}
 }

@@ -16,25 +16,25 @@
     <div class="l-inner">
       <h3 class="fourth-head">Popular City</h3>
       <ul class="fourth-list clearfix">
-        <li>
+        <li class="card-p">
           <img src="{{ asset('frontend/assets/images/shwe.jpg') }}" alt="">
           <div class="para">
             <p class="p1">Yangon</p>
-            <p>Yangon is Myanmar's most populous city and its most important commercial centre.</p>
+            <p class="txt-para">Yangon is Myanmar's most populous city and its most important commercial centre.</p>
           </div>
         </li>
-        <li>
+        <li class="card-p">
           <img src="{{ asset('frontend/assets/images/mandalay.jpg') }}" alt="">
           <div class="para">
             <p class="p1">Mandalay</p>
-            <p>Mandalay is the economic centre of Upper Myanmar and considered the centre.</p>
+            <p class="txt-para">Mandalay is the economic centre of Upper Myanmar and considered the centre.</p>
           </div>
         </li>
-        <li>
+        <li class="card-p">
           <img src="{{ asset('frontend/assets/images/sagaing.jpg') }}" alt="">
           <div class="para">
             <p class="p1">Sagaing</p>
-            <p>It is located in the Irrawaddy River, to the south-west of Mandalay on the opposite bank of the river.</p>
+            <p class="txt-para">It is located in the Irrawaddy River, to the south-west of Mandalay on the opposite bank of the river.</p>
           </div>
         </li>
       </ul>
@@ -108,7 +108,7 @@
     <h2 class="fourth-head">Our Blog</h2>
       <div class="row slick_slider justify-content-center mt-5">
         @foreach($posts as $post)
-        <div class="blogpost">
+        <div class="blog-post">
           <a href="{{ route('posts.show', $post)  }}">
             <div class="card-post">
               <div class="card-post-img">
@@ -136,5 +136,8 @@
   <script>
       $('.project-content .project-card').hide();
       $('.project-content .project-card:lt(6)').show();
+
+      $('.car-lp .car-sec').hide();
+      $('.car-lp .car-sec:lt(3)').show();
   </script>
 @endpush

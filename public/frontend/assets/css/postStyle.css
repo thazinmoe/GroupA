@@ -184,14 +184,14 @@
 }
 
 .slick-prev {
-  top: 47%;
+  top: 35%;
   left: 9px;
   z-index: 1;
 }
 
 .slick-next {
 
-  top: 47%;
+  top: 35%;
   right: 40px;
 
 }

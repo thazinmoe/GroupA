@@ -63,7 +63,8 @@
             </div>
             @endforeach
         </div>    
-    </section><!--containerImg-blog-->
+    </section>
+    <!--containerImg-blog-->
 
     <section class="intro-sec-row ">
         <div class="intro-package">

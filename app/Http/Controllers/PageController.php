@@ -124,7 +124,6 @@ class PageController extends Controller
         return view('contact');
     }
 
-
     /**
      * getEmail function
      *

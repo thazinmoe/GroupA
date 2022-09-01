@@ -49,6 +49,7 @@ Route::post('add-customer/{travelPackage:slug}', [CustomerController::class, 'st
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
 Auth::routes();
+//Thein Htike Soe
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [PageController::class, 'home'])->name('viewHome');
 Route::group(['middleware' => 'auth'], function () {

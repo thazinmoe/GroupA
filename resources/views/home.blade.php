@@ -42,7 +42,7 @@
   </section>
 
   <!--=============== Package ===============-->
-  <section class="home-package">
+  <section class="home-package" id="package">
     <div class="l-inner">
     <div class="project">
       <h3 class="fourth-head">Package</h3>
@@ -57,7 +57,7 @@
                       class="img-fluid" alt="">
             </div>
             <div class="project-card-text">
-              <a href="#" class="project-btn"> {{ $travelPackage->name }}</a>
+              <a href="#" class="name"> {{ $travelPackage->name }}</a>
             </div>
 
           </div>
@@ -83,7 +83,7 @@
             <h4 class="car-name">{{ $car->name }}</h4>
             <p class="car-price">Price-{{ $car->price }} <b>MMK</b></p>
             <p class="dua"><i class='bx bxs-time-five main-color fs-4 me-3'></i> <strong>{{ $car->duration }}</strong></p>
-            <a href="#" class="boo">Booking</a>
+            <a href="#package" class="boo">Go To Package</a>
         </div>
         @endforeach
 

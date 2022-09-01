@@ -39,7 +39,7 @@
                         <label for="image">Image</label>
                         <input type="file" class="form-control" id="image" name="image" />
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>

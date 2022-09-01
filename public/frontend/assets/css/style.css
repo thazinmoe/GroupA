@@ -68,14 +68,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 600px;
-    background: url('../images/nature.jpg')no-repeat center/cover;
+    height: 500px;
+    background: url('../images/mainv.jpg')no-repeat center/cover;
   
 }
 .hero-content{
     font-family: 'Roboto';
     font-weight: 700;
-    padding-top: 150px;
+    padding-top: 120px;
     text-align: center;
 }
 .hero-content .head{

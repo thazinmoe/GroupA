@@ -13,75 +13,126 @@ use App\Models\Customer_comfirm;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\StoreEmailRequest;
+use App\Contracts\Services\PageServiceInterface;
 
 class PageController extends Controller
 {
-    public function home() : View
+    /**
+     * Page interface
+     */
+    private $pageInterface;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct(PageServiceInterface $pageServiceInterface)
     {
-        $categories = Category::with('travel_packages')->get();
-        $posts = Post::get();
-        $car   = Car::get();
-        return view('home', compact('categories','posts','car'));
+        $this->pageInterface = $pageServiceInterface;
     }
 
+    /**
+     * home function
+     *
+     * @return View
+     */
+    public function home(): View
+    {
+        $categories = $this->pageInterface->getCategories();
+        $posts = $this->pageInterface->getPosts();
+        $car = $this->pageInterface->getCars();
+        return view('home', compact('categories', 'posts', 'car'));
+    }
+
+    /**
+     * detail function
+     *
+     * @param TravelPackage $travelPackage
+     * @return View
+     */
     public function detail(TravelPackage $travelPackage): View
     {
-        $car = Car::find($travelPackage->car_id);
+        $car = $this->pageInterface->getCarId($travelPackage);
         $car_name = $car->name;
-        $category = Category::find($travelPackage->category_id);
+        $category = $this->pageInterface->getCategoryId($travelPackage);
         $category_name = $category->title;
-        return view('detail', compact('travelPackage','car_name','category_name'));
+        return view('detail', compact('travelPackage', 'car_name', 'category_name'));
     }
 
-    public function package(Request $request){
-        $travelPackages = TravelPackage::orderBy('id','desc')->paginate(3);
-        $categories = Category::all();
-
-        if($request->ajax()) {
-            return view('package_paginate',compact('travelPackages'));
+    /**
+     * package function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function package(Request $request)
+    {
+        $categories = $this->pageInterface->getCategories();
+        $travelPackages = $this->pageInterface->getTravelPackages();
+        if ($request->ajax()) {
+            return view('package_paginate', compact('travelPackages'));
         }
-
-        $popu_packages = TravelPackage::leftJoin('customer_comfirms', 'package_id', '=', 'travel_packages.id')
-        ->select('travel_packages.id','travel_packages.name','travel_packages.image','travel_packages.description','travel_packages.price','travel_packages.location','travel_packages.duration','travel_packages.slug', DB::raw("count('customer_comfirms.package_id') as customer_count"))
-        ->groupBy('travel_packages.id')
-        ->orderBy('customer_count','desc')
-        ->having('customer_count','>',4)
-        ->get();    
-        
-        return view('package', compact('travelPackages','categories','popu_packages'));
+        $popu_packages = $this->pageInterface->getPopPackages();
+        return view('package', compact('travelPackages', 'categories', 'popu_packages'));
     }
 
-    public function package_by_cat($id) {
-        $categories = Category::all();
-        $travelPackages = TravelPackage::where('category_id',$id)->get();
-
-        $popu_packages = TravelPackage::leftJoin('customer_comfirms', 'package_id', '=', 'travel_packages.id')
-        ->select('travel_packages.id','travel_packages.name','travel_packages.image','travel_packages.description','travel_packages.price','travel_packages.location','travel_packages.duration','travel_packages.slug', DB::raw("count('customer_comfirms.package_id') as customer_count"))
-        ->groupBy('travel_packages.id')
-        ->orderBy('customer_count','desc')
-        ->having('customer_count','>',4)
-        ->get();    
-
-        return view('package',compact('travelPackages','categories','popu_packages'));
+    /**
+     * package_by_cat function
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function package_by_cat($id)
+    {
+        $categories = $this->pageInterface->getCategories();
+        $travelPackages = $this->pageInterface->getTravelPackageById($id);
+        $popu_packages = $this->pageInterface->getPopPackages();
+        return view('package', compact('travelPackages', 'categories', 'popu_packages'));
     }
 
-    public function posts(){
-        $posts = Post::get();
-
+    /**
+     * posts function
+     *
+     * @return void
+     */
+    public function posts()
+    {
+        $posts = $this->pageInterface->getPosts();
         return view('posts', compact('posts'));
     }
 
-    public function detailPost(Post $post){
-        $posts = Post::get();
-
-        return view('posts-detail',compact('posts','post'));
+    /**
+     * detailPost function
+     *
+     * @param Post $post
+     * @return void
+     */
+    public function detailPost(Post $post)
+    {
+        $posts = $this->pageInterface->getPosts();
+        return view('posts-detail', compact('posts', 'post'));
     }
 
-    public function contact(){
+    /**
+     * contact function
+     *
+     * @return void
+     */
+    public function contact()
+    {
         return view('contact');
     }
 
-    public function getEmail(StoreEmailRequest $request){
+
+    /**
+     * getEmail function
+     *
+     * @param StoreEmailRequest $request
+     * @return void
+     */
+    public function getEmail(StoreEmailRequest $request)
+    {
         $detail = [
             'name' => $request->name,
             'email' => $request->email,

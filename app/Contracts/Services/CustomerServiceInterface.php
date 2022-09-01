@@ -5,7 +5,7 @@ namespace App\Contracts\Services;
 use Illuminate\Http\Request;
 
 /**
- * Interface for post service
+ * Interface for Data Accessing Object of Customer
  */
 interface CustomerServiceInterface
 {

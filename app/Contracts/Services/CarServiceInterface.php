@@ -6,7 +6,7 @@ use App\Http\Requests\StoreCarRequest;
 use App\Models\Car;
 
 /**
- * Interface for Data Accessing Object of Post
+ * Interface for Data Accessing Object of Car
  */
 interface CarServiceInterface
 {

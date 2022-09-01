@@ -5,7 +5,7 @@ namespace App\Contracts\Dao;
 use Illuminate\Http\Request;
 
 /**
- * Interface for Data Accessing Object of Post
+ * Interface for Data Accessing Object of Customer
  */
 interface CustomerDaoInterface
 {

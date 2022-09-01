@@ -8,7 +8,7 @@ use App\Models\Car;
 use Illuminate\Support\Facades\File;
 
 /**
- * Data accessing object for post
+ * Data accessing object for Car
  */
 class CarDao implements CarDaoInterface
 {

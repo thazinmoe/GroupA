@@ -7,17 +7,17 @@ use App\Contracts\Dao\CustomerDaoInterface;
 use App\Contracts\Services\CustomerServiceInterface;
 
 /**
- * Service class for post.
+ * Service class for customer
  */
 class CustomerService implements CustomerServiceInterface
 {
     /**
-     * commentDao
+     * customerDao
      */
     private $customerDao;
     /**
      * Class Constructor
-     * @param PostDaoInterface
+     * @param CustomerDaoInterface
      * @return
      */
     public function __construct(CustomerDaoInterface $customerDaoInterface)

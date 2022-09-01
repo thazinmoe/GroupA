@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreCarRequest;
 
 /**
- * Interface for Data Accessing Object of Post
+ * Interface for Data Accessing Object of Car
  */
 interface CarDaoInterface
 {

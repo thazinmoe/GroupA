@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreCategoryRequest;
 
 /**
- * Interface for Data Accessing Object of Post
+ * Interface for Data Accessing Object of Category
  */
 interface CategoryDaoInterface
 {

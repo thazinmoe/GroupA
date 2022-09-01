@@ -10,7 +10,7 @@ use App\Contracts\Dao\CustomerDaoInterface;
 use App\Notifications\ComfirmEmailNotification;
 
 /**
- * Data accessing object for post
+ * Data accessing object for Customer
  */
 class CustomerDao implements CustomerDaoInterface
 {

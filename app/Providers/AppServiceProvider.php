@@ -35,9 +35,11 @@ class AppServiceProvider extends ServiceProvider
         //dashboard
         $this->app->bind('App\Contracts\Dao\DashboardDaoInterface','App\Dao\DashboardDao');
         $this->app->bind('App\Contracts\Services\DashboardServiceInterface','App\Services\DashboardService');
-        
-        
 
+        //page
+        $this->app->bind('App\Contracts\Dao\PageDaoInterface','App\Dao\PageDao');
+        $this->app->bind('App\Contracts\Services\PageServiceInterface','App\Services\PageService');
+        
     }
 
     /**

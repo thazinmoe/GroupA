@@ -8,12 +8,12 @@ use App\Http\Requests\StoreCarRequest;
 use App\Models\Car;
 
 /**
- * Service class for post.
+ * Service class for car
  */
 class CarService implements CarServiceInterface
 {
     /**
-     * postDao
+     * carDao
      */
     private $carDao;
     /**

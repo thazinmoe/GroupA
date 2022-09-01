@@ -21,6 +21,7 @@
     <link rel="stylesheet" href=" {{ asset('frontend/assets/css/reset.css') }} " />
     <link rel="stylesheet" href=" {{ asset('frontend/assets/css/common.css') }} " />
     <link rel="stylesheet" href=" {{ asset('frontend/assets/css/package-list.css') }} " />
+    <link rel="stylesheet" href=" {{ asset('frontend/assets/css/detail.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/library/slick.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/library/slick-theme.css') }}"/>
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}" />

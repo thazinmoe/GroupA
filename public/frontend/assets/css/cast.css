@@ -131,11 +131,16 @@
 }
 .txt-view button{
   padding: 10px 20px;
-  border: none;
+  border: 1px solid transparent;
+  background-color: #1abc9c;
+  border-radius: 8px;
+  color: #fff;
 }
 .txt-view button:hover{
-  border: 1px solid green;
-  border-radius: 3px;
+  border: 1px solid #1abc9c;
+  color: #1abc9c;
+  background-color: #fff;
+  border-radius: 8px;
 }
 .home-car{
   width: 100%;
@@ -176,13 +181,15 @@
 }
 .boo{
   text-align: center;
-  border: 1px solid white;
-  background-color:aqua;
+  border: 1px solid transparent;
+  background-color:#1abc9c;
   padding: 15px 0px;
+  color: #fff;
 }
 .boo:hover{
-  background-color: #f3f3f3;
-  border: 1px solid aqua;
+  color: #1abc9c;
+  background-color: #fff;
+  border: 1px solid #1abc9c;
 }
 
 /*Blog*/

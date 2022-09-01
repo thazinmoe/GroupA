@@ -1,0 +1,304 @@
+.detail-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.detail-title .title ul li{
+    float: left;
+    margin-right: 5px;
+}
+
+.detail-title .title ul li a:hover {
+    color: #1abc9c;
+}
+.detail-title .title ul li p {
+    font-size: 18px;
+}
+.detail-title .title ul li .color-text {
+    color: #1abc9c;
+}
+.package-title {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.package-title .package-title-link h1{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.package-title .package-title-link .name {
+    color: #1abc9c;
+}
+
+.package-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.package-description .pack-float-left {
+    float: left;
+    width: 49%;
+}
+.pack-float-left {
+    width: 49%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pack-float-left h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.pack-float-left p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.package-description .pack-float-right {
+    float: right;
+    width: 49%;
+}
+
+.pack-float-right {
+    width: 49%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pack-float-right h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.pack-float-right p {
+    font-size : 16px;
+    background-color: #f5f5f5;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.pack-float-right h3 {
+    font-size: 15px;
+    margin-top: 18px;
+    font-weight: 700;
+}
+.img-float {
+    margin-top: 15px;
+}
+.img-float-left {
+    float: left;
+    width: 50%;
+}
+
+.phone-float-right {
+    float: right;
+    width: 50%;
+}
+.phone-float-right h5 {
+    font-size: 14px;
+}
+
+.show_confirm button{
+    font-size: 15px;
+    padding: 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+/*I-pad*/
+@media screen and (min-width : 768px) and (max-width : 1160px) {
+    .detail-title {
+        margin-top: 3.906vw;
+        margin-bottom: 1.302vw;
+    }
+    
+    .detail-title .title ul li{
+        float: left;
+        margin-right: 0.651vw;
+    }
+
+    .detail-title .title ul li p {
+        font-size: 2.344vw;
+    }
+    
+    .package-title {
+        margin-top: 2.604vw;
+        margin-bottom: 3.906vw;
+    }
+    .package-title .package-title-link h1{
+        margin-bottom: 0.651vw;
+        font-size: 2.604vw;
+    }
+    
+    .package-description {
+        margin-top: 2.604vw;
+        margin-bottom: 2.604vw;
+    }
+    
+    .package-description .pack-float-left {
+        float: left;
+        width: 49%;
+    }
+    .pack-float-left {
+        width: 49%;
+        padding: 2.604vw;
+        border-radius: 1.302vw;
+    }
+    .pack-float-left h2 {
+        font-size: 2.344vw;
+        margin-bottom: 1.563vw;
+    }
+    .pack-float-left p {
+        line-height: 1.3;
+        font-size: 2.083vw;
+        margin-bottom: 1.302vw;
+    }
+    
+    .package-description .pack-float-right {
+        float: right;
+        width: 49%;
+    }
+    
+    .pack-float-right {
+        width: 49%;
+        padding: 2.604vw;
+        border-radius: 1.302vw;
+    }
+    
+    .pack-float-right h2 {
+        font-size: 2.344vw;
+        margin-bottom: 2.344vw;
+    }
+    
+    .pack-float-right p {
+        font-size : 2.083vw;
+        padding: 2.344vw;
+        border-radius: 1.302vw;
+        margin-bottom: 1.302vw;
+    }
+    .pack-float-right h3 {
+        font-size: 1.953vw;
+        margin-top: 2.344vw;
+    }
+    .img-float {
+        margin-top: 1.953vw;
+    }
+    .img-float-left {
+        float: left;
+        width: 50%;
+    }
+    
+    .phone-float-right {
+        float: right;
+        width: 50%;
+    }
+    .phone-float-right h5 {
+        font-size: 1.823vw;
+    }    
+
+    .show_confirm button{
+        font-size: 1.953vw;
+        padding: 1.953vw;
+        border-radius: 1.042vw;
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width:767.9px) {
+    .detail-title {
+        margin-top: 4.688vw;
+        margin-bottom: 1.563vw;
+    }
+    
+    .detail-title .title ul li{
+        margin-right: 0.781vw;
+    }
+
+    .detail-title .title ul li p {
+        font-size: 2.813vw;
+    }   
+
+    .package-title {
+        margin-top: 3.125vw;
+        margin-bottom: 4.688vw;
+    }
+    .package-title .package-title-link h1{
+        margin-bottom: 0.781vw;
+        font-size: 3.125vw;
+    }
+    
+    .package-description {
+        margin-top: 3.125vw;
+        margin-bottom: 3.125vw;
+    }
+    
+    .package-description .pack-float-left {
+        width: 100%;
+    }
+    .pack-float-left {
+        width: 100%;
+        padding: 3.125vw;
+        border-radius: 1.563vw;
+    }
+    .pack-float-left h2 {
+        font-size: 2.813vw;
+        margin-bottom: 1.875vw;
+    }
+    .pack-float-left p {
+        font-size: 2.5vw;
+        margin-bottom: 1.563vw;
+    }
+    
+    .package-description .pack-float-right {
+        width: 100%;
+        margin-top: 3.125vw;
+    }
+    
+    .pack-float-right {
+        width: 100%;
+        padding: 3.125vw;
+        border-radius: 1.563vw;
+    }
+    
+    .pack-float-right h2 {
+        font-size: 2.813vw;
+        margin-bottom: 2.813vw;
+    }
+    
+    .pack-float-right p {
+        font-size: 2.5vw;
+        padding: 2.813vw;
+        border-radius: 1.563vw;
+        margin-bottom: 1.563vw;
+    }
+    .pack-float-right h3 {
+        font-size: 2.344vw;
+        margin-top: 2.813vw;
+    }
+    .img-float {
+        margin-top: 2.344vw;
+    }
+    .img-float-left {
+        float: left;
+        width: 50%;
+    }
+    
+    .phone-float-right {
+        float: right;
+        width: 50%;
+    }
+    .phone-float-right h5 {
+        font-size: 2.188vw;
+    }    
+
+    .show_confirm button{
+        font-size: 2.344vw;
+        padding: 2.344vw;
+        border-radius: 1.25vw;
+    }
+}

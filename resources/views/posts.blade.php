@@ -16,6 +16,7 @@
 
       
     <section class="container-blog">
+        <h1 class="cmn-head" style="text-align:center">All Posts</h1>
         <div class="row justify-content-center mt-5 mb-10">
             
          
@@ -44,7 +45,7 @@
     </section><!--container-blog-->
        
     <section class="container-blog">
-        <h2 class="img-title">Gallery</h2><br>
+        <h2 class="cmn-head" style="text-align:center">Gallery</h2><br>
         <div class="row l-inner slick_slider justify-content-center mt-20">
         @foreach($posts as $post)
           <div class="blogpost slider">

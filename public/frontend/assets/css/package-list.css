@@ -431,6 +431,11 @@
     margin-right: 0;
   }
 
+  .third-row .float-right .card img {    
+    width: 39.063vw;
+    height: 26.042vw;
+  }
+
   .third-row .float-right .card {
     box-shadow: 0 0.521vw 1.042vw 0 rgba(0, 0, 0, 0.2);   
     max-width: 39vw;
@@ -665,6 +670,16 @@
   .float-right li {
     width: 100%;
     margin-bottom: 4.688vw;
+  }
+
+  .third-row .float-right .card img {
+    width: 46.875vw;
+    height: 31.25vw;
+  }
+    
+  .third-row .float-right .card {
+    box-shadow: 0 0.625vw 1.25vw 0 rgba(0, 0, 0, 0.2);
+    max-width: 46.875vw;
   }
 
   .third-row .float-right .card h1 {

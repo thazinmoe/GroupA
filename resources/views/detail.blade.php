@@ -2,21 +2,30 @@
 
 @section('content')
     <main>
-      <section class="container mt-5" style="margin-bottom: 70px">
-        <div class="col-12 col-md">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a class="title-alt" href="{{ route('home') }}">Home</a>
+      <section class="detail-title">
+        <div class="l-inner-package">
+          <div class="title">
+            <ul class="clearfix">
+              <li>
+                <a href="{{route('viewHome')}}"><p>Home</p></a>
               </li>
-              <li class="breadcrumb-item main-color">Package Detail</li>
-            </ol>
-          </nav>
+              <li>
+                <p>/</p>
+              </li>
+              <li>
+                <p class="color-text">Package Detail</p> 
+              </li>
+            </ul>        
+          </div>
         </div>
+      </section>
 
-        <div class="col-12 col-md text-center">
-          <h1 class="main-color">{{ $travelPackage->name }}</h1>
-          <span class="title-alt">{{ $travelPackage->location }}</span>
+      <section class="package-title">
+        <div class="l-inner">
+          <div class="package-title-link">
+            <h1 class="name">{{ $travelPackage->name }}</h1>
+            <h1> {{ $travelPackage->location }} </h1>
+          </div>
         </div>
       </section>
 
@@ -31,66 +40,36 @@
 
           </div>
         </div>
+      </section>
+      <!--swiper class end-->
 
-        <div class="row" style="margin-top: 120px">
-          <div class="col-12 col-md-12 col-lg-7 mb-5">
-            <div class="card border-0 p-2">
-              <h3 class="fw-bolder title mb-4">About Tour Packages</h3>
-              {!! $travelPackage->description !!}
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-5">
-            <div class="card bordered card-form" style="padding: 30px 40px">
-              <h4 class="text-center mb-3">Start Booking</h4>              
-              <div
-                class="alert alert-secondary"
-                style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
-                role="alert"
-              >
-                Category :
-                <span class="text-gray-500 font-weight-light"
-                  >{{ $category_name }}</span
-                >
+      <section class="package-description">
+        <div class="l-inner">
+          <div class="clearfix">
+              <div class="pack-float-left">
+                <h2>About Tour Package</h2>
+                <p> {{$travelPackage->description}} </p>
               </div>
-              <div
-                class="alert alert-secondary"
-                style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
-                role="alert"
-              >
-                Car :
-                <span class="text-gray-500 font-weight-light"
-                  >{{ $car_name }}</span
-                >
-              </div>
-              <div
-                class="alert alert-secondary"
-                style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
-                role="alert"
-              >
-                Duration: {{ $travelPackage->duration }}
-              </div>
-              <div
-                class="alert alert-secondary"
-                style="background-color: #f5f5f5; border: 1px solid #f5f5f5"
-                role="alert"
-              >
-                Price :
-                <span class="text-gray-500 font-weight-light"
-                  >{{ number_format($travelPackage->price) }} MMK</span
-                >
-              </div>
-              <h5 class="">Send Payment</h5>
-             <div class="card-bank d-flex align-items-center justify-content-around">
-                <img height="40" width="80" src="{{ asset('frontend/assets/images/testing.png') }}" alt="">
-                <div class="card-bank-content d-flex flex-column">
-                  <span>Group-A</span>
-                  <b>09-00022233</b>
+              <div class="pack-float-right">
+                <h2>Start Booking</h2>
+                <p>Category : {{ $category_name }}</p>
+                <p>Car : {{ $car_name }}</p>
+                <p>Duration : {{ $travelPackage->duration }}</p>
+                <p>Price : {{ number_format($travelPackage->price) }} MMK</p>
+                <h3>Send Payment :</h3>
+                <div class="img-float clearfix">
+                  <div class="img-float-left">
+                    <img height="50" width="100"  src="{{ asset('frontend/assets/images/car_logo.png') }}" alt="Logo">
+                  </div>
+                  <div class="phone-float-right">
+                    <h5>Group-A</h5>
+                    <h5>016-486-4656-45</h5>
+                  </div>
                 </div>
-             </div>
-              <a onClick="return confirm('Are you sure booking ?')" class="btn btn-book btn-block mt-3" href="{{ route('add-customer', $travelPackage) }}"
-                >Continue to Book</a
-              >
-            </div>
+                <a href="{{ route('add-customer', $travelPackage) }}" class="show_confirm">
+                  <button>Continue to Book</button>
+                </a>
+              </div>
           </div>
         </div>
       </section>
@@ -142,6 +121,7 @@
 
 @push('script-alt')
     <script src="{{ asset('frontend/assets/libraries/swipper/js/app.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
      <script>
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -153,6 +133,22 @@
         coverflowEffect: {
           rotate: 0,
         },
+      });
+      $('.show_confirm').click(function(event) {
+          event.preventDefault();
+          var url =  $(this).attr('href');
+          swal({
+              title: 'Are you sure to continue to book?',
+              text : 'This will take you to booking page.',
+              icon: "success",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willBook) => {
+            if (willBook) {
+              window.location.href = url;
+            }
+          });
       });
     </script>
 @endpush

@@ -44,9 +44,11 @@ class ComfirmEmailNotification extends Notification
         return (new MailMessage)
                     ->greeting('Hello, '.$this->customer->customer_name)
                     ->line('Welcome to Tour-booking-project(GROUPA).')
-                    ->line('Package Name is - '.$this->customer->travel_packages->name)
-                    ->line('Package Duration is - '.$this->customer->travel_packages->duration)
-                    ->line('Package Price is - '.$this->customer->travel_packages->price.'MMK')
+                    ->line('Package Name - '.$this->customer->travel_packages->name)
+                    ->line('Package Duration - '.$this->customer->travel_packages->duration)
+                    ->line('Package Price - '.$this->customer->travel_packages->price.'MMK')
+                    ->line('Package Count - '.$this->customer->package_count)
+                    ->line('Total Package Price - '.$this->customer->package_price.'MMK')
                     ->action('HomePage', url('/'))
                     ->line('Thank you for Booking!');
     }

@@ -8,7 +8,7 @@
       <div class="card my-4">
         <div class="card-header">
           <h4>Customer Booking Form
-            <a href="{{ url('/package-travel') }}" class="btn btn-info mb-3 float-end">BACK</a>
+            <a href="{{ url('/package-travel') }}" class="btn mb-3 float-end">BACK</a>
           </h4>
         </div>
         <div class="card-body">
@@ -61,7 +61,7 @@
               @enderror
             </div>                   
             <div class="form-group mb-3">
-              <button type="submit" class="btn btn-primary">Save Booking</button>
+              <button type="submit" class="btn">Save Booking</button>
             </div>
           </form>
         </div>

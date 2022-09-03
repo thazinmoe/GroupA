@@ -23,7 +23,7 @@
       <section class="package-title">
         <div class="l-inner">
           <div class="package-title-link">
-            <h1 class="name">{{ $travelPackage->name }}</h1>
+            <h1 class="package-name">{{ $travelPackage->name }}</h1>
             <h1> {{ $travelPackage->location }} </h1>
           </div>
         </div>

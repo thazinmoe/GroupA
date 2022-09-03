@@ -30,7 +30,7 @@ Route::get('/', function () {
 });
 
 //packageTravel(Hnin Yu Yu Lwin)
-Route::get('package-travel', [PageController::class, 'package'])->name('package');
+Route::get('package', [PageController::class, 'package'])->name('package');
 Route::get('package-travel/{id}', [PageController::class, 'package_by_cat'])->name('package_by_cat');
 Route::get('detail/{travelPackage:slug}', [PageController::class, 'detail'])->name('detail');
 
@@ -46,6 +46,8 @@ Route::post('contact', [PageController::class, 'getEmail'])->name('contact.email
 Route::get('add-customer/{travelPackage:slug}', [CustomerController::class, 'create'])->name('add-customer');
 Route::post('add-customer/{travelPackage:slug}', [CustomerController::class, 'store'])->name('add-customer');
 //end customer
+
+Route::get('cars', [PageController::class, 'cars'])->name('cars');
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
 Auth::routes();

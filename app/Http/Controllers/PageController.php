@@ -124,7 +124,16 @@ class PageController extends Controller
         return view('contact');
     }
 
-
+    /**
+     * cars function
+     *
+     * @return void
+     */
+    public function cars()
+    { 
+        $cars = $this->pageInterface->getCars();
+        return view('car',compact('cars'));
+    }
     /**
      * getEmail function
      *

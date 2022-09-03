@@ -44,30 +44,29 @@
   <!--=============== Package ===============-->
   <section class="home-package" id="package">
     <div class="l-inner">
-    <div class="project">
-      <h3 class="fourth-head">Package</h3>
-      
-      <div class="project-content">
-      @foreach($categories as $category)
+      <div class="project">
+        <h3 class="fourth-head">Package</h3>
+
+        <div class="project-content">
+          @foreach($categories as $category)
           @foreach($category->travel_packages as $travelPackage)
           <div class="project-card">
             <a href="{{ route('detail', $travelPackage) }}">
-            <div class="project-card-bg">
-              <img src="{{ Storage::url($travelPackage->image) }}"
-                      class="img-fluid" alt="">
-            </div>
-            <div class="project-card-text">
-              <a href="#" class="name"> {{ $travelPackage->name }}</a>
-            </div>
+              <div class="project-card-bg">
+                <img src="{{ Storage::url($travelPackage->image) }}" class="img-fluid" alt="">
+              </div>
+              <div class="name">
+                <a href="{{ route('detail', $travelPackage) }}"> {{ $travelPackage->name }}</a>
+              </div>
 
           </div>
           @endforeach
-      @endforeach
-      
-      </div>
-      <div class="txt-view">
-      <a  href="{{ route('package') }}"><button>View More</button></a>
-      </div>
+          @endforeach
+
+        </div>
+        <div class="txt-view">
+          <a href="{{ route('package') }}"><button>View More</button></a>
+        </div>
       </div>
     </div>
   </section>
@@ -75,20 +74,22 @@
   <!-- Cars -->
   <section class="home-car">
     <div class="l-inner">
-    <h2 class="fourth-head">Car</h2>
-    <div class="car-lp">
+      <h2 class="fourth-head">Car</h2>
+      <div class="car-lp">
         @foreach($car as $car)
         <div class="car-sec">
-            <img src="{{ Storage::url($car->image) }}" alt="">
-            <h4 class="car-name">{{ $car->name }}</h4>
-            <p class="car-price">Price-{{ $car->price }} <b>MMK</b></p>
-            <p class="dua"><i class='bx bxs-time-five main-color fs-4 me-3'></i> <strong>{{ $car->duration }}</strong></p>
-            <a href="#package" class="boo">Go To Package</a>
+          <img src="{{ Storage::url($car->image) }}" alt="">
+          <h4 class="car-name">{{ $car->name }}</h4>
+          <p class="car-price">Price-{{ $car->price }} <b>MMK</b></p>
+          <p class="dua"><i class='bx bxs-time-five main-color fs-4 me-3'></i> <strong>{{ $car->duration }}</strong></p>
+          <a href="#package" class="boo">Go To Package</a>
         </div>
         @endforeach
-
       </div>
+      <div class="txt-view">
+        <a href="{{ route('cars') }}"><button>View More</button></a>
       </div>
+    </div>
   </section>
 
   <!--=============== Video ===============-->
@@ -105,7 +106,7 @@
   <!--=============== Blog ===============-->
   <section class="home-blog">
     <div class="l-inner">
-    <h2 class="fourth-head">Our Blog</h2>
+      <h2 class="fourth-head">Our Blog</h2>
       <div class="row slick_slider justify-content-center mt-5">
         @foreach($posts as $post)
         <div class="blog-post">
@@ -120,24 +121,25 @@
               </div>
             </div>
           </a>
-          
+
         </div>
         @endforeach
       </div>
+
+      <div class="txt-view">
+        <a href="/posts"><button>View More</button></a>
       </div>
-        <div class="txt-view">
-       <a  href="{{ route('posts') }}"><button>View More</button></a>
-      </div>
+    </div>
   </section>
 </main>
 @endsection
 
 @push('script-alt')
-  <script>
-      $('.project-content .project-card').hide();
-      $('.project-content .project-card:lt(6)').show();
+<script>
+  $('.project-content .project-card').hide();
+  $('.project-content .project-card:lt(3)').show();
 
-      $('.car-lp .car-sec').hide();
-      $('.car-lp .car-sec:lt(3)').show();
-  </script>
+  $('.car-lp .car-sec').hide();
+  $('.car-lp .car-sec:lt(3)').show();
+</script>
 @endpush

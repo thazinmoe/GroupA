@@ -28,6 +28,7 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Price</th>
+                            <th>Duration</th>
                             <th>Image</th>
                             <th>Action</th>
                         </tr>
@@ -38,6 +39,7 @@
                             <td>{{ $car->id }}</td>
                             <td>{{ $car->name }}</td>
                             <td>{{ $car->price }}</td>
+                            <td>{{ $car->duration }}</td>
                             <td>
                                 <img width="150" src="{{ Storage::url($car->image) }}" alt="">
                             </td>

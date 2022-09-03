@@ -39,24 +39,6 @@
         </a>
       
         <div class="row slick_slider justify-content-center">
-
-            <!--@foreach($posts as $post)
-            <div class="col-lg-4 mb-4">
-              <a href="{{ route('posts.show', $post) }}">
-                <div class="card text-center p-4">
-                  <h4 class="title mb-2">{{ $post->title }}</h4>
-                  <span class="main-color">Posting <span href="#">{{ $post->created_at->diffForHumans() }}</span></span>
-                  <div class="card-body p-3">
-                    <img src="{{ Storage::url($post->image) }}" alt=""/>             
-                    <p class="title-alt mt-5">
-                      {{ $post->excerpt }}
-                    </p>
-                  </div>
-                </div>
-              </a>
-              
-            </div>
-            @endforeach-->
             @foreach($posts as $post)
             <div class="blogpost">
                 <ul>

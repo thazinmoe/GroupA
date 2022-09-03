@@ -42,6 +42,8 @@ Route::get('posts/{post:slug}', [PageController::class, 'detailPost'])->name('po
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
 Route::post('contact', [PageController::class, 'getEmail'])->name('contact.email');
 
+//theinhtikesoe
+Route::get('cars', [PageController::class, 'cars'])->name('cars');
 //start customer(Thazin Moe)
 Route::get('add-customer/{travelPackage:slug}', [CustomerController::class, 'create'])->name('add-customer');
 Route::post('add-customer/{travelPackage:slug}', [CustomerController::class, 'store'])->name('add-customer');

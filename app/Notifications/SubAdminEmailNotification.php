@@ -45,7 +45,7 @@ class SubAdminEmailNotification extends Notification
         return (new MailMessage)
                 ->greeting('Hello, '.$this->user->name)
                 ->line('Welcome to our admin team. You are subadmin')
-                ->line('If you know other imformation, You can connect Admin team')              
+                ->line('If you know other information, You can connect Admin team')              
                 ->action('Explore', url('/'))
                 ->line('Thank you for using our application!');
     }

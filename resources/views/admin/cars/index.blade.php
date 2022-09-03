@@ -2,23 +2,20 @@
 
 @section('content')
 <div class="container">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">CARS</h1>
-            <a href="{{ route('admin.cars.create') }}" class="btn btn-primary btn-sm shadow-sm">Create Car <i class="fa fa-plus"> </i></a>
+        <a href="{{ route('admin.cars.create') }}" class="btn btn-primary btn-sm shadow-sm">Create Car <i class="fa fa-plus"> </i></a>
     </div>
 
-     
-
-            @if(session('message'))
-                <div class="alert alert-info alert-dismissible fade show" role="alert">
-                    <strong>{{ session('message') }}</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
+    @if(session('message'))
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>{{ session('message') }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
 
         <div class="card-body">
             <div class="table-responsive">
@@ -68,6 +65,5 @@
     
 
     <!-- Content Row -->
-
 </div>
 @endsection

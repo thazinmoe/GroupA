@@ -2,10 +2,12 @@
 
 @section('content')
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Edit {{ $post->title }}</h1>
+        <div class="pull-right">
+            <a class="btn btn-primary" href="{{ route('admin.posts.index') }}"> Back</a>
+        </div>
     </div>
 
     @if($errors->any())
@@ -18,7 +20,7 @@
         </div>
     @endif
 
-<!-- Content Row -->
+    <!-- Content Row -->
         <div class="card shadow">
             <div class="card-body">
                 <form action="{{ route('admin.posts.update', $post) }}" method="POST" enctype="multipart/form-data">
@@ -43,14 +45,11 @@
                         <label for="content">Content</label>
                         <textarea name="content" id="description" class="form-control">{{ $post->content }}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Update</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             </div>
         </div>
-    
-
     <!-- Content Row -->
-
 </div>
 @endsection
 

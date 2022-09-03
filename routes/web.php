@@ -30,7 +30,7 @@ Route::get('/', function () {
 });
 
 //packageTravel(Hnin Yu Yu Lwin)
-Route::get('package', [PageController::class, 'package'])->name('package');
+Route::get('package-travel', [PageController::class, 'package'])->name('package');
 Route::get('package-travel/{id}', [PageController::class, 'package_by_cat'])->name('package_by_cat');
 Route::get('detail/{travelPackage:slug}', [PageController::class, 'detail'])->name('detail');
 

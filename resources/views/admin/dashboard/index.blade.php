@@ -101,16 +101,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script type="text/javascript">
-        var labels = {
-            {
-                Js::from($package)
-            }
-        };
-        var users = {
-            {
-                Js::from($test)
-            }
-        };
+        
+        var labels =  {{ Js::from($package) }};
+        
+        var users =  {{ Js::from($test) }};
 
         const data = {
             labels: labels,

@@ -45,7 +45,7 @@
   <section class="home-package" id="package">
     <div class="l-inner">
       <div class="project">
-        <h3 class="fourth-head">Package</h3>
+        <h3 class="fourth-head">Buy Package</h3>
 
         <div class="project-content">
           @foreach($categories as $category)

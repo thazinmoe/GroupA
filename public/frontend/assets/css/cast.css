@@ -1,7 +1,8 @@
 /*Popular City*/
-body{
+body {
   overflow-x: hidden;
 }
+
 .carview {
   display: block;
   position: relative;
@@ -12,6 +13,26 @@ body{
   background-image: url('../images/carback.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.hero {  
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  background: url('../images/3840.jpg')no-repeat center/cover;
+  margin-bottom: 20px;
+}
+.hero-content{
+  font-family: 'Roboto';
+  font-weight: 700;
+  padding-top: 120px;
+  text-align: center;
+}
+.hero-content .head{
+  line-height: 100px;
+  font-size: 70px;
+  color:#fff;
 }
 .title-head {
   width: 100%;
@@ -24,6 +45,7 @@ body{
   text-align: center;
   text-transform: uppercase;
 }
+
 .fourth-link {
   width: 100%;
   margin: 0 auto;
@@ -31,16 +53,19 @@ body{
   margin-bottom: 75px;
   box-sizing: border-box;
 }
+
 .fourth-head {
   font-family: 'IBM Plex Sans';
   font-weight: 900;
   font-size: 40px;
   text-align: center;
 }
-.fourth-list{
+
+.fourth-list {
   margin: 0 auto;
   margin-left: 40px;
 }
+
 .fourth-list li:nth-of-type(3n) {
   margin-right: 0;
 }
@@ -54,10 +79,12 @@ body{
   margin: 47px 29px 8px 0;
   padding-bottom: 5px;
 }
-.fourth-list li img{
+
+.fourth-list li img {
   height: 200px;
   width: 400px;
 }
+
 .para {
   position: relative;
   padding: 38px 0px 30px 0px;
@@ -66,7 +93,7 @@ body{
 
 .p1 {
   margin-bottom: 8px;
-  color:black;
+  color: black;
   font-family: 'IBM Plex Sans';
   font-weight: 700;
   font-size: 20px;
@@ -79,36 +106,40 @@ body{
 }
 
 /*Package*/
-.project-content{
+.project-content {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 30px 0px 0px;
 }
-.project-card{
+
+.project-card {
   width: 30%;
-  height: 300px; 
+  height: 300px;
   position: relative;
   margin: 20px 0px;
 }
-.project-card-bg{
+
+.project-card-bg {
   position: absolute;
   height: 100%;
   transition: all 0.5s ease-in-out;
-  
+
 }
-.project-card-bg img{
+
+.project-card-bg img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
 }
+
 .name {
   text-align: center;
   position: absolute;
-  width: 30%;
-  margin-left: 145px;
+  width: 50%;
+  margin-left: 90px;
   padding: 10px;
   border-radius: 5px;
   background-color: #4dffff;
@@ -117,21 +148,26 @@ body{
   bottom: 20px;
   color: green;
 }
-.name:hover{
+
+.name:hover {
   background-color: #f3f3f3;
 }
-.name a{
+
+.name a {
   font-size: 20px;
 }
-.name a:hover{
+
+.name a:hover {
   color: green;
 }
-.project-card-bg:hover{
+
+.project-card-bg:hover {
   transform: scale(1.05);
   border: none;
- 
+
 }
-.project-btn{
+
+.project-btn {
   text-decoration: none;
   color: #fff;
   padding: 10px 10px;
@@ -140,14 +176,15 @@ body{
   border-radius: 20px;
 
 }
-.project-btn:hover{
+
+.project-btn:hover {
   background-color: #fff;
   border-radius: 20px;
   color: #000;
   border: 1px solid #1abc9c;
 }
 
-.project-card-bg::after{
+.project-card-bg::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -158,92 +195,111 @@ body{
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
-.project-card-bg:hover:after{
+
+.project-card-bg:hover:after {
   opacity: 1;
 }
-.txt-view{
+
+.txt-view {
   margin-bottom: 30px;
   text-align: center;
 }
-.txt-view a{
+
+.txt-view a {
   margin-top: 40px;
   font-size: 20px;
   color: #000;
 }
-.txt-view button{
+
+.txt-view button {
   padding: 10px 20px;
   border: 1px solid transparent;
   background-color: #1abc9c;
   border-radius: 8px;
   color: #fff;
 }
-.txt-view button:hover{
+
+.txt-view button:hover {
   border: 1px solid #1abc9c;
   color: #1abc9c;
   background-color: #fff;
   border-radius: 8px;
 }
-.home-car{
+
+.home-car {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
 }
-.car-lp{
+
+.car-lp {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 30px;
 }
-.car-sec{
+
+.car-sec {
   width: 30%;
   margin-bottom: 50px;
   background-color: #f3f3f3;
 }
-.car-sec  img{
+
+.car-sec img {
   height: 200px;
   width: 100%;
 }
-.car-name{
+
+.car-name {
   font-size: 30px;
-  padding: 10px 0px;
+  padding: 10px 10px;
   color: green;
 }
+
 .car-price {
   font-size: 20px;
-  margin: 0px 0px 20px 190px;
+  margin: 0px 0px 20px 140px;
 }
-.dua{
+
+.dua {
   margin-bottom: 10px;
 }
+
 .dua i {
   position: relative;
 }
+
 .dua strong {
   position: absolute;
 }
-.boo{
+
+.boo {
   text-align: center;
   border: 1px solid transparent;
-  background-color:#1abc9c;
+  background-color: #1abc9c;
   padding: 15px 0px;
   color: #fff;
 }
-.boo:hover{
+
+.boo:hover {
   color: #1abc9c;
   background-color: #fff;
   border: 1px solid #1abc9c;
 }
 
 /*Blog*/
-.home-blog{
+.home-blog {
   margin: 0 auto;
 }
-.blogpost{
+
+.blogpost {
   margin-bottom: 100px;
 }
-.card-post{
+
+.card-post {
   margin: 0px 10px;
 }
+
 .card-post-img img {
   width: 100%;
   height: 250px;
@@ -260,10 +316,12 @@ body{
   text-transform: uppercase;
   color: var(--main-color);
 }
+
 .blogpost .card-post .card-post-data small {
   font-weight: 300;
   color: #959595;
 }
+
 .blogpost .card-post .card-post-data h5 {
   font-weight: 500;
   margin-top: 0.7rem;
@@ -272,541 +330,664 @@ body{
 
 
 @media screen and (min-width : 768px) and (max-width : 1160px) {
-  /*Popular City*/
-  body{
-    overflow-x: hidden;
+
+    /*Popular City*/
+    body {
+      overflow-x: hidden;
+    }
+
+    .fourth-link {
+      padding-top: 5.208vw;
+      margin-bottom: 9.766vw;
+    }
+
+    .fourth-head {
+      font-size: 5.208vw;
+    }
+
+        
+    .hero {        
+      height: 65.104vw;
+      margin-bottom: 3vw;
+    }
+    .hero-content{
+      padding-top: 15.625vw;
+    }
+    .hero-content .head{
+      line-height: 13.021vw;
+      font-size: 7vw;
+    }
+
+    .fourth-list {
+      margin-left: 2.344vw;
+    }
+
+    .fourth-list li {
+      border-radius: 1.302vw;
+      width: 30%;
+      height: 42.969vw;
+      margin: 6.12vw 3.776vw 1.042vw 0;
+      padding-bottom: 0.651vw;
+    }
+
+    .fourth-list li img {
+      height: 26.042vw;
+      width: 52.083vw;
+    }
+
+    .para {
+      padding: 4.948vw 0vw 3.906vw 0vw;
+    }
+
+    .p1 {
+      margin-bottom: 1.042vw;
+      font-size: 2.604vw;
+    }
+
+    .p2 {
+      font-size: 2.083vw;
+    }
+
+    .txt-para {
+      font-size: 1.693vw;
+    }
+
+    /*Package*/
+    .project-content {
+      width: 100%;
+      padding: 3.906vw 0vw;
+    }
+
+    .project-card {
+      width: 30%;
+      height: 29.036vw;
+      margin: 2.604vw 0vw;
+    }
+
+    .project-card-bg {
+      height: 100%;
+    }
+
+    .project-card-bg img {
+      width: 100%;
+      height: 100%;
+      border-radius: 2.604vw;
+    }
+
+    .project-card-text {
+      width: 100%;
+      bottom: 2.604vw;
+    }
+
+    .project-btn {
+      padding: 1.302vw 1.302vw;
+      border-radius: 2.604vw;
+
+    }
+
+    .project-btn:hover {
+      border-radius: 2.604vw;
+    }
+
+    .project-card-bg::after {
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-card-bg:hover:after {
+      opacity: 1;
+    }
+
+    .txt-view a {
+      font-size: 2.604vw;
+    }
+
+    .txt-view button {
+      padding: 1.302vw 2.604vw;
+      border-radius: 1.042vw;
+    }
+
+    .txt-view button:hover {
+      border-radius: 1.042vw;
+    }
+
+    .name {
+      font-size: 3.906vw;
+      margin-left: 5vw;  
+      width: 70%;
+      padding: 1.302vw;
+      border-radius: 0.651vw;
+      border: 0.13vw solid #f3f3f3;
+      bottom: 2.604vw;
+    }
+
+    .home-car {
+      width: 100%;
+      margin-bottom: 6.51vw;
+    }
+
+    .car-lp {
+      padding-top: 3.906vw;
+      margin-bottom: 3.906vw;
+    }
+
+    .car-sec {
+      width: 30%;
+    }
+
+    .car-sec img {
+      height: 26.042vw;
+      width: 100%;
+    }
+
+    .car-name {
+      font-size: 3vw;
+      padding: 1.302vw 1vw;
+    }
+
+    .car-price {
+      font-size: 2.083vw;
+      margin: 0vw 0vw 2.604vw 9vw;
+    }
+
+    .dua {
+      margin-bottom: 1.302vw;
+    }
+
+    .boo {
+      padding: 1.953vw 0vw;
+    }
+
+    /*Blog*/
+    .home-blog .blog-post {
+      margin-bottom: 3.906vw;
+      width: 100%;
+    }
+
+    .card-post {
+      margin: 0vw 1.302vw;
+      width: 84%;
+      margin-left: 4.427vw;
+    }
+
+    .card-post-img {
+      width: 100%;
+      height: 32.552vw;
+      border-radius: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-post-data {
+      text-align: left;
+    }
+
+    .card-post-data span {
+      font-weight: 600;
+    }
+
+    .card-post-data small {
+      font-weight: 300;
+    }
+
+  .card-post-data h5 {
+    font-weight: 500;
+    margin-top: 0.7rem;
   }
-.fourth-link {
-  padding-top: 40px;
-  margin-bottom: 75px;
-}
 
-.fourth-head {
-  font-size: 40px;
-}
-.fourth-list{
-  margin-left: 18px;
-}
+  .slick-prev:before {
+    position: absolute;
+    content: url('../images/img-left-arrow.png');
+    opacity: 1;
+  }
 
-.fourth-list li {
-  border-radius: 10px;
-  width: 30%;
-  height: 330px;
-  margin: 47px 29px 8px 0;
-  padding-bottom: 5px;
-}
-.fourth-list li img{
-  height: 200px;
-  width: 400px;
-}
-.para {
-  padding: 38px 0px 30px 0px;
-}
+  .slick-next:before {
+    position: absolute;
+    content: url('../images/img-right-arrow.png');
+    opacity: 1;
+  }
 
-.p1 {
-  margin-bottom: 8px;
-  font-size: 20px;
-}
+  .home-blog .slick-prev {
+    top: 30%;
+    left: 3.906vw;
+    z-index: 1;
+  }
 
-.p2 {
-  font-size: 16px;
-}
-.txt-para{
-  font-size: 13px;
-}
-
-/*Package*/
-.project-content{
-  width: 100%;
-  padding: 30px 0px;
-}
-.project-card{
-  width: 30%;
-  height: 223px; 
-  margin: 20px 0px;
-}
-.project-card-bg{
-  height: 100%; 
-}
-.project-card-bg img{
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-.project-card-text{
-  width: 100%;
-  bottom: 20px;
-}
-.project-btn{
-  padding: 10px 10px;
-  border-radius: 20px;
-
-}
-.project-btn:hover{
-  border-radius: 20px;
-}
-
-.project-card-bg::after{
-  width: 100%;
-  height: 100%;
-}
-.project-card-bg:hover:after{
-  opacity: 1;
-}
-.txt-view a{
-  font-size: 20px;
-}
-.txt-view button{
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-.txt-view button:hover{
-  border-radius: 8px;
-}
-.name{
-  font-size: 30px;
-  margin-left: 102px;
-}
-.home-car{
-  width: 100%;
-  margin-bottom: 50px;
-}
-.car-lp{
-  padding-top: 30px;
-  margin-bottom: 30px;
-}
-.car-sec{
-  width: 30%;
-}
-.car-sec  img{
-  height: 200px;
-  width: 100%;
-}
-.car-name{
-  font-size: 30px;
-  padding: 10px 0px;
-}
-.car-price {
-  font-size: 16px;
-  margin: 0px 0px 20px 86px;
-}
-.dua{
-  margin-bottom: 10px;
-}
-
-.boo{
-  padding: 15px 0px;
-}
-
-/*Blog*/
-.home-blog .blog-post{
-  margin-bottom: 30px;
-  width: 100%;
-}
-.card-post{
-  margin: 0px 10px;
-  width: 84%;
-  margin-left: 34px;
-}
-.card-post-img {
-  width: 100%;
-  height: 250px;
-  border-radius: 0.7rem;
-  margin-bottom: 1rem;
-}
-.card-post-data {
-  text-align: left;
-}
-
-.card-post-data span {
-  font-weight: 600;
-}
-.card-post-data small {
-  font-weight: 300;
-}
-.card-post-data h5 {
-  font-weight: 500;
-  margin-top: 0.7rem;
-}
-.slick-prev:before {
-  position: absolute;
-  content: url('../images/img-left-arrow.png');
-  opacity: 1;
-}
-
-.slick-next:before {
-  position: absolute;
-  content: url('../images/img-right-arrow.png');
-  opacity: 1;
-}
-
-.home-blog .slick-prev {
-  top:30%;
-  left: 30px;
-  z-index: 1;
-}
-
-.home-blog .slick-next {
-  top: 30%;
-  right: 50px;
-}
+  .home-blog .slick-next {
+    top: 30%;
+    right: 6.51vw;
+  }
 }
 
 @media screen and (max-width:767.9px) {
-  body{
+  body {
     overflow-x: hidden;
   }
-.fourth-link {
-  padding-top: 40px;
-  margin-bottom: 75px;
-}
 
-.fourth-head {
-  font-size: 40px;
-}
-.fourth-list{
-  margin-left: 18px;
-}
+  .fourth-link {
+    padding-top: 6.25vw;
+    margin-bottom: 11.719vw;
+  }
 
-.fourth-list li {
-    border-radius: 10px;
+    
+  .hero {      
+    height: 78.125vw;
+    margin-bottom: 5vw;
+  }
+  .hero-content{
+    padding-top: 18.75vw;
+  }
+  .hero-content .head{
+    line-height: 15.625vw;
+    font-size: 8vw;
+  }
+
+  .fourth-head {
+    font-size: 6.25vw;
+  }
+
+  .fourth-list {
+    margin-left: 2.813vw;
+  }
+
+  .fourth-list li {
+    border-radius: 1.563vw;
     width: 30%;
-    height: 366px;
-    margin: 47px 6px 8px 8px;
-    padding-bottom: 5px;
-}
-.fourth-list li img{
-  height: 200px;
-  width: 400px;
-}
-.para {
-  padding: 38px 0px 30px 0px;
-}
+    height: 57.188vw;
+    margin: 7.344vw 0.938vw 1.25vw 1.25vw;
+    padding-bottom: 0.781vw;
+  }
 
-.p1 {
-  margin-bottom: 8px;
-  font-size: 20px;
-}
+  .fourth-list li img {
+    height: 31.25vw;
+    width: 62.5vw;
+  }
 
-.p2 {
-  font-size: 16px;
-}
+  .para {
+    padding: 5.938vw 0vw 4.688vw 0vw;
+  }
 
-/*Package*/
-.project-content{
-  width: 100%;
-  padding: 30px 0px;
-}
-.project-card{
-  width: 30%;
-  height: 300px; 
-  margin: 20px 0px;
-}
-.project-card-bg{
-  height: 100%; 
-}
-.project-card-bg img{
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-.project-card-text{
-  width: 100%;
-  bottom: 20px;
-}
-.project-btn{
-  padding: 10px 10px;
-  border-radius: 20px;
+  .p1 {
+    margin-bottom: 1.25vw;
+    font-size: 3.125vw;
+  }
 
-}
-.project-btn:hover{
-  border-radius: 20px;
-}
+  .p2 {
+    font-size: 2.5vw;
+  }
 
-.project-card-bg::after{
-  width: 100%;
-  height: 100%;
-}
-.project-card-bg:hover:after{
-  opacity: 1;
-}
-.txt-view a{
-  font-size: 20px;
-}
-.txt-view button{
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-.txt-view button:hover{
-  border-radius: 8px;
-}
-.name{
-  padding: 10px;
-  margin-left: 66px;
-}
-.name a{
-  font-size: 10px;
-}
-.home-car{
-  width: 100%;
-  margin-bottom: 50px;
-}
-.car-lp{
-  padding-top: 30px;
-  margin-bottom: 30px;
-}
-.car-sec{
-  width: 30%;
-}
-.car-sec  img{
-  height: 200px;
-  width: 100%;
-}
-.car-name{
-  font-size: 14px;
-  padding: 10px 0px;
-}
-.car-price {
-  font-size: 10px;
-    margin: 0px 0px 20px 30px;
-}
-.dua{
-  margin-bottom: 10px;
-}
+  /*Package*/
+  .project-content {
+    width: 100%;
+    padding: 4.688vw 0vw;
+  }
 
-.boo{
-  padding: 15px 0px;
-}
+  .project-card {
+    width: 30%;
+    height: 46.875vw;
+    margin: 3.125vw 0vw;
+  }
 
-/*Blog*/
-.blogpost{
-  margin-bottom: 30px;
-  width: 100%;
-}
-.card-post{
-  margin: 0px 10px;
-  width: 84%;
-  margin-left: 34px;
-}
-.card-post-img {
-  width: 100%;
-  height: 250px;
-  border-radius: 0.7rem;
-  margin-bottom: 1rem;
-}
-.card-post-data {
-  text-align: left;
-}
+  .project-card-bg {
+    height: 100%;
+  }
 
-.card-post-data span {
-  font-weight: 600;
-}
-.card-post-data small {
-  font-weight: 300;
-}
-.card-post-data h5 {
-  font-weight: 500;
-  margin-top: 0.7rem;
-}
-.slick-prev:before {
-  position: absolute;
-  content: url('../images/img-left-arrow.png');
-  opacity: 1;
-}
+  .project-card-bg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3.125vw;
+  }
 
-.slick-next:before {
-  position: absolute;
-  content: url('../images/img-right-arrow.png');
-  opacity: 1;
-}
+  .project-card-text {
+    width: 100%;
+    bottom: 3.125vw;
+  }
 
-.home-blog .slick-prev {
-  top:30%;
-  left: 30px;
-  z-index: 1;
-}
+  .project-btn {
+    padding: 1.563vw 1.563vw;
+    border-radius: 3.125vw;
 
-.home-blog .slick-next {
-  top: 30%;
-  right: 50px;
-}
+  }
+
+  .project-btn:hover {
+    border-radius: 3.125vw;
+  }
+
+  .project-card-bg::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-card-bg:hover:after {
+    opacity: 1;
+  }
+
+  .txt-view a {
+    font-size: 3.125vw;
+  }
+
+  .txt-view button {
+    padding: 1.563vw 3.125vw;
+    border-radius: 1.25vw;
+  }
+
+  .txt-view button:hover {
+    border-radius: 1.25vw;
+  }
+
+  .name {
+    padding: 1.563vw;
+    margin-left: 7vw;
+    border-radius: 0.781vw;
+    border: 0.156vw solid #f3f3f3;
+    bottom: 3.125vw;
+  }
+
+  .name a {
+    font-size: 1.563vw;
+  }
+
+  .home-car {
+    width: 100%;
+    margin-bottom: 7.813vw;
+  }
+
+  .car-lp {
+    padding-top: 4.688vw;
+    margin-bottom: 4.688vw;
+  }
+
+  .car-sec {
+    width: 30%;
+  }
+
+  .car-sec img {
+    height: 31.25vw;
+    width: 100%;
+  }
+
+  .car-name {
+    font-size: 2.188vw;
+    padding: 1.563vw 0vw;
+  }
+
+  .car-price {
+    font-size: 1.563vw;
+    margin: 0vw 0vw 3.125vw 4.688vw;
+  }
+
+  .dua {
+    margin-bottom: 1.563vw;
+  }
+
+  .boo {
+    padding: 2.344vw 0vw;
+  }
+
+  /*Blog*/
+  .blogpost {
+    margin-bottom: 4.688vw;
+    width: 100%;
+  }
+
+  .card-post {
+    margin: 0vw 1.563vw;
+    width: 84%;
+    margin-left: 5.313vw;
+  }
+
+  .card-post-img {
+    width: 100%;
+    height: 39.063vw;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-post-data {
+    text-align: left;
+  }
+
+  .card-post-data span {
+    font-weight: 600;
+  }
+
+  .card-post-data small {
+    font-weight: 300;
+  }
+
+  .card-post-data h5 {
+    font-weight: 500;
+    margin-top: 0.7rem;
+  }
+
+  .slick-prev:before {
+    position: absolute;
+    content: url('../images/img-left-arrow.png');
+    opacity: 1;
+  }
+
+  .slick-next:before {
+    position: absolute;
+    content: url('../images/img-right-arrow.png');
+    opacity: 1;
+  }
+
+  .home-blog .slick-prev {
+    top: 30%;
+    left: 4.688vw;
+    z-index: 1;
+  }
+
+  .home-blog .slick-next {
+    top: 30%;
+    right: 7.813vw;
+  }
 }
 
 @media screen and (max-width:480px) {
-  body{
+  body {
     overflow-x: hidden;
   }
-.fourth-link {
-  padding-top: 40px;
-  margin-bottom: 75px;
-}
 
-.fourth-head {
-  font-size: 40px;
-}
-.fourth-list{
-  margin-left: 18px;
-}
+  .fourth-link {
+    padding-top: 40px;
+    margin-bottom: 75px;
+  }
 
-.fourth-list li {
+  .fourth-head {
+    font-size: 40px;
+  }
+
+  .fourth-list {
+    margin-left: 18px;
+  }
+
+  .fourth-list li {
     border-radius: 10px;
     width: 30%;
     height: 253px;
     margin: 47px 11px 8px 0;
     padding-bottom: 5px;
-}
-.fourth-list li img{
-  height: 118px;
-  width: 400px;
-}
-.para {
-  padding: 38px 0px 30px 0px;
-}
-.txt-para{
-  font-size: 10px;
-}
-.p1 {
-  margin-bottom: 8px;
-  font-size: 20px;
-}
+  }
 
-.p2 {
-  font-size: 16px;
-}
+  .fourth-list li img {
+    height: 118px;
+    width: 400px;
+  }
 
-/*Package*/
-.project-content{
-  width: 100%;
-  padding: 30px 0px;
-}
-.project-card{
-  width: 30%;
-  height: 187px; 
-  margin: 20px 0px;
-}
-.project-card-bg{
-  height: 100%; 
-}
-.project-card-bg img{
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-.project-card-text{
-  width: 100%;
-  bottom: 20px;
-}
-.project-btn{
-  padding: 10px 10px;
-  border-radius: 20px;
+  .para {
+    padding: 38px 0px 30px 0px;
+  }
 
-}
-.project-btn:hover{
-  border-radius: 20px;
-}
+  .txt-para {
+    font-size: 10px;
+  }
 
-.project-card-bg::after{
-  width: 100%;
-  height: 100%;
-}
-.project-card-bg:hover:after{
-  opacity: 1;
-}
-.txt-view a{
-  font-size: 20px;
-}
-.txt-view button{
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-.txt-view button:hover{
-  border-radius: 8px;
-}
-.name{
-  font-size: 20px;
-  padding: 10px;
-}
-.home-car{
-  width: 100%;
-  margin-bottom: 50px;
-}
-.car-lp{
-  padding-top: 30px;
-  margin-bottom: 30px;
-}
-.car-sec{
-  width: 30%;
-}
-.car-sec  img{
-  height: 200px;
-  width: 100%;
-}
-.car-name{
-  font-size: 14px;
-  padding: 10px 0px;
-}
-.car-price {
-  font-size: 10px;
+  .p1 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .p2 {
+    font-size: 16px;
+  }
+
+  /*Package*/
+  .project-content {
+    width: 100%;
+    padding: 30px 0px;
+  }
+
+  .project-card {
+    width: 30%;
+    height: 187px;
+    margin: 20px 0px;
+  }
+
+  .project-card-bg {
+    height: 100%;
+  }
+
+  .project-card-bg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .project-card-text {
+    width: 100%;
+    bottom: 20px;
+  }
+
+  .project-btn {
+    padding: 10px 10px;
+    border-radius: 20px;
+
+  }
+
+  .project-btn:hover {
+    border-radius: 20px;
+  }
+
+  .project-card-bg::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-card-bg:hover:after {
+    opacity: 1;
+  }
+
+  .txt-view a {
+    font-size: 20px;
+  }
+
+  .txt-view button {
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .txt-view button:hover {
+    border-radius: 8px;
+  }
+
+  .name {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .home-car {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .car-lp {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .car-sec {
+    width: 30%;
+  }
+
+  .car-sec img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .car-name {
+    font-size: 14px;
+    padding: 10px 0px;
+  }
+
+  .car-price {
+    font-size: 10px;
     margin: 0px 0px 20px 30px;
-}
-.dua{
-  margin-bottom: 10px;
-}
+  }
 
-.boo{
-  padding: 15px 0px;
-}
+  .dua {
+    margin-bottom: 10px;
+  }
 
-/*Blog*/
-.home-blog .blog-post{
-  margin-bottom: 30px;
-  width: 100%;
-}
-.card-post{
-  margin: 0px 10px;
-  width: 84%;
-  margin-left: 34px;
-}
-.card-post-img img{
-  width: 100%;
-  height: 250px;
-  border-radius: 0.7rem;
-  margin-bottom: 1rem;
-}
-.card-post-data {
-  text-align: left;
-}
+  .boo {
+    padding: 15px 0px;
+  }
 
-.card-post-data span {
-  font-weight: 600;
-}
-.card-post-data small {
-  font-weight: 300;
-}
-.card-post-data h5 {
-  font-weight: 500;
-  margin-top: 0.7rem;
-}
-.slick-prev:before {
-  position: absolute;
-  content: url('../images/img-left-arrow.png');
-  opacity: 1;
-}
+  /*Blog*/
+  .home-blog .blog-post {
+    margin-bottom: 30px;
+    width: 100%;
+  }
 
-.slick-next:before {
-  position: absolute;
-  content: url('../images/img-right-arrow.png');
-  opacity: 1;
-}
+  .card-post {
+    margin: 0px 10px;
+    width: 84%;
+    margin-left: 34px;
+  }
 
-.home-blog .slick-prev {
-  top:30%;
-  left: 30px;
-  z-index: 1;
-}
+  .card-post-img img {
+    width: 100%;
+    height: 250px;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+  }
 
-.home-blog .slick-next {
-  top: 30%;
-  right: 50px;
-}
+  .card-post-data {
+    text-align: left;
+  }
+
+  .card-post-data span {
+    font-weight: 600;
+  }
+
+  .card-post-data small {
+    font-weight: 300;
+  }
+
+  .card-post-data h5 {
+    font-weight: 500;
+    margin-top: 0.7rem;
+  }
+
+  .slick-prev:before {
+    position: absolute;
+    content: url('../images/img-left-arrow.png');
+    opacity: 1;
+  }
+
+  .slick-next:before {
+    position: absolute;
+    content: url('../images/img-right-arrow.png');
+    opacity: 1;
+  }
+
+  .home-blog .slick-prev {
+    top: 30%;
+    left: 30px;
+    z-index: 1;
+  }
+
+  .home-blog .slick-next {
+    top: 30%;
+    right: 50px;
+  }
 }

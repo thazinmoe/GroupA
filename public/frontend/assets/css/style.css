@@ -64,26 +64,6 @@ body {
     overflow-x: hidden;
 }
 
-.hero {
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 500px;
-    background: url('../images/ddd.jpg')no-repeat center/cover;
-  
-}
-.hero-content{
-    font-family: 'Roboto';
-    font-weight: 700;
-    padding-top: 120px;
-    text-align: center;
-}
-.hero-content .head{
-    line-height: 100px;
-    font-size: 70px;
-    color: #ffff1a;
-}
 .btn{
     margin-top: 30px;
     border: 1px solid transparent;
@@ -265,6 +245,11 @@ hr {
 
 .nav__icon {
     font-size: 1.5rem;
+}
+
+.hero-content .head{
+    line-height: 13.021vw;
+    font-size: 7vw;
 }
 
 /*Active link*/

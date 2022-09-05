@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Select Car</h1>
+        <h1 class="h3 mb-0 text-gray-800">Create Car</h1>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('admin.cars.index') }}"> Back</a>
         </div>
